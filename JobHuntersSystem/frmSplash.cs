@@ -15,6 +15,19 @@ namespace JobHuntersSystem
         public frmSplash()
         {
             InitializeComponent();
+            TimerSplash.Start();
+        }
+
+        private void TimerSplash_Tick(object sender, EventArgs e)
+        {
+            pgbSplash.Increment(1);
+            lblProgress.Text = pgbSplash.Value.ToString() + "%";
+
+            if(pgbSplash.Value == pgbSplash.Maximum)
+            {
+                TimerSplash.Stop();
+                this.Close();
+            }
         }
     }
 }
