@@ -46,7 +46,7 @@ namespace SWUserControls
             set { _AccessLevel = value; }
         }
 
-        private void SWLauchForm_Click(object sender, EventArgs e)
+        private void pnlMain_Click(object sender, EventArgs e)
         {
             Assembly assembly;
             assembly = Assembly.LoadFrom(_Class);
@@ -59,6 +59,19 @@ namespace SWUserControls
             dllBD = Activator.CreateInstance(types);
 
             ((Form)dllBD).Show();
+        }
+
+        private void pnlMain_MouseEnter(object sender, EventArgs e)
+        {
+            this.BackColor = Color.FromArgb(183, 143, 82);
+            this.ForeColor = Color.FromArgb(67, 79, 56);
+
+        }
+
+        private void pnlMain_MouseLeave(object sender, EventArgs e)
+        {
+            this.ForeColor = Color.FromArgb(183, 143, 82);
+            this.BackColor = Color.FromArgb(67, 79, 56);
         }
     }
 }
