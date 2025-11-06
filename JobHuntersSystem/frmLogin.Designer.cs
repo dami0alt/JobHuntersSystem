@@ -39,7 +39,7 @@ namespace JobHuntersSystem
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(273, 253);
+            this.txtUser.Location = new System.Drawing.Point(246, 253);
             this.txtUser.Name = "txtUser";
             this.txtUser.PasswordChar = '*';
             this.txtUser.Size = new System.Drawing.Size(238, 26);
@@ -47,7 +47,7 @@ namespace JobHuntersSystem
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(273, 356);
+            this.txtPass.Location = new System.Drawing.Point(246, 356);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(238, 26);
             this.txtPass.TabIndex = 1;
@@ -56,7 +56,7 @@ namespace JobHuntersSystem
             // 
             this.lblUser.AutoSize = true;
             this.lblUser.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.Location = new System.Drawing.Point(121, 253);
+            this.lblUser.Location = new System.Drawing.Point(94, 253);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(133, 30);
             this.lblUser.TabIndex = 2;
@@ -66,7 +66,7 @@ namespace JobHuntersSystem
             // 
             this.lblPass.AutoSize = true;
             this.lblPass.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPass.Location = new System.Drawing.Point(132, 352);
+            this.lblPass.Location = new System.Drawing.Point(105, 352);
             this.lblPass.Name = "lblPass";
             this.lblPass.Size = new System.Drawing.Size(122, 30);
             this.lblPass.TabIndex = 3;
@@ -74,7 +74,7 @@ namespace JobHuntersSystem
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(413, 430);
+            this.btnLogin.Location = new System.Drawing.Point(386, 430);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(108, 45);
             this.btnLogin.TabIndex = 4;
@@ -84,7 +84,7 @@ namespace JobHuntersSystem
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(262, 430);
+            this.btnExit.Location = new System.Drawing.Point(235, 430);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(108, 45);
             this.btnExit.TabIndex = 5;
@@ -97,7 +97,7 @@ namespace JobHuntersSystem
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(79)))), ((int)(((byte)(56)))));
-            this.ClientSize = new System.Drawing.Size(647, 764);
+            this.ClientSize = new System.Drawing.Size(606, 764);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.lblPass);

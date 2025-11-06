@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.36602.28
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobHuntersSystem", "JobHuntersSystem\JobHuntersSystem.csproj", "{AAB73736-725E-4825-A224-130A2B2F8EDC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashUtils", "HashUtils\HashUtils.csproj", "{ED53FD11-A412-4D4E-88F4-3B6C606C4ED4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashUtils", "HashUtils\HashUtils.csproj", "{967322C0-3201-4556-9A3F-717E54D72FFD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{AAB73736-725E-4825-A224-130A2B2F8EDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AAB73736-725E-4825-A224-130A2B2F8EDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AAB73736-725E-4825-A224-130A2B2F8EDC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{ED53FD11-A412-4D4E-88F4-3B6C606C4ED4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ED53FD11-A412-4D4E-88F4-3B6C606C4ED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ED53FD11-A412-4D4E-88F4-3B6C606C4ED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ED53FD11-A412-4D4E-88F4-3B6C606C4ED4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{967322C0-3201-4556-9A3F-717E54D72FFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{967322C0-3201-4556-9A3F-717E54D72FFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{967322C0-3201-4556-9A3F-717E54D72FFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{967322C0-3201-4556-9A3F-717E54D72FFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
