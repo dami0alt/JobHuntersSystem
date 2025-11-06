@@ -9,7 +9,7 @@ namespace HashUtils
 {
     public class clsHash
     {
-        private string CreateSalt()
+        public string CreateSalt()
         {
             string salt;
             using(RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider())
