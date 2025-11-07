@@ -12,7 +12,7 @@ namespace JobHuntersSystem
 {
     public partial class frmMain : Form
     {
-        private int _AccessLevelUser = 80;
+        private int _AccessLevelUser = 100;
         public List<Dictionary<string, string>> Colors = new List<Dictionary<string, string>>
         {
             new Dictionary<string, string>
