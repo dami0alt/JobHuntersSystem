@@ -16,6 +16,13 @@ namespace SWUserControls
         public SWLauchForm()
         {
             InitializeComponent();
+            pnlMain.MouseEnter += new EventHandler(Control_MouseEnter);
+            pnlMain.MouseLeave += new EventHandler(Control_MouseLeave);
+            foreach (Control ctrl in pnlMain.Controls)
+            {
+                ctrl.MouseEnter += new EventHandler(Control_MouseEnter);
+                ctrl.MouseLeave += new EventHandler(Control_MouseLeave);
+            }
         }
         private string _Description;
         public string Description
@@ -60,15 +67,12 @@ namespace SWUserControls
 
             ((Form)dllBD).Show();
         }
-
-        private void pnlMain_MouseEnter(object sender, EventArgs e)
+        private void Control_MouseEnter(object sender, EventArgs e)
         {
             this.BackColor = Color.FromArgb(183, 143, 82);
             this.ForeColor = Color.FromArgb(67, 79, 56);
-
         }
-
-        private void pnlMain_MouseLeave(object sender, EventArgs e)
+        private void Control_MouseLeave(object sender, EventArgs e)
         {
             this.ForeColor = Color.FromArgb(183, 143, 82);
             this.BackColor = Color.FromArgb(67, 79, 56);

@@ -32,7 +32,6 @@ namespace SWUserControls
             this.lblOptionName = new System.Windows.Forms.Label();
             this.pnlMain = new System.Windows.Forms.Panel();
             this.pctOptionIcon = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.pnlMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctOptionIcon)).BeginInit();
             this.SuspendLayout();
@@ -41,7 +40,7 @@ namespace SWUserControls
             // 
             this.lblOptionName.AutoSize = true;
             this.lblOptionName.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOptionName.Location = new System.Drawing.Point(77, 13);
+            this.lblOptionName.Location = new System.Drawing.Point(75, 13);
             this.lblOptionName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblOptionName.Name = "lblOptionName";
             this.lblOptionName.Size = new System.Drawing.Size(81, 22);
@@ -50,7 +49,6 @@ namespace SWUserControls
             // 
             // pnlMain
             // 
-            this.pnlMain.Controls.Add(this.panel1);
             this.pnlMain.Controls.Add(this.pctOptionIcon);
             this.pnlMain.Controls.Add(this.lblOptionName);
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -59,27 +57,17 @@ namespace SWUserControls
             this.pnlMain.Size = new System.Drawing.Size(224, 52);
             this.pnlMain.TabIndex = 1;
             this.pnlMain.Click += new System.EventHandler(this.pnlMain_Click);
-            this.pnlMain.MouseEnter += new System.EventHandler(this.pnlMain_MouseEnter);
-            this.pnlMain.MouseLeave += new System.EventHandler(this.pnlMain_MouseLeave);
             // 
             // pctOptionIcon
             // 
             this.pctOptionIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.pctOptionIcon.ImageLocation = "Multimedia/png/User.png";
-            this.pctOptionIcon.Location = new System.Drawing.Point(21, 5);
+            this.pctOptionIcon.Location = new System.Drawing.Point(13, 5);
             this.pctOptionIcon.Name = "pctOptionIcon";
             this.pctOptionIcon.Size = new System.Drawing.Size(42, 42);
             this.pctOptionIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctOptionIcon.TabIndex = 1;
             this.pctOptionIcon.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(31)))), ((int)(((byte)(38)))));
-            this.panel1.Location = new System.Drawing.Point(-1, 8);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(11, 36);
-            this.panel1.TabIndex = 2;
             // 
             // SWLauchForm
             // 
@@ -101,7 +89,6 @@ namespace SWUserControls
 
         private System.Windows.Forms.Label lblOptionName;
         private System.Windows.Forms.Panel pnlMain;
-        private System.Windows.Forms.Panel panel1;
         internal System.Windows.Forms.PictureBox pctOptionIcon;
     }
 }
