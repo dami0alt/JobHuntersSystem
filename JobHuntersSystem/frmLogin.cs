@@ -18,5 +18,15 @@ namespace JobHuntersSystem
             frmSplash.ShowDialog();
             InitializeComponent();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
