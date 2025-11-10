@@ -32,9 +32,9 @@ namespace WindowsFormsApp1
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.swTextbox1 = new Secure_Core_Inherited_Control.SWTextbox();
-            this.swTextbox2 = new Secure_Core_Inherited_Control.SWTextbox();
             this.swTextbox3 = new Secure_Core_Inherited_Control.SWTextbox();
+            this.swTextbox2 = new Secure_Core_Inherited_Control.SWTextbox();
+            this.swTextbox1 = new Secure_Core_Inherited_Control.SWTextbox();
             this.SuspendLayout();
             // 
             // textBox1
@@ -58,35 +58,35 @@ namespace WindowsFormsApp1
             this.textBox3.Size = new System.Drawing.Size(100, 22);
             this.textBox3.TabIndex = 2;
             // 
-            // swTextbox1
+            // swTextbox3
             // 
-            this.swTextbox1.AllowedData = Secure_Core_Inherited_Control.DataType.Text;
-            this.swTextbox1.Location = new System.Drawing.Point(162, 51);
-            this.swTextbox1.Name = "swTextbox1";
-            this.swTextbox1.DatabaseName = "";
-            this.swTextbox1.NullSpace = true;
-            this.swTextbox1.Size = new System.Drawing.Size(100, 22);
-            this.swTextbox1.TabIndex = 3;
+            this.swTextbox3.AllowedData = Secure_Core_Inherited_Control.DataType.Text;
+            this.swTextbox3.DatabaseName = "";
+            this.swTextbox3.Location = new System.Drawing.Point(162, 193);
+            this.swTextbox3.Name = "swTextbox3";
+            this.swTextbox3.NullSpace = true;
+            this.swTextbox3.Size = new System.Drawing.Size(100, 22);
+            this.swTextbox3.TabIndex = 5;
             // 
             // swTextbox2
             // 
-            this.swTextbox2.AllowedData = Secure_Core_Inherited_Control.DataType.Text;
+            this.swTextbox2.AllowedData = Secure_Core_Inherited_Control.DataType.Number;
+            this.swTextbox2.DatabaseName = "";
             this.swTextbox2.Location = new System.Drawing.Point(162, 119);
             this.swTextbox2.Name = "swTextbox2";
-            this.swTextbox2.DatabaseName = "";
             this.swTextbox2.NullSpace = true;
             this.swTextbox2.Size = new System.Drawing.Size(100, 22);
             this.swTextbox2.TabIndex = 4;
             // 
-            // swTextbox3
+            // swTextbox1
             // 
-            this.swTextbox3.AllowedData = Secure_Core_Inherited_Control.DataType.Text;
-            this.swTextbox3.Location = new System.Drawing.Point(162, 193);
-            this.swTextbox3.Name = "swTextbox3";
-            this.swTextbox3.DatabaseName = "";
-            this.swTextbox3.NullSpace = true;
-            this.swTextbox3.Size = new System.Drawing.Size(100, 22);
-            this.swTextbox3.TabIndex = 5;
+            this.swTextbox1.AllowedData = Secure_Core_Inherited_Control.DataType.Code;
+            this.swTextbox1.DatabaseName = "";
+            this.swTextbox1.Location = new System.Drawing.Point(162, 51);
+            this.swTextbox1.Name = "swTextbox1";
+            this.swTextbox1.NullSpace = true;
+            this.swTextbox1.Size = new System.Drawing.Size(100, 22);
+            this.swTextbox1.TabIndex = 3;
             // 
             // Form1
             // 

@@ -25,6 +25,7 @@ namespace Secure_Core_Inherited_Control
         private bool _NullSpace = true;
         private Color _OriginalColor;
         private bool _IsValid = true;
+        private bool _IsForeignKey = false;
 
         public DataType AllowedData
         {
@@ -48,6 +49,12 @@ namespace Secure_Core_Inherited_Control
         {
             get { return _IsValid; }
             private set { _IsValid = value; }
+        }
+
+        public bool IsForeignKey
+        {
+            get { return _IsForeignKey; }
+            set { _IsForeignKey = value; }
         }
 
         public SWTextbox()
@@ -80,17 +87,20 @@ namespace Secure_Core_Inherited_Control
             if (!NullSpace && string.IsNullOrEmpty(text))
                 validation = false;
 
-            if (validation && AllowedData == DataType.Number)
+            if (validation && AllowedData == DataType.Number && text.Length > 0)
             {
-                if (!Regex.IsMatch(text, @"^\d+$") && text.Length > 0)
-                    validation = false;
+                validation = Regex.IsMatch(text, @"^\d+$");
             }
 
-            if (validation && AllowedData == DataType.Code)
+            if (validation && AllowedData == DataType.Code && text.Length > 0)
             {
                 string pattern = @"^[AEIOU][A-Z]{3}-\d{2}[13579]$";
-                if (!Regex.IsMatch(text, pattern) && text.Length > 0)
-                    validation = false;
+                validation = Regex.IsMatch(text, pattern);
+            }
+
+            if (validation && AllowedData == DataType.Text && text.Length > 0)
+            {
+                validation = Regex.IsMatch(text, @"^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$");
             }
 
             _IsValid = validation;
