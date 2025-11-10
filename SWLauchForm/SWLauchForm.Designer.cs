@@ -61,7 +61,7 @@ namespace SWUserControls
             // pctOptionIcon
             // 
             this.pctOptionIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.pctOptionIcon.ImageLocation = "Multimedia/png/User.png";
+            this.pctOptionIcon.ImageLocation = "";
             this.pctOptionIcon.Location = new System.Drawing.Point(13, 5);
             this.pctOptionIcon.Name = "pctOptionIcon";
             this.pctOptionIcon.Size = new System.Drawing.Size(42, 42);

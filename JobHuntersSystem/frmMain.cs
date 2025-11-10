@@ -12,7 +12,7 @@ namespace JobHuntersSystem
 {
     public partial class frmMain : Form
     {
-        private int _AccessLevelUser = 100;
+        private int _AccessLevelUser = 120;
         public List<Dictionary<string, string>> Colors = new List<Dictionary<string, string>>
         {
             new Dictionary<string, string>
@@ -55,10 +55,12 @@ namespace JobHuntersSystem
                 if(_AccessLevelUser >= AccessLevel)
                 {
                     flpOptions.Controls.Add(new SWUserControls.SWLauchForm
-                    { 
+                    {
+                        InitialImagePath = "Multimedia/png/User.png",
+                        HoverImagePath = "Multimedia/png/Clon.png",
                         Description = item["Descripcion"],
-                        Class = item["ClassName"],
-                        Form = item["NamespaceForm"]
+                        ClassName = item["ClassName"],
+                        FormName = item["NamespaceForm"]
                     });
                 }
             }
