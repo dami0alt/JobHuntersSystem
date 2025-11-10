@@ -15,14 +15,9 @@ namespace SWUserControls
         public SWLauchForm()
         {
             InitializeComponent();
-            pnlMain.MouseEnter += new EventHandler(Control_MouseEnter);
-            pnlMain.MouseLeave += new EventHandler(Control_MouseLeave);
-            foreach (Control ctrl in pnlMain.Controls)
-            {
-                ctrl.MouseEnter += new EventHandler(Control_MouseEnter);
-                ctrl.MouseLeave += new EventHandler(Control_MouseLeave);
-            }
         }
+
+        #region Properties
         private string _Description = "Option";
         public string Description
         {
@@ -108,8 +103,23 @@ namespace SWUserControls
                 }
             }
         }
-
-        private void pnlMain_Click(object sender, EventArgs e)
+        #endregion
+        #region Events
+        //Evento Load: del control suscribiremos nuestros controles a los eventos de "MouseEnter y "MouseLeave"
+        private void SWLauchForm_Load(object sender, EventArgs e)
+        {
+            pnlMain.MouseEnter += new EventHandler(Control_MouseEnter);
+            pnlMain.MouseLeave += new EventHandler(Control_MouseLeave);
+            pnlMain.Click += new EventHandler(Control_Click);
+            foreach (Control ctrl in pnlMain.Controls)
+            {
+                ctrl.MouseEnter += new EventHandler(Control_MouseEnter);
+                ctrl.MouseLeave += new EventHandler(Control_MouseLeave);
+                ctrl.Click += new EventHandler(Control_Click);
+            }
+        }
+        //Evento Click: Cuando se haga click sobre cualquier parte del control, este abrira un frm mediante "Reflection"
+        private void Control_Click(object sender, EventArgs e)
         {
             if(_FormName != null || _ClassName != null)
             {
@@ -126,6 +136,7 @@ namespace SWUserControls
                 ((Form)dllBD).Show();
             }
         }
+        //Eventos de diseño:...
         private void Control_MouseEnter(object sender, EventArgs e)
         {
             pctOptionIcon.ImageLocation = _HoverImagePath;
@@ -138,5 +149,6 @@ namespace SWUserControls
             this.ForeColor = this.Parent.ForeColor;
             this.BackColor = this.Parent.BackColor;
         }
+        #endregion
     }
 }

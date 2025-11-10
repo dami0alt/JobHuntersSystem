@@ -7,68 +7,47 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
 
 namespace JobHuntersSystem
 {
     public partial class frmMain : Form
     {
-        private int _AccessLevelUser = 120;
-        public List<Dictionary<string, string>> Colors = new List<Dictionary<string, string>>
-        {
-            new Dictionary<string, string>
-            {
-                { "Descripcion", "Blue" },
-                { "AccesLevel", "50" },
-                { "ClassName", "Colors.dll" },
-                { "NamespaceForm", "Colors.Blue" }
-            },
-            new Dictionary<string, string>
-            {
-                { "Descripcion", "Red" },
-                { "AccesLevel", "80" },
-                { "ClassName", "Colors.dll" },
-                { "NamespaceForm", "Colors.Red" }
-            },
-            new Dictionary<string, string>
-            {
-                { "Descripcion", "Orange" },
-                { "AccesLevel", "90" },
-                { "ClassName", "Colors.dll" },
-                { "NamespaceForm", "Colors.Orange" }
-            },
-            new Dictionary<string, string>
-            {
-                { "Descripcion", "Green" },
-                { "AccesLevel", "20" },
-                { "ClassName", "Colors.dll" },
-                { "NamespaceForm", "Colors.Green" }
-            }
-        };
-
-
+        //A futuro remplazar las propiedaedes del "user"por un data set con la query del usuario
+        private int _AccessLevelUser;
+        private string _UserName = "Damian2005";
+        private string _RoleUser = "Admin";
+        private string _ProfileImagePath="Multimedia/png/Clon.png";
+        
         public frmMain()
         {
             InitializeComponent();
-            foreach(var item in Colors)
+            /*
+             * A futuro, aplicar esta lógico para cargar los botones según nivel de acceso, comparando con la tabla "UserOptions" - DB
+            foreach(DataTable row in UserOptions)
             {
-                int AccessLevel = int.Parse(item["AccesLevel"]);
+                int AccessLevel = poner "Row["AccesLevel"]"
                 if(_AccessLevelUser >= AccessLevel)
                 {
                     flpOptions.Controls.Add(new SWUserControls.SWLauchForm
                     {
-                        InitialImagePath = "Multimedia/png/User.png",
-                        HoverImagePath = "Multimedia/png/Clon.png",
-                        Description = item["Descripcion"],
-                        ClassName = item["ClassName"],
-                        FormName = item["NamespaceForm"]
+                          //Asignar propiedades de la DB al control
+                            
                     });
                 }
             }
+            */
+        }
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
-        private void swLauchForm1_Load(object sender, EventArgs e)
+        private void frmMain_Load(object sender, EventArgs e)
         {
-
+            lblUserName.Text = _UserName;
+            lblRoleUser.Text = _RoleUser;
+            pctProfileImage.ImageLocation = AppDomain.CurrentDomain.BaseDirectory + _ProfileImagePath;
         }
     }
 }

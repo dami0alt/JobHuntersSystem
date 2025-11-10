@@ -56,7 +56,6 @@ namespace SWUserControls
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(224, 52);
             this.pnlMain.TabIndex = 1;
-            this.pnlMain.Click += new System.EventHandler(this.pnlMain_Click);
             // 
             // pctOptionIcon
             // 
@@ -78,6 +77,7 @@ namespace SWUserControls
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "SWLauchForm";
             this.Size = new System.Drawing.Size(224, 52);
+            this.Load += new System.EventHandler(this.SWLauchForm_Load);
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctOptionIcon)).EndInit();

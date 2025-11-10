@@ -30,40 +30,68 @@ namespace JobHuntersSystem
         private void InitializeComponent()
         {
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.lblSystemName = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
             this.pnlOptions = new System.Windows.Forms.Panel();
             this.flpOptions = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlPanelTool = new System.Windows.Forms.Panel();
+            this.pctExtender = new System.Windows.Forms.PictureBox();
+            this.pnlRectangleTop = new System.Windows.Forms.Panel();
+            this.lblUserName = new System.Windows.Forms.Label();
+            this.lblRoleUser = new System.Windows.Forms.Label();
+            this.pctProfileImage = new System.Windows.Forms.PictureBox();
+            this.pnlUserInformation = new System.Windows.Forms.Panel();
+            this.pnlRectangleLeft = new System.Windows.Forms.Panel();
+            this.pnlHeader.SuspendLayout();
             this.pnlOptions.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.pnlPanelTool.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctExtender)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctProfileImage)).BeginInit();
+            this.pnlUserInformation.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlHeader
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.pnlHeader.Controls.Add(this.lblSystemName);
+            this.pnlHeader.Controls.Add(this.btnClose);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(143)))), ((int)(((byte)(82)))));
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1444, 29);
+            this.pnlHeader.Size = new System.Drawing.Size(1440, 29);
             this.pnlHeader.TabIndex = 0;
+            // 
+            // lblSystemName
+            // 
+            this.lblSystemName.AutoSize = true;
+            this.lblSystemName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(164)))), ((int)(((byte)(69)))));
+            this.lblSystemName.Location = new System.Drawing.Point(695, 5);
+            this.lblSystemName.Name = "lblSystemName";
+            this.lblSystemName.Size = new System.Drawing.Size(50, 19);
+            this.lblSystemName.TabIndex = 5;
+            this.lblSystemName.Text = "Home";
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btnClose.BackColor = System.Drawing.Color.Red;
+            this.btnClose.ForeColor = System.Drawing.Color.Black;
+            this.btnClose.Location = new System.Drawing.Point(659, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(30, 29);
+            this.btnClose.TabIndex = 0;
+            this.btnClose.Text = "X";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // pnlOptions
             // 
             this.pnlOptions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
             this.pnlOptions.Controls.Add(this.flpOptions);
-            this.pnlOptions.Controls.Add(this.panel3);
+            this.pnlOptions.Controls.Add(this.pnlPanelTool);
             this.pnlOptions.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlOptions.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(143)))), ((int)(((byte)(82)))));
+            this.pnlOptions.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(164)))), ((int)(((byte)(69)))));
             this.pnlOptions.Location = new System.Drawing.Point(0, 29);
             this.pnlOptions.Name = "pnlOptions";
             this.pnlOptions.Size = new System.Drawing.Size(236, 852);
@@ -83,102 +111,102 @@ namespace JobHuntersSystem
             this.flpOptions.TabIndex = 5;
             this.flpOptions.WrapContents = false;
             // 
-            // panel3
+            // pnlPanelTool
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(236, 74);
-            this.panel3.TabIndex = 6;
+            this.pnlPanelTool.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.pnlPanelTool.Controls.Add(this.pctExtender);
+            this.pnlPanelTool.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlPanelTool.Location = new System.Drawing.Point(0, 0);
+            this.pnlPanelTool.Name = "pnlPanelTool";
+            this.pnlPanelTool.Size = new System.Drawing.Size(236, 74);
+            this.pnlPanelTool.TabIndex = 6;
             // 
-            // pictureBox2
+            // pctExtender
             // 
-            this.pictureBox2.ImageLocation = "Multimedia/png/Cross.png";
-            this.pictureBox2.Location = new System.Drawing.Point(20, 22);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.pctExtender.ImageLocation = "Multimedia/png/Cross.png";
+            this.pctExtender.Location = new System.Drawing.Point(20, 22);
+            this.pctExtender.Name = "pctExtender";
+            this.pctExtender.Size = new System.Drawing.Size(30, 30);
+            this.pctExtender.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctExtender.TabIndex = 0;
+            this.pctExtender.TabStop = false;
             // 
-            // panel5
+            // pnlRectangleTop
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(143)))), ((int)(((byte)(82)))));
-            this.panel5.Location = new System.Drawing.Point(236, 103);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1208, 10);
-            this.panel5.TabIndex = 5;
+            this.pnlRectangleTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.pnlRectangleTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlRectangleTop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(143)))), ((int)(((byte)(82)))));
+            this.pnlRectangleTop.Location = new System.Drawing.Point(236, 103);
+            this.pnlRectangleTop.Name = "pnlRectangleTop";
+            this.pnlRectangleTop.Size = new System.Drawing.Size(1204, 10);
+            this.pnlRectangleTop.TabIndex = 5;
             // 
-            // label4
+            // lblUserName
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(1003, 19);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(122, 18);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "DamianLord203";
+            this.lblUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblUserName.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.ForeColor = System.Drawing.Color.White;
+            this.lblUserName.Location = new System.Drawing.Point(896, 19);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(225, 18);
+            this.lblUserName.TabIndex = 1;
+            this.lblUserName.Text = "UserName";
+            this.lblUserName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label3
+            // lblRoleUser
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(1070, 37);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Admin";
+            this.lblRoleUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblRoleUser.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRoleUser.ForeColor = System.Drawing.Color.White;
+            this.lblRoleUser.Location = new System.Drawing.Point(899, 36);
+            this.lblRoleUser.Name = "lblRoleUser";
+            this.lblRoleUser.Size = new System.Drawing.Size(222, 20);
+            this.lblRoleUser.TabIndex = 2;
+            this.lblRoleUser.Text = "Role";
+            this.lblRoleUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // pictureBox1
+            // pctProfileImage
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.ImageLocation = "Multimedia/png/Clon.png";
-            this.pictureBox1.Location = new System.Drawing.Point(1132, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(56, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.pctProfileImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pctProfileImage.ImageLocation = "";
+            this.pctProfileImage.Location = new System.Drawing.Point(1128, 13);
+            this.pctProfileImage.Name = "pctProfileImage";
+            this.pctProfileImage.Size = new System.Drawing.Size(50, 50);
+            this.pctProfileImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctProfileImage.TabIndex = 3;
+            this.pctProfileImage.TabStop = false;
             // 
-            // panel2
+            // pnlUserInformation
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(143)))), ((int)(((byte)(82)))));
-            this.panel2.Location = new System.Drawing.Point(236, 29);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1208, 74);
-            this.panel2.TabIndex = 3;
+            this.pnlUserInformation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.pnlUserInformation.Controls.Add(this.pctProfileImage);
+            this.pnlUserInformation.Controls.Add(this.lblRoleUser);
+            this.pnlUserInformation.Controls.Add(this.lblUserName);
+            this.pnlUserInformation.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlUserInformation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(164)))), ((int)(((byte)(69)))));
+            this.pnlUserInformation.Location = new System.Drawing.Point(236, 29);
+            this.pnlUserInformation.Name = "pnlUserInformation";
+            this.pnlUserInformation.Size = new System.Drawing.Size(1204, 74);
+            this.pnlUserInformation.TabIndex = 3;
             // 
-            // panel1
+            // pnlRectangleLeft
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(48)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(143)))), ((int)(((byte)(82)))));
-            this.panel1.Location = new System.Drawing.Point(236, 113);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(11, 768);
-            this.panel1.TabIndex = 6;
+            this.pnlRectangleLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(48)))));
+            this.pnlRectangleLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlRectangleLeft.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(143)))), ((int)(((byte)(82)))));
+            this.pnlRectangleLeft.Location = new System.Drawing.Point(236, 113);
+            this.pnlRectangleLeft.Name = "pnlRectangleLeft";
+            this.pnlRectangleLeft.Size = new System.Drawing.Size(11, 768);
+            this.pnlRectangleLeft.TabIndex = 6;
             // 
             // frmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(86)))), ((int)(((byte)(68)))));
-            this.ClientSize = new System.Drawing.Size(1444, 881);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(1440, 881);
+            this.Controls.Add(this.pnlRectangleLeft);
+            this.Controls.Add(this.pnlRectangleTop);
+            this.Controls.Add(this.pnlUserInformation);
             this.Controls.Add(this.pnlOptions);
             this.Controls.Add(this.pnlHeader);
             this.Font = new System.Drawing.Font("Century Gothic", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -187,12 +215,14 @@ namespace JobHuntersSystem
             this.Name = "frmMain";
             this.Text = "Home";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmMain_Load);
+            this.pnlHeader.ResumeLayout(false);
+            this.pnlHeader.PerformLayout();
             this.pnlOptions.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pnlPanelTool.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pctExtender)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctProfileImage)).EndInit();
+            this.pnlUserInformation.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -202,13 +232,15 @@ namespace JobHuntersSystem
         private System.Windows.Forms.Panel pnlHeader;
         private System.Windows.Forms.Panel pnlOptions;
         private System.Windows.Forms.FlowLayoutPanel flpOptions;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlPanelTool;
+        private System.Windows.Forms.Panel pnlRectangleTop;
+        private System.Windows.Forms.Label lblUserName;
+        private System.Windows.Forms.Label lblRoleUser;
+        private System.Windows.Forms.PictureBox pctProfileImage;
+        private System.Windows.Forms.Panel pnlUserInformation;
+        private System.Windows.Forms.PictureBox pctExtender;
+        private System.Windows.Forms.Panel pnlRectangleLeft;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label lblSystemName;
     }
 }
