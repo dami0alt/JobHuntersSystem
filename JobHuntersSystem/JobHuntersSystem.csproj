@@ -98,6 +98,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ManagementForms\ManagementForms.csproj">
+      <Project>{a34868a2-7230-486b-be37-b66d5cb50aaf}</Project>
+      <Name>ManagementForms</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SWLauchForm\SWUserControls.csproj">
       <Project>{3d4aad84-4203-4acd-9c84-4021bae48781}</Project>
       <Name>SWUserControls</Name>

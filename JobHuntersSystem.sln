@@ -5,10 +5,15 @@ VisualStudioVersion = 16.0.36602.28
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobHuntersSystem", "JobHuntersSystem\JobHuntersSystem.csproj", "{AAB73736-725E-4825-A224-130A2B2F8EDC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecureCoreInheritedControl", "Secure_Core_Inherited_Control\SecureCoreInheritedControl.csproj", "{03D30974-503E-4351-8F6B-6678ABC18454}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWInheritedControl", "Secure_Core_Inherited_Control\SWInheritedControl.csproj", "{03D30974-503E-4351-8F6B-6678ABC18454}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWUserControls", "SWLauchForm\SWUserControls.csproj", "{3D4AAD84-4203-4ACD-9C84-4021BAE48781}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComponentesDeAcceso", "ComponentesDeAcceso\ComponentesDeAcceso.csproj", "{6D09F3BE-9853-4B5B-9234-6D9120321A2F}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashUtils", "HashUtils\HashUtils.csproj", "{967322C0-3201-4556-9A3F-717E54D72FFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagementForms", "ManagementForms\ManagementForms.csproj", "{A34868A2-7230-486B-BE37-B66D5CB50AAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +41,10 @@ Global
 		{967322C0-3201-4556-9A3F-717E54D72FFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{967322C0-3201-4556-9A3F-717E54D72FFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{967322C0-3201-4556-9A3F-717E54D72FFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A34868A2-7230-486B-BE37-B66D5CB50AAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A34868A2-7230-486B-BE37-B66D5CB50AAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A34868A2-7230-486B-BE37-B66D5CB50AAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A34868A2-7230-486B-BE37-B66D5CB50AAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
