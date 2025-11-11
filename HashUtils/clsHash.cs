@@ -20,13 +20,12 @@ namespace HashUtils
             }
             return salt;
         }
-        public string CreatePassword(string pass)
+        public string CreatePassword(string pass, string salt)
         {
             string passHashed;
-            string saltHash = CreateSalt();
             using(SHA256 hash = SHA256.Create())
             {
-                byte[] bytes = hash.ComputeHash(Encoding.UTF8.GetBytes(pass + saltHash));
+                byte[] bytes = hash.ComputeHash(Encoding.UTF8.GetBytes(pass + salt));
                 passHashed = BitConverter.ToString(bytes);
             }
             return passHashed;
