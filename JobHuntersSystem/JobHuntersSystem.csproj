@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmConfirmPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfirmPassword.Designer.cs">
+      <DependentUpon>frmConfirmPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSplash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmConfirmPassword.resx">
+      <DependentUpon>frmConfirmPassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -98,6 +107,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ComponentesDeAcceso\ComponentesDeAcceso.csproj">
+      <Project>{6d09f3be-9853-4b5b-9234-6d9120321a2f}</Project>
+      <Name>ComponentesDeAcceso</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HashUtils\HashUtils.csproj">
+      <Project>{967322c0-3201-4556-9a3f-717e54d72ffd}</Project>
+      <Name>HashUtils</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SWLauchForm\SWUserControls.csproj">
       <Project>{3d4aad84-4203-4acd-9c84-4021bae48781}</Project>
       <Name>SWUserControls</Name>
