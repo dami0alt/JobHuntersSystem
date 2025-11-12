@@ -7,14 +7,134 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ComponentesDeAcceso;
+using SecureCoreInheritedControl;
 
 namespace ManagementForms
 {
-    public partial class Form1 : Form
+    public partial class frmBase : Form
     {
-        public Form1()
+        protected string _tableName;
+        BaseDeDades dbManager;
+        Boolean _isNew = false;
+        Boolean _creationMode = false;
+        public frmBase()
         {
             InitializeComponent();
+            dbManager = new BaseDeDades();
         }
+
+        DataSet dts;
+  
+        private void BindControls()
+        {
+            foreach (Control ctrl in this.Controls)
+            {
+                if(ctrl is SWTextbox && ((SWTextbox)ctrl).DataBindings.Count == 0)
+                {
+                    ctrl.DataBindings.Add("Text", dts.Tables[0], ((SWTextbox)ctrl).DatabaseName);
+                    ctrl.Validated += new EventHandler(this.SWTextbox_Validated);
+                }
+            }
+        }
+        private void UnbindControls()
+        {
+            foreach (Control ctrl in this.Controls)
+            {
+                if (ctrl is SWTextbox && ((SWTextbox)ctrl).DataBindings.Count > 0)
+                {
+                    ctrl.DataBindings.Clear();
+                    ((SWTextbox)ctrl).Text = "";
+                    ctrl.Validated -= new EventHandler(this.SWTextbox_Validated);
+                }
+            }
+        }
+        private void UpdateRegisters()
+        {
+            string query = $"SELECT * FROM {_tableName}";
+            if (_isNew)
+            {
+                NewRegister();
+                _creationMode = false;
+                _isNew = false;
+
+                btnCreate.Text = "Create";
+                btnCreate.ForeColor = Color.FromArgb(38, 38, 38);
+            }
+            else
+            {
+                UnbindControls();
+            }
+
+            dbManager.Actualitzar(query, dts);
+
+            dts = dbManager.PortarTaula(_tableName);
+
+            BindControls();
+            dgtData.DataSource = dts.Tables[0];
+        }
+        private void NewRegister()
+        {
+            DataRow row;
+            row = dts.Tables[0].NewRow();
+
+            foreach (Control ctrl in this.Controls)
+            {
+                if(ctrl is SWTextbox)
+                {
+                    row[((SWTextbox)ctrl).DatabaseName] = ctrl.Text;
+                }
+                else if (ctrl is ComboBox)
+                {
+                    row[ctrl.Tag.ToString()] = ((ComboBox)ctrl).SelectedValue;
+                }
+            }
+            dts.Tables[0].Rows.Add(row);
+                
+        }
+        private void frmBase_Load(object sender, EventArgs e)
+        {
+            if (DesignMode) return;
+            dts = dbManager.PortarTaula(_tableName);
+
+            BindControls();
+            dgtData.DataSource = dts.Tables[0];
+        }
+        private void SWTextbox_Validated(object sender, EventArgs e)
+        {
+            ((SWTextbox)sender).DataBindings[0].BindingManagerBase.EndCurrentEdit();
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            if (!_creationMode)
+            {
+                UnbindControls();
+                _creationMode = true;
+                _isNew = true;
+
+                btnCreate.Text = "Cancel";
+                btnCreate.ForeColor = Color.Red;
+            }
+            else
+            {
+                BindControls();
+                _creationMode = false;
+                _isNew = false;
+
+                btnCreate.Text = "Create";
+                btnCreate.ForeColor = Color.FromArgb(38,38,38);
+            }
+
+        }
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            UpdateRegisters();
+        }
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }

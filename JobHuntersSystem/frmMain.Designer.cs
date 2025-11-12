@@ -120,6 +120,7 @@ namespace JobHuntersSystem
             this.pnlPanelTool.Name = "pnlPanelTool";
             this.pnlPanelTool.Size = new System.Drawing.Size(236, 74);
             this.pnlPanelTool.TabIndex = 6;
+            this.pnlPanelTool.Click += new System.EventHandler(this.pnlPanelTool_Click);
             // 
             // pctExtender
             // 
