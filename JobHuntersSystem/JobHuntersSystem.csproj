@@ -98,6 +98,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SpeechUnit\SpeechUnit.csproj">
+      <Project>{29a9cf3b-6e0f-4210-b00a-8a6138e4e3ca}</Project>
+      <Name>SpeechUnit</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SWLauchForm\SWUserControls.csproj">
       <Project>{3d4aad84-4203-4acd-9c84-4021bae48781}</Project>
       <Name>SWUserControls</Name>
