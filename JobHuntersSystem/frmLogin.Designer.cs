@@ -29,26 +29,29 @@ namespace JobHuntersSystem
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.lblUser = new System.Windows.Forms.Label();
             this.lblPass = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.lblMessage = new System.Windows.Forms.Label();
+            this.timerMessage = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(246, 253);
+            this.txtUser.Location = new System.Drawing.Point(246, 195);
             this.txtUser.Name = "txtUser";
-            this.txtUser.PasswordChar = '*';
             this.txtUser.Size = new System.Drawing.Size(238, 26);
             this.txtUser.TabIndex = 0;
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(246, 356);
+            this.txtPass.Location = new System.Drawing.Point(246, 298);
             this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(238, 26);
             this.txtPass.TabIndex = 1;
             // 
@@ -56,7 +59,7 @@ namespace JobHuntersSystem
             // 
             this.lblUser.AutoSize = true;
             this.lblUser.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.Location = new System.Drawing.Point(94, 253);
+            this.lblUser.Location = new System.Drawing.Point(94, 195);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(133, 30);
             this.lblUser.TabIndex = 2;
@@ -66,7 +69,7 @@ namespace JobHuntersSystem
             // 
             this.lblPass.AutoSize = true;
             this.lblPass.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPass.Location = new System.Drawing.Point(105, 352);
+            this.lblPass.Location = new System.Drawing.Point(105, 294);
             this.lblPass.Name = "lblPass";
             this.lblPass.Size = new System.Drawing.Size(122, 30);
             this.lblPass.TabIndex = 3;
@@ -74,7 +77,7 @@ namespace JobHuntersSystem
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(386, 430);
+            this.btnLogin.Location = new System.Drawing.Point(386, 372);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(108, 45);
             this.btnLogin.TabIndex = 4;
@@ -84,7 +87,7 @@ namespace JobHuntersSystem
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(235, 430);
+            this.btnExit.Location = new System.Drawing.Point(235, 372);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(108, 45);
             this.btnExit.TabIndex = 5;
@@ -92,12 +95,28 @@ namespace JobHuntersSystem
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // lblMessage
+            // 
+            this.lblMessage.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMessage.ForeColor = System.Drawing.Color.Red;
+            this.lblMessage.Location = new System.Drawing.Point(62, 461);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(476, 253);
+            this.lblMessage.TabIndex = 6;
+            this.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // timerMessage
+            // 
+            this.timerMessage.Interval = 5000;
+            this.timerMessage.Tick += new System.EventHandler(this.timerMessage_Tick);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(79)))), ((int)(((byte)(56)))));
             this.ClientSize = new System.Drawing.Size(606, 764);
+            this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.lblPass);
@@ -105,6 +124,7 @@ namespace JobHuntersSystem
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtUser);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(143)))), ((int)(((byte)(82)))));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin";
@@ -121,5 +141,7 @@ namespace JobHuntersSystem
         private System.Windows.Forms.Label lblPass;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Label lblMessage;
+        private System.Windows.Forms.Timer timerMessage;
     }
 }

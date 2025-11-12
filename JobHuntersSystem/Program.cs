@@ -14,21 +14,22 @@ namespace JobHuntersSystem
         [STAThread]
         static void Main()
         {
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //using (frmLogin frmLogin = new frmLogin())
-            //{
-            //    DialogResult result = frmLogin.ShowDialog();
-            //    if(result == DialogResult.OK)
-            //    {
-            //        Application.Run(new frmMain());
-            //    }
-            //    else
-            //    {
-            //        Application.Exit();
-            //    }
-            //}
-            Application.Run(new frmMain());
+            using (frmLogin frmLogin = new frmLogin())
+            {
+                DialogResult result = frmLogin.ShowDialog();
+                if(result == DialogResult.OK)
+                {
+                    Application.Run(new frmMain());
+                }
+                else
+                {
+                    Application.Exit();
+                }
+            }
+            //Application.Run(new frmLogin());
         }
     }
 }
