@@ -20,6 +20,7 @@ namespace IdentityUser
         //Path Image
         public string Photo { get; set; }
         public int AccesLevel { get; set; }
-        public string DescRank { get; set; }]
+        public string DescRank { get; set; }
+        public string DescCategory { get; set; }
     }
 }
