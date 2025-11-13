@@ -114,6 +114,7 @@
     <ProjectReference Include="..\HashUtils\HashUtils.csproj">
       <Project>{967322c0-3201-4556-9a3f-717e54d72ffd}</Project>
       <Name>HashUtils</Name>
+	</ProjectReference>
     <ProjectReference Include="..\ManagementForms\ManagementForms.csproj">
       <Project>{a34868a2-7230-486b-be37-b66d5cb50aaf}</Project>
       <Name>ManagementForms</Name>
