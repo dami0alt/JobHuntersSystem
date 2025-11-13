@@ -38,10 +38,10 @@ namespace JobHuntersSystem
             // 
             // btnConfirmPassword
             // 
-            this.btnConfirmPassword.Location = new System.Drawing.Point(585, 281);
-            this.btnConfirmPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnConfirmPassword.Location = new System.Drawing.Point(467, 227);
+            this.btnConfirmPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnConfirmPassword.Name = "btnConfirmPassword";
-            this.btnConfirmPassword.Size = new System.Drawing.Size(96, 36);
+            this.btnConfirmPassword.Size = new System.Drawing.Size(125, 29);
             this.btnConfirmPassword.TabIndex = 10;
             this.btnConfirmPassword.Text = "Done";
             this.btnConfirmPassword.UseVisualStyleBackColor = true;
@@ -51,7 +51,8 @@ namespace JobHuntersSystem
             // 
             this.lblConfirmPassword.AutoSize = true;
             this.lblConfirmPassword.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConfirmPassword.Location = new System.Drawing.Point(76, 212);
+            this.lblConfirmPassword.Location = new System.Drawing.Point(84, 157);
+            this.lblConfirmPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblConfirmPassword.Name = "lblConfirmPassword";
             this.lblConfirmPassword.Size = new System.Drawing.Size(189, 23);
             this.lblConfirmPassword.TabIndex = 9;
@@ -61,7 +62,8 @@ namespace JobHuntersSystem
             // 
             this.lblNewPassword.AutoSize = true;
             this.lblNewPassword.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNewPassword.Location = new System.Drawing.Point(157, 126);
+            this.lblNewPassword.Location = new System.Drawing.Point(165, 90);
+            this.lblNewPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNewPassword.Name = "lblNewPassword";
             this.lblNewPassword.Size = new System.Drawing.Size(108, 23);
             this.lblNewPassword.TabIndex = 8;
@@ -69,35 +71,39 @@ namespace JobHuntersSystem
             // 
             // txtConfirmPassword
             // 
-            this.txtConfirmPassword.Location = new System.Drawing.Point(290, 212);
-            this.txtConfirmPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(288, 160);
+            this.txtConfirmPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
-            this.txtConfirmPassword.Size = new System.Drawing.Size(391, 22);
+            this.txtConfirmPassword.Size = new System.Drawing.Size(304, 20);
             this.txtConfirmPassword.TabIndex = 7;
             // 
             // txtNewPassword
             // 
-            this.txtNewPassword.Location = new System.Drawing.Point(290, 129);
-            this.txtNewPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNewPassword.Location = new System.Drawing.Point(288, 93);
+            this.txtNewPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNewPassword.Name = "txtNewPassword";
             this.txtNewPassword.PasswordChar = '*';
-            this.txtNewPassword.Size = new System.Drawing.Size(391, 22);
+            this.txtNewPassword.Size = new System.Drawing.Size(304, 20);
             this.txtNewPassword.TabIndex = 6;
             // 
             // frmConfirmPassword
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(79)))), ((int)(((byte)(56)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(722, 366);
             this.Controls.Add(this.btnConfirmPassword);
             this.Controls.Add(this.lblConfirmPassword);
             this.Controls.Add(this.lblNewPassword);
             this.Controls.Add(this.txtConfirmPassword);
             this.Controls.Add(this.txtNewPassword);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(143)))), ((int)(((byte)(82)))));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmConfirmPassword";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmConfirmPassword";
+            this.TopMost = true;
             this.ResumeLayout(false);
             this.PerformLayout();
 

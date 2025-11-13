@@ -44,9 +44,9 @@ namespace JobHuntersSystem
 
         private void UpdatePass()
         {
-            string query = "select Password, hash, Login" +
-                "from Users" +
-                $"where Login = '{userName}'";
+            string query = "select *" +
+                " from Users";
+
             DataSet dataSet = bd.PortarPerConsulta(query);
             foreach (DataRow row in dataSet.Tables[0].Rows)
             {
