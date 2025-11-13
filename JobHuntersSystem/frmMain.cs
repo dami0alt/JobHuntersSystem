@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
+using ManagementForms;
 
 namespace JobHuntersSystem
 {
@@ -48,6 +49,12 @@ namespace JobHuntersSystem
             lblUserName.Text = _UserName;
             lblRoleUser.Text = _RoleUser;
             pctProfileImage.ImageLocation = AppDomain.CurrentDomain.BaseDirectory + _ProfileImagePath;
+        }
+
+        private void pnlPanelTool_Click(object sender, EventArgs e)
+        {
+            frmUsers form = new frmUsers();
+            form.Show();
         }
     }
 }
