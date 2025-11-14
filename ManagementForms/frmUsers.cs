@@ -38,9 +38,5 @@ namespace ManagementForms
             lastRow["Password"] = "12345aA";
 
         }
-        private void frmUsers_Load(object sender, EventArgs e)
-        {
-            lblTableName.Text = _tableName;
-        }
     }
 }
