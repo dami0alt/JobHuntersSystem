@@ -16,7 +16,8 @@ namespace SWUserControls
         {
             InitializeComponent();
         }
-
+        Object dllBD;
+        Type types;
         #region Properties
         private string _Description = "Option";
         public string Description
@@ -104,6 +105,35 @@ namespace SWUserControls
             }
         }
         #endregion
+        private void LoadDll()
+        {
+            if (_FormName != null || _ClassName != null)
+            {
+                Assembly assembly;
+                assembly = Assembly.LoadFrom(_ClassName);
+
+                types = assembly.GetType(_FormName);
+                dllBD = Activator.CreateInstance(types);
+            }
+        }
+        private void LoadFormByDll()
+        {
+            Form parentForm = this.FindForm();
+            foreach (Control ctrl in parentForm.Controls)
+            {
+                if (ctrl is Panel && ((Panel)ctrl).Name == "pnlMain")
+                {
+                    ((Form)dllBD).TopLevel = false;
+
+                    ((Form)dllBD).FormBorderStyle = FormBorderStyle.None;
+
+                    ctrl.Controls.Add(((Form)dllBD));
+                    ((Form)dllBD).BringToFront();
+                    ((Form)dllBD).Show();
+                }
+            }
+        }
+
         #region Events
         //Evento Load: del control suscribiremos nuestros controles a los eventos de "MouseEnter y "MouseLeave"
         private void SWLauchForm_Load(object sender, EventArgs e)
@@ -121,19 +151,19 @@ namespace SWUserControls
         //Evento Click: Cuando se haga click sobre cualquier parte del control, este abrira un frm mediante "Reflection"
         private void Control_Click(object sender, EventArgs e)
         {
-            if(_FormName != null || _ClassName != null)
+            Boolean exist = false;
+            LoadDll();
+            foreach (Form frm in Application.OpenForms)
             {
-                Assembly assembly;
-                assembly = Assembly.LoadFrom(_ClassName);
-                Object dllBD;
-
-                Type types;
-
-                types = assembly.GetType(_FormName);
-
-                dllBD = Activator.CreateInstance(types);
-
-                ((Form)dllBD).Show();
+                if (frm.GetType() == types)
+                {
+                    exist = true;
+                    frm.BringToFront();
+                }
+            }
+            if (!exist)
+            {
+                LoadFormByDll();
             }
         }
         //Eventos de diseño:...
