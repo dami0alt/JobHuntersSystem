@@ -41,7 +41,7 @@ namespace JobHuntersSystem
                 }
             }
             */
-            speech = new SpeechManager(this);
+            speech = new SpeechManager(this, pctProfileImage.Image);
 
         }
 

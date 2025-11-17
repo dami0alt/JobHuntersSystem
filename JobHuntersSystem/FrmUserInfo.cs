@@ -12,9 +12,23 @@ namespace JobHuntersSystem
 {
     public partial class FrmUserInfo : Form
     {
-        public FrmUserInfo()
+        public FrmUserInfo(string username, string category, string rank, Image profileImage)
         {
             InitializeComponent();
+
+            lblUsername.Text = username;
+            lblCategory.Text = category;
+            lblRank.Text = rank;
+
+            if (profileImage != null)
+            {
+                ProfilePic.Image = profileImage;
+            }
+        }
+
+        private void FrmUserInfo_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

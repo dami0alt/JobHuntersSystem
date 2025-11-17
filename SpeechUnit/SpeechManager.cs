@@ -7,6 +7,7 @@ using System.Speech.Recognition;
 using System.Speech.Synthesis;
 using System.Windows.Forms;
 using System.Globalization;
+using System.Drawing;
 
 namespace SpeechUnit
 {
@@ -16,12 +17,14 @@ namespace SpeechUnit
         private  SpeechRecognitionEngine recognizer;
         private  Dictionary<string, Action> commands;
         private  Form parentForm;
+        private Image userProfileImage;
         /*private  string currentUser;*/
 
-        public SpeechManager(Form form)
+        public SpeechManager(Form form, Image profilePic )
         {
             parentForm = form;
-           /* currentUser = user;*/
+            /* currentUser = user;*/
+            userProfileImage = profilePic;
 
             recognizer = new SpeechRecognitionEngine(new CultureInfo("en-US"));
 
@@ -95,10 +98,14 @@ namespace SpeechUnit
         /*private void ShowUserInfo()
         {
             parentForm.Invoke(new Action(() =>
-            {
-                MessageBox.Show($"User: {currentUser}\nAccess level: Administrator",
-                    "User Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }));
+    {
+        string username = "User";       // tú lo cambiarás luego
+        string category = "Category";   // idem
+        string rank = "Rank";           // idem
+
+        UserCardForm card = new UserCardForm(username, category, rank, userProfileImage);
+        card.ShowDialog(parentForm);
+    }));
         }
         */
 

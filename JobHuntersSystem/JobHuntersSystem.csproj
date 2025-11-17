@@ -70,6 +70,12 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmUserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUserInfo.Designer.cs">
+      <DependentUpon>FrmUserInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmConfirmPassword.resx">
@@ -83,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSplash.resx">
       <DependentUpon>frmSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUserInfo.resx">
+      <DependentUpon>FrmUserInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -118,7 +127,7 @@
     <ProjectReference Include="..\HashUtils\HashUtils.csproj">
       <Project>{967322c0-3201-4556-9a3f-717e54d72ffd}</Project>
       <Name>HashUtils</Name>
-	</ProjectReference>
+    </ProjectReference>
     <ProjectReference Include="..\ManagementForms\ManagementForms.csproj">
       <Project>{a34868a2-7230-486b-be37-b66d5cb50aaf}</Project>
       <Name>ManagementForms</Name>
