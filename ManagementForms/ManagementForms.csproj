@@ -55,6 +55,12 @@
     <Compile Include="frmBase.Designer.cs">
       <DependentUpon>frmBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmUsersCategories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsersCategories.Designer.cs">
+      <DependentUpon>frmUsersCategories.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -63,6 +69,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmUsers.resx">
       <DependentUpon>frmUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsersCategories.resx">
+      <DependentUpon>frmUsersCategories.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
