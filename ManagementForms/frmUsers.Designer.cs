@@ -104,7 +104,7 @@ namespace ManagementForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(869, 704);
+            this.ClientSize = new System.Drawing.Size(1195, 729);
             this.Controls.Add(this.SWtxtLogin);
             this.Controls.Add(this.SWtxtUserName);
             this.Controls.Add(this.SWtxtCodeUser);
