@@ -39,7 +39,7 @@ namespace JobHuntersSystem
             // btnConfirmPassword
             // 
             this.btnConfirmPassword.Location = new System.Drawing.Point(467, 227);
-            this.btnConfirmPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConfirmPassword.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfirmPassword.Name = "btnConfirmPassword";
             this.btnConfirmPassword.Size = new System.Drawing.Size(125, 29);
             this.btnConfirmPassword.TabIndex = 10;
@@ -72,15 +72,16 @@ namespace JobHuntersSystem
             // txtConfirmPassword
             // 
             this.txtConfirmPassword.Location = new System.Drawing.Point(288, 160);
-            this.txtConfirmPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtConfirmPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
+            this.txtConfirmPassword.PasswordChar = '*';
             this.txtConfirmPassword.Size = new System.Drawing.Size(304, 20);
             this.txtConfirmPassword.TabIndex = 7;
             // 
             // txtNewPassword
             // 
             this.txtNewPassword.Location = new System.Drawing.Point(288, 93);
-            this.txtNewPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNewPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtNewPassword.Name = "txtNewPassword";
             this.txtNewPassword.PasswordChar = '*';
             this.txtNewPassword.Size = new System.Drawing.Size(304, 20);
@@ -99,7 +100,7 @@ namespace JobHuntersSystem
             this.Controls.Add(this.txtNewPassword);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(143)))), ((int)(((byte)(82)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmConfirmPassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmConfirmPassword";

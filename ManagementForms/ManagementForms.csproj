@@ -71,7 +71,7 @@
       <Name>ComponentesDeAcceso</Name>
     </ProjectReference>
     <ProjectReference Include="..\Secure_Core_Inherited_Control\SWInheritedControl.csproj">
-      <Project>{03D30974-503E-4351-8F6B-6678ABC18454}</Project>
+      <Project>{03d30974-503e-4351-8f6b-6678abc18454}</Project>
       <Name>SWInheritedControl</Name>
     </ProjectReference>
   </ItemGroup>

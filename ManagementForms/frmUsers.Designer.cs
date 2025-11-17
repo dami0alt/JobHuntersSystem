@@ -113,7 +113,6 @@ namespace ManagementForms
             this.Controls.Add(this.lblCodeUser);
             this.Name = "frmUsers";
             this.Text = "Users";
-            this.Load += new System.EventHandler(this.frmUsers_Load);
             this.Controls.SetChildIndex(this.lblCodeUser, 0);
             this.Controls.SetChildIndex(this.lblUserName, 0);
             this.Controls.SetChildIndex(this.lblLogin, 0);

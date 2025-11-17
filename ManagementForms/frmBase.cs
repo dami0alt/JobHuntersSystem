@@ -119,6 +119,7 @@ namespace ManagementForms
             BindControls();
             dgtData.DataSource = dts.Tables[0];
             ConfigurateDataGridView();
+            lblTableName.Text = _tableName;
         }
         private void SWTextbox_Validated(object sender, EventArgs e)
         {

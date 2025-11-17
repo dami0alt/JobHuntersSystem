@@ -42,6 +42,7 @@ namespace JobHuntersSystem
             this.pctProfileImage = new System.Windows.Forms.PictureBox();
             this.pnlUserInformation = new System.Windows.Forms.Panel();
             this.pnlRectangleLeft = new System.Windows.Forms.Panel();
+            this.pnlMain = new System.Windows.Forms.Panel();
             this.pnlHeader.SuspendLayout();
             this.pnlOptions.SuspendLayout();
             this.pnlPanelTool.SuspendLayout();
@@ -120,7 +121,6 @@ namespace JobHuntersSystem
             this.pnlPanelTool.Name = "pnlPanelTool";
             this.pnlPanelTool.Size = new System.Drawing.Size(236, 74);
             this.pnlPanelTool.TabIndex = 6;
-            this.pnlPanelTool.Click += new System.EventHandler(this.pnlPanelTool_Click);
             // 
             // pctExtender
             // 
@@ -200,11 +200,20 @@ namespace JobHuntersSystem
             this.pnlRectangleLeft.Size = new System.Drawing.Size(11, 768);
             this.pnlRectangleLeft.TabIndex = 6;
             // 
+            // pnlMain
+            // 
+            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMain.Location = new System.Drawing.Point(247, 113);
+            this.pnlMain.Name = "pnlMain";
+            this.pnlMain.Size = new System.Drawing.Size(1193, 768);
+            this.pnlMain.TabIndex = 7;
+            // 
             // frmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(86)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(1440, 881);
+            this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.pnlRectangleLeft);
             this.Controls.Add(this.pnlRectangleTop);
             this.Controls.Add(this.pnlUserInformation);
@@ -243,5 +252,6 @@ namespace JobHuntersSystem
         private System.Windows.Forms.Panel pnlRectangleLeft;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label lblSystemName;
+        private System.Windows.Forms.Panel pnlMain;
     }
 }
