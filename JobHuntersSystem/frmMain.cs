@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,18 +8,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 using ManagementForms;
 using ComponentesDeAcceso;
+using IdentityUser;
 namespace JobHuntersSystem
 {
     public partial class frmMain : Form
     {
-        //A futuro remplazar las propiedaedes del "user"por un data set con la query del usuario
-        private int _AccessLevelUser = 210;
-        private string _UserName = "Damian2005";
-        private string _RoleUser = "Admin";
-        private string _ProfileImagePath="Multimedia/png/Clon.png";
+        private int _AccessLevelUser = CurrentUser.MainUser.AccesLevel;
+        private string _UserName = CurrentUser.MainUser.UserName;
+        private string _RoleUser = CurrentUser.MainUser.DescRank;
+        private string _ProfileImagePath = AppDomain.CurrentDomain.BaseDirectory + CurrentUser.MainUser.Photo;
 
         BaseDeDades dbManager;
         public frmMain()
@@ -62,7 +62,15 @@ namespace JobHuntersSystem
 
             lblUserName.Text = _UserName;
             lblRoleUser.Text = _RoleUser;
-            pctProfileImage.ImageLocation = AppDomain.CurrentDomain.BaseDirectory + _ProfileImagePath; 
+            if (File.Exists(_ProfileImagePath))
+            {
+                pctProfileImage.ImageLocation = _ProfileImagePath;
+
+            }
+            else
+            {
+                pctProfileImage.ImageLocation = AppDomain.CurrentDomain.BaseDirectory + "Multimedia/png/Anonym.png";
+            }
         }
     }
 }

@@ -169,6 +169,7 @@ namespace JobHuntersSystem
             // pctProfileImage
             // 
             this.pctProfileImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pctProfileImage.ErrorImage = null;
             this.pctProfileImage.ImageLocation = "";
             this.pctProfileImage.Location = new System.Drawing.Point(1128, 13);
             this.pctProfileImage.Name = "pctProfileImage";
