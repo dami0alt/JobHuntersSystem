@@ -97,6 +97,7 @@ namespace JobHuntersSystem
             this.Name = "frmSplash";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSplash";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmSplash_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
