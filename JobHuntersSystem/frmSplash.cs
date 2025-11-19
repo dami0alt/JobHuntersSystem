@@ -29,5 +29,12 @@ namespace JobHuntersSystem
                 this.Close();
             }
         }
+        private void frmSplash_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Alt && e.KeyCode == Keys.F4)
+            {
+                e.Handled = true;
+            }
+        } //para no cerrar con alt+f4
     }
 }
