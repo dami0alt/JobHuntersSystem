@@ -24,9 +24,22 @@ namespace ComponentesDeAcceso
         public BaseDeDades()
         {
             Connectar();
+            XifrarConexio();
         }
 
-        public void Connectar()
+        private void XifrarConexio()
+        {
+            Configuration configuration = ConfigurationManager.OpenExeConfiguration("JobHuntersSystem.exe");
+            ConnectionStringsSection section = configuration.GetSection("connectionStrings")
+            as ConnectionStringsSection;
+            if (!section.SectionInformation.IsProtected)
+            {
+                section.SectionInformation.ProtectSection("DataProtectionConfigurationProvider");
+            }
+            configuration.Save();
+        }
+
+        private void Connectar()
         {
             conf = ConfigurationManager.ConnectionStrings["SecureCoreG2Connection"];
             if (conf != null)
