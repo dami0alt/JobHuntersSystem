@@ -17,12 +17,14 @@ namespace JobHuntersSystem
     {
         BaseDeDades dataBase = new BaseDeDades();
         clsHash hash = new clsHash();
+        private int errorCount = 0;
         public frmLogin()
         {
             frmSplash frmSplash = new frmSplash();
             frmSplash.ShowDialog();
             InitializeComponent();
         }
+        #region consultas
         private DataTable consultationDataBase(string user)
         {
             string query = $"SELECT * FROM Users WHERE Login = '{user}'";
@@ -41,32 +43,47 @@ namespace JobHuntersSystem
             DataTable db = dataBase.PortarDataTable(query);
             return db;
         }
+        #endregion
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string user = txtUser.Text;
             string pass = txtPass.Text;
-            string passInitial = "12345aA";            
+            string passInitial = "12345aA";
 
-            DataTable db = consultationDataBase(user);
-            if(db.Rows.Count == 0)
+            try
             {
-                lblMessage.Text = ("Invalid user or nonexistent user credentials");
-                lblMessage.ForeColor = Color.Red;
+                DataTable db = consultationDataBase(user);
+
+                if (db.Rows.Count == 0 || db == null)
+                {
+                    lblMessage.Text = ("Invalid or nonexistent user credentials");
+                    lblMessage.ForeColor = Color.Red;
+                }
+                else
+                {
+                    string dbPassword = db.Rows[0]["Password"].ToString();
+                    bool passValidateInitial = CheckPasswordInitial(pass, passInitial, dbPassword);
+
+                    CheckFinalPassword(passValidateInitial, db, pass, dbPassword, user);
+                }
             }
-            else
+            catch(System.Data.Common.DbException ex)
             {
-                string dbPassword = db.Rows[0]["Password"].ToString();
-                bool passValidateInitial = CheckPasswordInitial(pass, passInitial, dbPassword);
+                lblMessage.Text = "ERROR: Could not connect to the database. Please check the connection.\n"+
+                                    $"Details: {ex.Message}";
+            }
+            catch(Exception ex)
+            {
+                lblMessage.Text = "ERROR: An unexpected error occurred in the system.\n"+
+                                    $"Details: {ex.Message}";
+            }
 
-                CheckFinalPassword(passValidateInitial, db, pass, dbPassword, user);
-            }            
+
         }      
-
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
         private bool CheckPasswordInitial(string pass, string passInitial, string dbPass)
         {
             if (hash.ValidatePass(pass, passInitial) && hash.ValidatePass(pass, dbPass))
@@ -78,7 +95,6 @@ namespace JobHuntersSystem
                 return false;   
             }
         }
-
         private void CheckFinalPassword(bool passValidateInitial, DataTable db, string pass, string dbPassword, string user)
         {
             string validatePass, salt;
@@ -106,13 +122,44 @@ namespace JobHuntersSystem
                     SaveLinkedData(user);
                 }
                 else
-                {
-                    txtPass.Clear();
-                    lblMessage.Text = ("The password doesn't match with the user.");
-                    lblMessage.ForeColor = Color.Red;                   
+                {                    
+                    ThreateningMessage();
                 }
             }
         }
+        private void ThreateningMessage()
+        {
+            txtPass.Clear();
+            errorCount++;
+            int attempts = 4 - errorCount;
+            string message = "";
+            switch (attempts)
+            {
+                case 3:
+                    message = "The password you entered is incorrect. Please check your credentials and try again.";
+                    break;
+
+                case 2:
+                    message = "The password is still incorrect. Continued failed attempts may trigger security measures.";
+                    break;
+                case 1:
+                    message = "Only one attempt remains before your account is temporarily locked for protection.";
+                    break;
+                case 0:
+                    message = "SECURITY ALERT!\n\n" +
+                           "You have exceeded the maximum number of access attempts.\n\n" +
+                           "⚠️ FIRST ORDER WARNING ⚠️\n\n" +
+                           "The corresponding security measures have been taken.\n\n" +
+                           "The system will shut down immediately for security reasons.\n\n" +
+                           "Consider this your final warning!";
+                    MessageBox.Show(message);
+                    Application.Exit();
+                    break;
+            }
+            lblMessage.Text = message;
+            lblMessage.ForeColor = Color.Red;
+        }
+
         private void timerMessage_Tick(object sender, EventArgs e)
         {
             timerMessage.Stop();
