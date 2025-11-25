@@ -22,7 +22,7 @@ namespace JobHuntersSystem
 
         private void ConfigureRecognizer()
         {
-            string[] commands = { "close", "time", "user info" };
+            string[] commands = { "close", "time", "user" };
             Choices words = new Choices(commands);
             GrammarBuilder gb = new GrammarBuilder(words);
             gb.Culture = recognizer.RecognizerInfo.Culture;
@@ -48,7 +48,7 @@ namespace JobHuntersSystem
             {
                 ShowTime();
             }
-            else if (command == "user info")
+            else if (command == "user")
             {
                 ShowUserInfo();
             }
@@ -84,7 +84,7 @@ namespace JobHuntersSystem
                     profile
                 );
 
-                form.Show();
+                form.ShowDialog();
             }
         }
 

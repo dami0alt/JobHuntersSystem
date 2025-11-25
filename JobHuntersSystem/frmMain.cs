@@ -20,14 +20,16 @@ namespace JobHuntersSystem
         private string _UserName = "Damian2005";
         private string _RoleUser = "Admin";
         private string _ProfileImagePath="Multimedia/png/Clon.png";*/
-        private SpeechManager speech;
+        
 
         private int _AccessLevelUser = CurrentUser.MainUser.AccesLevel;
         private string _UserName = CurrentUser.MainUser.UserName;
         private string _RoleUser = CurrentUser.MainUser.DescRank;
         private string _ProfileImagePath = AppDomain.CurrentDomain.BaseDirectory + CurrentUser.MainUser.Photo;
+        private SpeechManager speech;
 
         BaseDeDades dbManager;
+        
         public frmMain()
         {
             InitializeComponent();
@@ -57,7 +59,7 @@ namespace JobHuntersSystem
                     });
                 }
             }
-            */
+            
            
 
         }
@@ -82,6 +84,8 @@ namespace JobHuntersSystem
             {
                 pctProfileImage.ImageLocation = AppDomain.CurrentDomain.BaseDirectory + "Multimedia/png/Anonym.png";
             }
+
+            speech = new SpeechManager(this);
         }
     }
 }
