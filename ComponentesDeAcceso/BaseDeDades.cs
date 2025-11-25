@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Data;
+using System.Collections;
 
 namespace ComponentesDeAcceso
 {
@@ -133,6 +134,34 @@ namespace ComponentesDeAcceso
             cmd.ExecuteNonQuery();
             cmd.Dispose();
             cnn.Close();
+        }
+
+        public DataSet GeneraConsultaCerca(string nomTaula, Dictionary<string, string> keyValuePairs)
+        {
+            SqlCommand cmd = cnn.CreateCommand();
+            DataSet data = new DataSet();
+
+
+            cmd.CommandType = CommandType.Text;
+            string query = "SELECT * FROM " + nomTaula +
+                                    " WHERE";
+
+            foreach (var item in keyValuePairs)
+            {
+                string paramName = "@" + item.Key;
+                query += $" {item.Key} = {paramName} AND";
+                cmd.Parameters.Add(new SqlParameter(paramName, item.Value));
+            }
+            query = query.Substring(0, query.Length - 3);
+
+
+            cmd.CommandText = query;
+            cnn.Open();            
+            adapter = new SqlDataAdapter(cmd);
+            adapter.Fill(data);
+            cnn.Close();
+
+            return data;
         }
     }
 }
