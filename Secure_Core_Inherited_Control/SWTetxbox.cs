@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Text.RegularExpressions;
+using SWUserControls;
+using System.Data;
 
 namespace SecureCoreInheritedControl
 {
@@ -56,11 +58,17 @@ namespace SecureCoreInheritedControl
             get { return _IsForeignKey; }
             set { _IsForeignKey = value; }
         }
+        private string _ControlID;
+        public string ControlID
+        {
+            get { return _ControlID; }
+            set { _ControlID = value; }
+        }
 
         public SWTextbox()
         {
             _OriginalColor = this.BackColor;
-
+            InitializeComponent();
             this.Enter += SWTextbox_Enter;
             this.Leave += SWTextbox_Leave;
             this.Validating += SWTextbox_Validating;
@@ -83,7 +91,7 @@ namespace SecureCoreInheritedControl
         {
             string text = this.Text.Trim();
             bool validation = true;
-
+            
             if (!NullSpace && string.IsNullOrEmpty(text))
                 validation = false;
 
@@ -108,6 +116,36 @@ namespace SecureCoreInheritedControl
             if (!_IsValid)
             {
                 e.Cancel = true;
+            }
+            
+        }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // SWTextbox
+            // 
+            this.TextChanged += new System.EventHandler(this.SWTextbox_TextChanged);
+            this.ResumeLayout(false);
+
+        }
+
+        private void SWTextbox_TextChanged(object sender, EventArgs e)
+        {
+            Form parentForm = this.FindForm();
+
+            if (_IsForeignKey)
+            {
+                foreach (Control ctrl in parentForm.Controls)
+                {
+                    if (ctrl.Name == _ControlID)    
+                    {
+                        DataSet ds = new DataSet();
+                        ds = ((SWCodi)ctrl).GetDataSWTextbox(this.Text);
+                        ((SWCodi)ctrl).SetSWCodiData(ds);
+                    }
+                }
             }
         }
     }
