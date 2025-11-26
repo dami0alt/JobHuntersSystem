@@ -14,6 +14,7 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashUtils", "HashUtils\HashUtils.csproj", "{967322C0-3201-4556-9A3F-717E54D72FFD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityUser", "IdentityUser\IdentityUser.csproj", "{5FEAC1C2-3D16-403E-8122-EF276D07026E}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagementForms", "ManagementForms\ManagementForms.csproj", "{A34868A2-7230-486B-BE37-B66D5CB50AAF}"
 EndProject
 Global

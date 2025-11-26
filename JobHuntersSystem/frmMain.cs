@@ -15,12 +15,15 @@ namespace JobHuntersSystem
 {
     public partial class frmMain : Form
     {
+        
         private int _AccessLevelUser = CurrentUser.MainUser.AccesLevel;
         private string _UserName = CurrentUser.MainUser.UserName;
         private string _RoleUser = CurrentUser.MainUser.DescRank;
         private string _ProfileImagePath = AppDomain.CurrentDomain.BaseDirectory + CurrentUser.MainUser.Photo;
+        private SpeechManager speech;
 
         BaseDeDades dbManager;
+        
         public frmMain()
         {
             InitializeComponent();
@@ -50,7 +53,11 @@ namespace JobHuntersSystem
                     });
                 }
             }
+            
+           
+
         }
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -71,6 +78,8 @@ namespace JobHuntersSystem
             {
                 pctProfileImage.ImageLocation = AppDomain.CurrentDomain.BaseDirectory + "Multimedia/png/Anonym.png";
             }
+
+            speech = new SpeechManager(this);
         }
     }
 }
