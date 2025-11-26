@@ -22,7 +22,7 @@ namespace JobHuntersSystem
 
         private void ConfigureRecognizer()
         {
-            string[] commands = { "close", "time", "user" };
+            string[] commands = { "turn off", "get time", "get info" };
             Choices words = new Choices(commands);
             GrammarBuilder gb = new GrammarBuilder(words);
             gb.Culture = recognizer.RecognizerInfo.Culture;
@@ -38,17 +38,21 @@ namespace JobHuntersSystem
 
         private void Recognizer_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
+
+            if (e.Result.Confidence < 0.60f)
+                return;
+
             string command = e.Result.Text.ToLower();
 
-            if (command == "close")
+            if (command == "turn off")
             {
                 CloseApp();
             }
-            else if (command == "time")
+            else if (command == "get time")
             {
                 ShowTime();
             }
-            else if (command == "user")
+            else if (command == "get info")
             {
                 ShowUserInfo();
             }
