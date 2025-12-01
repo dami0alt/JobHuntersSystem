@@ -19,7 +19,7 @@ namespace ManagementForms
         protected string _tableName;
         protected DataSet dts;
 
-        public DataRow RowSelected { get; set; }
+        public string IdSelected { get; set; }
         public frmScreenCS(string tableName)
         {
             InitializeComponent();
@@ -31,7 +31,7 @@ namespace ManagementForms
 
             foreach (Control ctrl in this.Controls)
             {
-                if(ctrl is SWCodi swc && !string.IsNullOrEmpty(swc.Text))
+                if(ctrl is SWTextbox swc && !string.IsNullOrEmpty(swc.Text))
                 {
                     keyValuePairs.Add(swc.DatabaseName, swc.Text);
                 }                                
@@ -62,10 +62,10 @@ namespace ManagementForms
         {
             foreach (Control ctrl in this.Controls)
             {
-                if (ctrl is SWCodi && ((SWCodi)ctrl).DataBindings.Count == 0)
+                if (ctrl is SWTextbox && ((SWTextbox)ctrl).DataBindings.Count == 0)
                 {
-                    ctrl.DataBindings.Add("Text", dts.Tables[0], ((SWCodi)ctrl).DatabaseName);
-                    ctrl.Validated += new EventHandler(this.SWCodi_Validated);
+                    ctrl.DataBindings.Add("Text", dts.Tables[0], ((SWTextbox)ctrl).DatabaseName);
+                    ctrl.Validated += new EventHandler(this.SWTextbox_Validated);
                 }
             }
         }
@@ -73,17 +73,17 @@ namespace ManagementForms
         {
             foreach (Control ctrl in this.Controls)
             {
-                if (ctrl is SWCodi && ((SWCodi)ctrl).DataBindings.Count > 0)
+                if (ctrl is SWTextbox && ((SWTextbox)ctrl).DataBindings.Count > 0)
                 {
                     ctrl.DataBindings.Clear();
-                    ((SWCodi)ctrl).Text = "";
-                    ctrl.Validated -= new EventHandler(this.SWCodi_Validated);
+                    ((SWTextbox)ctrl).Text = "";
+                    ctrl.Validated -= new EventHandler(this.SWTextbox_Validated);
                 }
             }
         }
         private void SWCodi_Validated(object sender, EventArgs e)
         {
-            ((SWCodi)sender).DataBindings[0].BindingManagerBase.EndCurrentEdit();
+            ((SWTextbox)sender).DataBindings[0].BindingManagerBase.EndCurrentEdit();
         }
         private void frmScreenCS_Load(object sender, EventArgs e)
         {
@@ -125,11 +125,7 @@ namespace ManagementForms
         {
             if(e.RowIndex >= 0)
             {
-                DataGridViewRow row = dgvData.Rows[e.RowIndex];
-                DataRowView view = row.DataBoundItem as DataRowView;
-
-                RowSelected = view.Row;
-                this.DialogResult = DialogResult.OK;
+                IdSelected
                 this.Close();
             }
 
