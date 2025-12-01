@@ -37,17 +37,13 @@ namespace ManagementForms
             this.SWtxtLogin = new SecureCoreInheritedControl.SWTextbox();
             this.SuspendLayout();
             // 
-            // lblTableName
-            // 
-            this.lblTableName.Size = new System.Drawing.Size(1129, 25);
-            // 
             // lblCodeUser
             // 
             this.lblCodeUser.AutoSize = true;
             this.lblCodeUser.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodeUser.Location = new System.Drawing.Point(53, 119);
+            this.lblCodeUser.Location = new System.Drawing.Point(61, 141);
             this.lblCodeUser.Name = "lblCodeUser";
-            this.lblCodeUser.Size = new System.Drawing.Size(85, 18);
+            this.lblCodeUser.Size = new System.Drawing.Size(106, 23);
             this.lblCodeUser.TabIndex = 4;
             this.lblCodeUser.Text = "Code User";
             // 
@@ -55,9 +51,9 @@ namespace ManagementForms
             // 
             this.lblUserName.AutoSize = true;
             this.lblUserName.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserName.Location = new System.Drawing.Point(50, 167);
+            this.lblUserName.Location = new System.Drawing.Point(57, 198);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(88, 18);
+            this.lblUserName.Size = new System.Drawing.Size(111, 23);
             this.lblUserName.TabIndex = 5;
             this.lblUserName.Text = "User Name";
             // 
@@ -65,9 +61,9 @@ namespace ManagementForms
             // 
             this.lblLogin.AutoSize = true;
             this.lblLogin.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogin.Location = new System.Drawing.Point(90, 219);
+            this.lblLogin.Location = new System.Drawing.Point(103, 260);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(48, 18);
+            this.lblLogin.Size = new System.Drawing.Size(59, 23);
             this.lblLogin.TabIndex = 6;
             this.lblLogin.Text = "Login";
             // 
@@ -76,10 +72,11 @@ namespace ManagementForms
             this.SWtxtCodeUser.AllowedData = SecureCoreInheritedControl.DataType.Text;
             this.SWtxtCodeUser.DatabaseName = "CodeUser";
             this.SWtxtCodeUser.IsForeignKey = false;
-            this.SWtxtCodeUser.Location = new System.Drawing.Point(144, 116);
+            this.SWtxtCodeUser.Location = new System.Drawing.Point(165, 138);
+            this.SWtxtCodeUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SWtxtCodeUser.Name = "SWtxtCodeUser";
             this.SWtxtCodeUser.NullSpace = true;
-            this.SWtxtCodeUser.Size = new System.Drawing.Size(193, 21);
+            this.SWtxtCodeUser.Size = new System.Drawing.Size(220, 24);
             this.SWtxtCodeUser.TabIndex = 7;
             // 
             // SWtxtUserName
@@ -87,10 +84,11 @@ namespace ManagementForms
             this.SWtxtUserName.AllowedData = SecureCoreInheritedControl.DataType.Text;
             this.SWtxtUserName.DatabaseName = "UserName";
             this.SWtxtUserName.IsForeignKey = false;
-            this.SWtxtUserName.Location = new System.Drawing.Point(144, 167);
+            this.SWtxtUserName.Location = new System.Drawing.Point(165, 198);
+            this.SWtxtUserName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SWtxtUserName.Name = "SWtxtUserName";
             this.SWtxtUserName.NullSpace = true;
-            this.SWtxtUserName.Size = new System.Drawing.Size(193, 21);
+            this.SWtxtUserName.Size = new System.Drawing.Size(220, 24);
             this.SWtxtUserName.TabIndex = 8;
             // 
             // SWtxtLogin
@@ -98,24 +96,25 @@ namespace ManagementForms
             this.SWtxtLogin.AllowedData = SecureCoreInheritedControl.DataType.Text;
             this.SWtxtLogin.DatabaseName = "Login";
             this.SWtxtLogin.IsForeignKey = false;
-            this.SWtxtLogin.Location = new System.Drawing.Point(144, 219);
+            this.SWtxtLogin.Location = new System.Drawing.Point(165, 260);
+            this.SWtxtLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SWtxtLogin.Name = "SWtxtLogin";
             this.SWtxtLogin.NullSpace = true;
-            this.SWtxtLogin.Size = new System.Drawing.Size(193, 21);
+            this.SWtxtLogin.Size = new System.Drawing.Size(220, 24);
             this.SWtxtLogin.TabIndex = 9;
             // 
             // frmUsers
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1201, 729);
+            this.ClientSize = new System.Drawing.Size(1373, 866);
             this.Controls.Add(this.SWtxtLogin);
             this.Controls.Add(this.SWtxtUserName);
             this.Controls.Add(this.SWtxtCodeUser);
             this.Controls.Add(this.lblLogin);
             this.Controls.Add(this.lblUserName);
             this.Controls.Add(this.lblCodeUser);
-            this.MinimumSize = new System.Drawing.Size(1211, 768);
+            this.MinimumSize = new System.Drawing.Size(1381, 903);
             this.Name = "frmUsers";
             this.Text = "Users";
             this.Controls.SetChildIndex(this.lblCodeUser, 0);

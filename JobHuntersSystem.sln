@@ -14,7 +14,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashUtils", "HashUtils\HashUtils.csproj", "{967322C0-3201-4556-9A3F-717E54D72FFD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityUser", "IdentityUser\IdentityUser.csproj", "{5FEAC1C2-3D16-403E-8122-EF276D07026E}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagementForms", "ManagementForms\ManagementForms.csproj", "{A34868A2-7230-486B-BE37-B66D5CB50AAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuOption", "MenuOption\MenuOption.csproj", "{55BFC198-63F0-4D06-9510-FE6FCA4DA9E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageSelector", "ImageSelector\ImageSelector.csproj", "{E9BF7555-00C5-469A-9A96-3867A41FCC28}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,6 +55,14 @@ Global
 		{A34868A2-7230-486B-BE37-B66D5CB50AAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A34868A2-7230-486B-BE37-B66D5CB50AAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A34868A2-7230-486B-BE37-B66D5CB50AAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55BFC198-63F0-4D06-9510-FE6FCA4DA9E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55BFC198-63F0-4D06-9510-FE6FCA4DA9E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55BFC198-63F0-4D06-9510-FE6FCA4DA9E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55BFC198-63F0-4D06-9510-FE6FCA4DA9E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9BF7555-00C5-469A-9A96-3867A41FCC28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9BF7555-00C5-469A-9A96-3867A41FCC28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9BF7555-00C5-469A-9A96-3867A41FCC28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9BF7555-00C5-469A-9A96-3867A41FCC28}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
