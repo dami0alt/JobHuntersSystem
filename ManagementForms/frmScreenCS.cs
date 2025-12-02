@@ -13,17 +13,20 @@ using SecureCoreInheritedControl;
 
 namespace ManagementForms
 {
+    //hacer constructor
     public partial class frmScreenCS : Form
     {
         protected BaseDeDades db;
-        protected string _tableName;
+        protected string _tableName, _controlId, _formName;
         protected DataSet dts;
 
         public string IdSelected { get; set; }
-        public frmScreenCS(string tableName)
+        public frmScreenCS(string tableName, string controlId, string formName)
         {
             InitializeComponent();
             _tableName = tableName;
+            _controlId = controlId;
+            _formName = formName;
         }
         protected Dictionary<string, string> GetValues()
         {
@@ -58,33 +61,6 @@ namespace ManagementForms
             dgvData.AllowUserToAddRows = false;
 
         }
-        private void BindControls()
-        {
-            foreach (Control ctrl in this.Controls)
-            {
-                if (ctrl is SWTextbox && ((SWTextbox)ctrl).DataBindings.Count == 0)
-                {
-                    ctrl.DataBindings.Add("Text", dts.Tables[0], ((SWTextbox)ctrl).DatabaseName);
-                    ctrl.Validated += new EventHandler(this.SWTextbox_Validated);
-                }
-            }
-        }
-        private void UnbindControls()
-        {
-            foreach (Control ctrl in this.Controls)
-            {
-                if (ctrl is SWTextbox && ((SWTextbox)ctrl).DataBindings.Count > 0)
-                {
-                    ctrl.DataBindings.Clear();
-                    ((SWTextbox)ctrl).Text = "";
-                    ctrl.Validated -= new EventHandler(this.SWTextbox_Validated);
-                }
-            }
-        }
-        private void SWCodi_Validated(object sender, EventArgs e)
-        {
-            ((SWTextbox)sender).DataBindings[0].BindingManagerBase.EndCurrentEdit();
-        }
         private void frmScreenCS_Load(object sender, EventArgs e)
         {
             if (DesignMode) return;
@@ -92,7 +68,6 @@ namespace ManagementForms
             db = new BaseDeDades();
             dts = new DataSet();
 
-            BindControls();
             dgvData.DataSource = null;
             ConfigurateDataGridView();
         }
@@ -100,7 +75,6 @@ namespace ManagementForms
         private void btnSearch_Click(object sender, EventArgs e)
         {
             Dictionary<string, string> searchParameters = GetValues();
-            UnbindControls();
             try
             {
                 dts = db.GeneraConsultaCerca(_tableName, searchParameters);
@@ -108,7 +82,6 @@ namespace ManagementForms
                 {
                     dgvData.DataSource = dts.Tables[0];
                     ConfigurateDataGridView();
-                    BindControls();
                 }
                 else
                 {
@@ -125,10 +98,13 @@ namespace ManagementForms
         {
             if(e.RowIndex >= 0)
             {
-                IdSelected
+                IdSelected = dgvData.Rows[e.RowIndex].Cells[0].Value.ToString();
+
+                //foreach(Form frm in ){
+
+
                 this.Close();
             }
-
         }
     }
 }
