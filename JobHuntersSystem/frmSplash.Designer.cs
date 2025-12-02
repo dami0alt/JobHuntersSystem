@@ -35,6 +35,7 @@ namespace JobHuntersSystem
             this.TimerSplash = new System.Windows.Forms.Timer(this.components);
             this.lblOrg = new System.Windows.Forms.Label();
             this.lblClan = new System.Windows.Forms.Label();
+            this.btnSkip = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // pgbSplash
@@ -82,12 +83,23 @@ namespace JobHuntersSystem
             this.lblClan.TabIndex = 3;
             this.lblClan.Text = "Job Hunters";
             // 
+            // btnSkip
+            // 
+            this.btnSkip.Location = new System.Drawing.Point(107, 43);
+            this.btnSkip.Name = "btnSkip";
+            this.btnSkip.Size = new System.Drawing.Size(296, 121);
+            this.btnSkip.TabIndex = 4;
+            this.btnSkip.Text = "skip";
+            this.btnSkip.UseVisualStyleBackColor = true;
+            this.btnSkip.Click += new System.EventHandler(this.btnSkip_Click);
+            // 
             // frmSplash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(79)))), ((int)(((byte)(56)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSkip);
             this.Controls.Add(this.lblClan);
             this.Controls.Add(this.lblOrg);
             this.Controls.Add(this.lblProgress);
@@ -110,5 +122,6 @@ namespace JobHuntersSystem
         private System.Windows.Forms.Timer TimerSplash;
         private System.Windows.Forms.Label lblOrg;
         private System.Windows.Forms.Label lblClan;
+        private System.Windows.Forms.Button btnSkip;
     }
 }
