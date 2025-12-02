@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Text.RegularExpressions;
+using SWUserControls;
+using System.Data;
 
 namespace SecureCoreInheritedControl
 {
@@ -19,13 +21,16 @@ namespace SecureCoreInheritedControl
 
     public class SWTextbox : TextBox
     {
-
         private DataType _AllowedData = DataType.Text;
         private string _DatabaseName = "";
         private bool _NullSpace = true;
         private Color _OriginalColor;
         private bool _IsValid = true;
         private bool _IsForeignKey = false;
+
+
+        Color notNullColor = Color.LightGray;
+        Color defaultColor = Color.White;
 
         public DataType AllowedData
         {
@@ -42,7 +47,12 @@ namespace SecureCoreInheritedControl
         public bool NullSpace
         {
             get { return _NullSpace; }
-            set { _NullSpace = value; }
+            set { _NullSpace = value;
+                if (!_NullSpace)
+                {
+                    this.BackColor = notNullColor;
+                }
+            }
         }
 
         public bool IsValid
@@ -56,11 +66,17 @@ namespace SecureCoreInheritedControl
             get { return _IsForeignKey; }
             set { _IsForeignKey = value; }
         }
+        private string _ControlID;
+        public string ControlID
+        {
+            get { return _ControlID; }
+            set { _ControlID = value; }
+        }
 
         public SWTextbox()
         {
-            _OriginalColor = this.BackColor;
-
+            //_OriginalColor = this.BackColor;
+            InitializeComponent();
             this.Enter += SWTextbox_Enter;
             this.Leave += SWTextbox_Leave;
             this.Validating += SWTextbox_Validating;
@@ -83,7 +99,7 @@ namespace SecureCoreInheritedControl
         {
             string text = this.Text.Trim();
             bool validation = true;
-
+            
             if (!NullSpace && string.IsNullOrEmpty(text))
                 validation = false;
 
@@ -109,6 +125,48 @@ namespace SecureCoreInheritedControl
             {
                 e.Cancel = true;
             }
+            
+        }
+        //BORRAR A FUTURO
+        public void SetDefaultData()
+        {
+            this.Text = "1";
+        }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // SWTextbox
+            // 
+            this.TextChanged += new System.EventHandler(this.SWTextbox_TextChanged);
+            this.Validated += new System.EventHandler(this.SWTextbox_Validated);
+            this.ResumeLayout(false);
+
+        }
+
+        private void SWTextbox_TextChanged(object sender, EventArgs e)
+        {
+            string value = this.Text;
+
+            if (_IsForeignKey)
+            {
+                Form parentForm = this.FindForm();
+                foreach (Control ctrl in parentForm.Controls)
+                {
+                    if (ctrl.Name == _ControlID)
+                    {
+                        DataSet ds = new DataSet();
+                        ds = ((SWCodi)ctrl).GetData(value);
+                        ((SWCodi)ctrl).SetSWCodiData(ds);
+                    }
+                }
+            }      
+        }
+
+        private void SWTextbox_Validated(object sender, EventArgs e)
+        {
+          
         }
     }
 }

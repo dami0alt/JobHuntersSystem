@@ -17,18 +17,30 @@ namespace JobHuntersSystem
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            using (frmLogin frmLogin = new frmLogin())
+
+            frmSplash splash = new frmSplash(); //añadido
+            Application.Run(splash); //añadido
+
+            if (splash.SkipClicked) //añadido
             {
-                DialogResult result = frmLogin.ShowDialog();
-                if (result == DialogResult.OK)
+                Application.Run(new frmMain());
+            }
+            else
+            {
+                using (frmLogin frmLogin = new frmLogin())
                 {
-                    Application.Run(new frmMain());
-                }
-                else
-                {
-                    Application.Exit();
+                    DialogResult result = frmLogin.ShowDialog();
+                    if (result == DialogResult.OK)
+                    {
+                        Application.Run(new frmMain());
+                    }
+                    else
+                    {
+                        Application.Exit();
+                    }
                 }
             }
+
         }
     }
 }
