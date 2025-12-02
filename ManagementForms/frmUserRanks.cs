@@ -24,5 +24,10 @@ namespace ManagementForms
 
             dgtData.Columns["idUserRank"].Visible = false;
         }
+
+        private void frmUserRanks_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

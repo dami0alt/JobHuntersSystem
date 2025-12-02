@@ -1,7 +1,7 @@
 ﻿
 namespace ManagementForms
 {
-    partial class frmBase
+    partial class frmBasefk
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,15 @@ namespace ManagementForms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.lblTableName = new System.Windows.Forms.Label();
             this.dgtData = new System.Windows.Forms.DataGridView();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
+            this.lblInfo = new System.Windows.Forms.Label();
+            this.timerInfo = new System.Windows.Forms.Timer(this.components);
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgtData)).BeginInit();
             this.SuspendLayout();
@@ -56,7 +59,7 @@ namespace ManagementForms
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btnClose.BackColor = System.Drawing.Color.Red;
             this.btnClose.ForeColor = System.Drawing.Color.Black;
-            this.btnClose.Location = new System.Drawing.Point(1152, 7);
+            this.btnClose.Location = new System.Drawing.Point(1158, 5);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(30, 29);
             this.btnClose.TabIndex = 1;
@@ -72,9 +75,9 @@ namespace ManagementForms
             this.lblTableName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.lblTableName.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTableName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
-            this.lblTableName.Location = new System.Drawing.Point(365, 9);
+            this.lblTableName.Location = new System.Drawing.Point(321, 9);
             this.lblTableName.Name = "lblTableName";
-            this.lblTableName.Size = new System.Drawing.Size(470, 25);
+            this.lblTableName.Size = new System.Drawing.Size(559, 25);
             this.lblTableName.TabIndex = 0;
             this.lblTableName.Text = "Table Name";
             this.lblTableName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -88,7 +91,6 @@ namespace ManagementForms
             this.dgtData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgtData.Name = "dgtData";
             this.dgtData.ReadOnly = true;
-            this.dgtData.RowHeadersWidth = 62;
             this.dgtData.Size = new System.Drawing.Size(1079, 313);
             this.dgtData.TabIndex = 1;
             // 
@@ -117,12 +119,31 @@ namespace ManagementForms
             this.btnCreate.UseVisualStyleBackColor = true;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
-            // frmBase
+            // lblInfo
+            // 
+            this.lblInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblInfo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.lblInfo.Location = new System.Drawing.Point(327, 341);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(602, 23);
+            this.lblInfo.TabIndex = 4;
+            this.lblInfo.Text = "Wrong Message ";
+            this.lblInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblInfo.Visible = false;
+            // 
+            // timerInfo
+            // 
+            this.timerInfo.Interval = 3000;
+            this.timerInfo.Tick += new System.EventHandler(this.timerInfo_Tick);
+            // 
+            // frmBasefk
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(86)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(1201, 729);
+            this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.dgtData);
@@ -131,7 +152,7 @@ namespace ManagementForms
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(1217, 768);
-            this.Name = "frmBase";
+            this.Name = "frmBasefk";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Base";
             this.Load += new System.EventHandler(this.frmBase_Load);
@@ -149,5 +170,7 @@ namespace ManagementForms
         protected System.Windows.Forms.DataGridView dgtData;
         protected System.Windows.Forms.Label lblTableName;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label lblInfo;
+        private System.Windows.Forms.Timer timerInfo;
     }
 }

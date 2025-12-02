@@ -38,6 +38,7 @@ namespace ManagementForms
             // SWtxtDescRank
             // 
             this.SWtxtDescRank.AllowedData = SecureCoreInheritedControl.DataType.Text;
+            this.SWtxtDescRank.ControlID = null;
             this.SWtxtDescRank.DatabaseName = "DescRank";
             this.SWtxtDescRank.IsForeignKey = false;
             this.SWtxtDescRank.Location = new System.Drawing.Point(155, 167);
@@ -49,6 +50,7 @@ namespace ManagementForms
             // SWtxtCodeRank
             // 
             this.SWtxtCodeRank.AllowedData = SecureCoreInheritedControl.DataType.Code;
+            this.SWtxtCodeRank.ControlID = null;
             this.SWtxtCodeRank.DatabaseName = "CodeRank";
             this.SWtxtCodeRank.IsForeignKey = false;
             this.SWtxtCodeRank.Location = new System.Drawing.Point(155, 116);
@@ -88,6 +90,7 @@ namespace ManagementForms
             this.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.MinimumSize = new System.Drawing.Size(857, 594);
             this.Name = "frmUserRanks";
+            this.Load += new System.EventHandler(this.frmUserRanks_Load);
             this.Controls.SetChildIndex(this.lblCodeRank, 0);
             this.Controls.SetChildIndex(this.lblDescription, 0);
             this.Controls.SetChildIndex(this.SWtxtCodeRank, 0);

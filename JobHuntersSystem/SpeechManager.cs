@@ -1,0 +1,101 @@
+﻿using System;
+using System.Globalization;
+using System.Speech.Recognition;
+using System.Windows.Forms;
+using System.Drawing;
+using IdentityUser;
+
+namespace JobHuntersSystem
+{
+    public class SpeechManager
+    {
+        private SpeechRecognitionEngine recognizer;
+        private frmMain parentForm;
+
+        public SpeechManager(frmMain form)
+        {
+            parentForm = form;
+            recognizer = new SpeechRecognitionEngine(new CultureInfo("en-US"));
+
+            ConfigureRecognizer();
+        }
+
+        private void ConfigureRecognizer()
+        {
+            string[] commands = { "turn off", "get time", "get info" };
+            Choices words = new Choices(commands);
+            GrammarBuilder gb = new GrammarBuilder(words);
+            gb.Culture = recognizer.RecognizerInfo.Culture;
+
+            Grammar grammar = new Grammar(gb);
+            recognizer.LoadGrammarAsync(grammar);
+
+            recognizer.SetInputToDefaultAudioDevice();
+            recognizer.SpeechRecognized += Recognizer_SpeechRecognized;
+
+            recognizer.RecognizeAsync(RecognizeMode.Multiple);
+        }
+
+        private void Recognizer_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
+        {
+
+            if (e.Result.Confidence < 0.60f)
+                return;
+
+            string command = e.Result.Text.ToLower();
+
+            if (command == "turn off")
+            {
+                CloseApp();
+            }
+            else if (command == "get time")
+            {
+                ShowTime();
+            }
+            else if (command == "get info")
+            {
+                ShowUserInfo();
+            }
+        }
+
+        private void CloseApp()
+        {
+            parentForm.Close();
+        }
+
+        private void ShowTime()
+        {
+            string hour = DateTime.Now.ToString("hh:mm tt");
+            MessageBox.Show($"Current time: {hour}", "System Time");
+        }
+
+        private void ShowUserInfo()
+        {
+            var user = CurrentUser.MainUser;
+
+            if (user != null)
+            {
+                Image profile = null;
+                string fullPath = AppDomain.CurrentDomain.BaseDirectory + user.Photo;
+
+                if (System.IO.File.Exists(fullPath))
+                    profile = Image.FromFile(fullPath);
+
+                FrmUserInfo form = new FrmUserInfo(
+                    user.UserName,
+                    user.DescRank,
+                    user.DescCategory,
+                    profile
+                );
+
+                form.ShowDialog();
+            }
+        }
+
+        /*public void Stop()
+        {
+            recognizer.RecognizeAsyncStop();
+            recognizer.Dispose();
+        }*/
+    }
+}
