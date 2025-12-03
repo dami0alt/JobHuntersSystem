@@ -34,7 +34,7 @@ namespace JobHuntersSystem
             this.btnClose = new System.Windows.Forms.Button();
             this.pnlOptions = new System.Windows.Forms.Panel();
             this.flpOptions = new System.Windows.Forms.FlowLayoutPanel();
-            this.pnlPanelTool = new System.Windows.Forms.Panel();
+            this.pnlTool = new System.Windows.Forms.Panel();
             this.pctExtender = new System.Windows.Forms.PictureBox();
             this.pnlRectangleTop = new System.Windows.Forms.Panel();
             this.lblUserName = new System.Windows.Forms.Label();
@@ -45,7 +45,7 @@ namespace JobHuntersSystem
             this.pnlMain = new System.Windows.Forms.Panel();
             this.pnlHeader.SuspendLayout();
             this.pnlOptions.SuspendLayout();
-            this.pnlPanelTool.SuspendLayout();
+            this.pnlTool.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctExtender)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctProfileImage)).BeginInit();
             this.pnlUserInformation.SuspendLayout();
@@ -90,7 +90,7 @@ namespace JobHuntersSystem
             // 
             this.pnlOptions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
             this.pnlOptions.Controls.Add(this.flpOptions);
-            this.pnlOptions.Controls.Add(this.pnlPanelTool);
+            this.pnlOptions.Controls.Add(this.pnlTool);
             this.pnlOptions.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlOptions.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(164)))), ((int)(((byte)(69)))));
             this.pnlOptions.Location = new System.Drawing.Point(0, 29);
@@ -100,7 +100,6 @@ namespace JobHuntersSystem
             // 
             // flpOptions
             // 
-            this.flpOptions.AutoScroll = true;
             this.flpOptions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(60)))), ((int)(((byte)(58)))));
             this.flpOptions.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpOptions.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
@@ -112,25 +111,29 @@ namespace JobHuntersSystem
             this.flpOptions.TabIndex = 5;
             this.flpOptions.WrapContents = false;
             // 
-            // pnlPanelTool
+            // pnlTool
             // 
-            this.pnlPanelTool.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.pnlPanelTool.Controls.Add(this.pctExtender);
-            this.pnlPanelTool.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlPanelTool.Location = new System.Drawing.Point(0, 0);
-            this.pnlPanelTool.Name = "pnlPanelTool";
-            this.pnlPanelTool.Size = new System.Drawing.Size(236, 74);
-            this.pnlPanelTool.TabIndex = 6;
+            this.pnlTool.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.pnlTool.Controls.Add(this.pctExtender);
+            this.pnlTool.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTool.Location = new System.Drawing.Point(0, 0);
+            this.pnlTool.Name = "pnlTool";
+            this.pnlTool.Size = new System.Drawing.Size(236, 74);
+            this.pnlTool.TabIndex = 6;
             // 
             // pctExtender
             // 
-            this.pctExtender.ImageLocation = "Multimedia/png/Cross.png";
-            this.pctExtender.Location = new System.Drawing.Point(20, 22);
+            this.pctExtender.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pctExtender.ImageLocation = "Multimedia/png/minimized.png";
+            this.pctExtender.Location = new System.Drawing.Point(173, 13);
             this.pctExtender.Name = "pctExtender";
-            this.pctExtender.Size = new System.Drawing.Size(30, 30);
+            this.pctExtender.Size = new System.Drawing.Size(50, 50);
             this.pctExtender.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctExtender.TabIndex = 0;
             this.pctExtender.TabStop = false;
+            this.pctExtender.Click += new System.EventHandler(this.pctExtender_Click);
+            this.pctExtender.MouseEnter += new System.EventHandler(this.pctExtender_MouseEnter);
+            this.pctExtender.MouseLeave += new System.EventHandler(this.pctExtender_MouseLeave);
             // 
             // pnlRectangleTop
             // 
@@ -230,7 +233,7 @@ namespace JobHuntersSystem
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
             this.pnlOptions.ResumeLayout(false);
-            this.pnlPanelTool.ResumeLayout(false);
+            this.pnlTool.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pctExtender)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctProfileImage)).EndInit();
             this.pnlUserInformation.ResumeLayout(false);
@@ -243,7 +246,7 @@ namespace JobHuntersSystem
         private System.Windows.Forms.Panel pnlHeader;
         private System.Windows.Forms.Panel pnlOptions;
         private System.Windows.Forms.FlowLayoutPanel flpOptions;
-        private System.Windows.Forms.Panel pnlPanelTool;
+        private System.Windows.Forms.Panel pnlTool;
         private System.Windows.Forms.Panel pnlRectangleTop;
         private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.Label lblRoleUser;
