@@ -60,15 +60,14 @@ namespace MenuOption
             // SWtxtPicturePathMain
             // 
             this.SWtxtPicturePathMain.AllowedData = SecureCoreInheritedControl.DataType.Text;
-            this.SWtxtPicturePathMain.ControlID = null;
+            this.SWtxtPicturePathMain.ControlID = "isIcon";
             this.SWtxtPicturePathMain.DatabaseName = "PicturePathMain";
-            this.SWtxtPicturePathMain.IsForeignKey = false;
+            this.SWtxtPicturePathMain.IsForeignKey = true;
             this.SWtxtPicturePathMain.Location = new System.Drawing.Point(207, 323);
             this.SWtxtPicturePathMain.Name = "SWtxtPicturePathMain";
             this.SWtxtPicturePathMain.NullSpace = true;
             this.SWtxtPicturePathMain.Size = new System.Drawing.Size(456, 21);
             this.SWtxtPicturePathMain.TabIndex = 15;
-            this.SWtxtPicturePathMain.TextChanged += new System.EventHandler(this.SWtxtPicturePathMain_TextChanged);
             // 
             // SWtxtFormName
             // 
@@ -149,7 +148,7 @@ namespace MenuOption
             // 
             // SWtxtFontColorHover
             // 
-            this.SWtxtFontColorHover.AllowedData = SecureCoreInheritedControl.DataType.Text;
+            this.SWtxtFontColorHover.AllowedData = SecureCoreInheritedControl.DataType.Rgb;
             this.SWtxtFontColorHover.ControlID = null;
             this.SWtxtFontColorHover.DatabaseName = "FontColorHover";
             this.SWtxtFontColorHover.IsForeignKey = false;
@@ -171,7 +170,7 @@ namespace MenuOption
             // 
             // SWtxtFontColorMain
             // 
-            this.SWtxtFontColorMain.AllowedData = SecureCoreInheritedControl.DataType.Text;
+            this.SWtxtFontColorMain.AllowedData = SecureCoreInheritedControl.DataType.Rgb;
             this.SWtxtFontColorMain.ControlID = null;
             this.SWtxtFontColorMain.DatabaseName = "FontColorMain";
             this.SWtxtFontColorMain.IsForeignKey = false;
@@ -183,7 +182,7 @@ namespace MenuOption
             // 
             // SWtxtBackColorHover
             // 
-            this.SWtxtBackColorHover.AllowedData = SecureCoreInheritedControl.DataType.Text;
+            this.SWtxtBackColorHover.AllowedData = SecureCoreInheritedControl.DataType.Rgb;
             this.SWtxtBackColorHover.ControlID = null;
             this.SWtxtBackColorHover.DatabaseName = "BackColorHover";
             this.SWtxtBackColorHover.IsForeignKey = false;
@@ -195,7 +194,7 @@ namespace MenuOption
             // 
             // SWtxtBackColorMain
             // 
-            this.SWtxtBackColorMain.AllowedData = SecureCoreInheritedControl.DataType.Text;
+            this.SWtxtBackColorMain.AllowedData = SecureCoreInheritedControl.DataType.Rgb;
             this.SWtxtBackColorMain.ControlID = null;
             this.SWtxtBackColorMain.DatabaseName = "BackColorMain";
             this.SWtxtBackColorMain.IsForeignKey = false;
@@ -204,7 +203,6 @@ namespace MenuOption
             this.SWtxtBackColorMain.NullSpace = true;
             this.SWtxtBackColorMain.Size = new System.Drawing.Size(117, 21);
             this.SWtxtBackColorMain.TabIndex = 23;
-            this.SWtxtBackColorMain.Validating += new System.ComponentModel.CancelEventHandler(this.SWtxtBackColorMain_Validating);
             // 
             // label2
             // 
@@ -284,7 +282,6 @@ namespace MenuOption
             // 
             this.isIcon.CtrlName = "SWtxtPicturePathMain";
             this.isIcon.DestinationPath = "Multimedia/png/";
-            this.isIcon.ImagePath = null;
             this.isIcon.Location = new System.Drawing.Point(695, 248);
             this.isIcon.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.isIcon.Name = "isIcon";
