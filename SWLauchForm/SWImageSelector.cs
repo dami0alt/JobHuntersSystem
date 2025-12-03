@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 
 
-namespace ImageSelector
+namespace SWUserControls
 {
     public partial class ImageSelector : UserControl
     {
@@ -72,6 +72,10 @@ namespace ImageSelector
                     }
                 }
             }
+        }
+        public void SetPhoto(string path)
+        {
+            pbSelectedImage.ImageLocation = path;
         }
     }
 }

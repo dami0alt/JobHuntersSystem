@@ -49,7 +49,7 @@ namespace MenuOption
             this.label6 = new System.Windows.Forms.Label();
             this.SWtxtAccesLevel = new SecureCoreInheritedControl.SWTextbox();
             this.label7 = new System.Windows.Forms.Label();
-            this.isIcon = new ImageSelector.ImageSelector();
+            this.isIcon = new SWUserControls.ImageSelector();
             this.SuspendLayout();
             // 
             // lblTableName
@@ -365,6 +365,6 @@ namespace MenuOption
         private System.Windows.Forms.Label label6;
         private SecureCoreInheritedControl.SWTextbox SWtxtAccesLevel;
         private System.Windows.Forms.Label label7;
-        private ImageSelector.ImageSelector isIcon;
+        private SWUserControls.ImageSelector isIcon;
     }
 }
