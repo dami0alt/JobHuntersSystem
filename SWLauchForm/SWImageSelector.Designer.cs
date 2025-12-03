@@ -31,17 +31,17 @@ namespace SWUserControls
         {
             this.pbSelectedImage = new System.Windows.Forms.PictureBox();
             this.btnSelectImage = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlEdge = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pbSelectedImage)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.pnlEdge.SuspendLayout();
             this.SuspendLayout();
             // 
             // pbSelectedImage
             // 
-            this.pbSelectedImage.Location = new System.Drawing.Point(6, 5);
+            this.pbSelectedImage.Location = new System.Drawing.Point(7, 7);
             this.pbSelectedImage.Margin = new System.Windows.Forms.Padding(10);
             this.pbSelectedImage.Name = "pbSelectedImage";
-            this.pbSelectedImage.Size = new System.Drawing.Size(69, 70);
+            this.pbSelectedImage.Size = new System.Drawing.Size(65, 65);
             this.pbSelectedImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbSelectedImage.TabIndex = 0;
             this.pbSelectedImage.TabStop = false;
@@ -56,25 +56,25 @@ namespace SWUserControls
             this.btnSelectImage.UseVisualStyleBackColor = true;
             this.btnSelectImage.Click += new System.EventHandler(this.btnSelectImage_Click_1);
             // 
-            // panel1
+            // pnlEdge
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.panel1.Controls.Add(this.pbSelectedImage);
-            this.panel1.Location = new System.Drawing.Point(172, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(81, 79);
-            this.panel1.TabIndex = 3;
+            this.pnlEdge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.pnlEdge.Controls.Add(this.pbSelectedImage);
+            this.pnlEdge.Location = new System.Drawing.Point(171, 2);
+            this.pnlEdge.Name = "pnlEdge";
+            this.pnlEdge.Size = new System.Drawing.Size(81, 79);
+            this.pnlEdge.TabIndex = 3;
             // 
             // ImageSelector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlEdge);
             this.Controls.Add(this.btnSelectImage);
             this.Name = "ImageSelector";
             this.Size = new System.Drawing.Size(253, 82);
             ((System.ComponentModel.ISupportInitialize)(this.pbSelectedImage)).EndInit();
-            this.panel1.ResumeLayout(false);
+            this.pnlEdge.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -83,6 +83,6 @@ namespace SWUserControls
 
         private System.Windows.Forms.PictureBox pbSelectedImage;
         private System.Windows.Forms.Button btnSelectImage;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlEdge;
     }
 }

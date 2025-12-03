@@ -313,7 +313,7 @@ namespace ManagementForms
             this.SWisUserProfile.Location = new System.Drawing.Point(773, 120);
             this.SWisUserProfile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SWisUserProfile.Name = "SWisUserProfile";
-            this.SWisUserProfile.Size = new System.Drawing.Size(291, 113);
+            this.SWisUserProfile.Size = new System.Drawing.Size(305, 113);
             this.SWisUserProfile.TabIndex = 25;
             // 
             // SWtxtPhoto
