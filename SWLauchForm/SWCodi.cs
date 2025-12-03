@@ -58,7 +58,7 @@ namespace SWUserControls
             get { return _NomId; }
             set { _NomId = value; }
         }
-        private string _ControlID;
+        private string _ControlID; 
         public string ControlID
         {
             get { return _ControlID; }
@@ -152,21 +152,23 @@ namespace SWUserControls
         {
             if (_FormCS != null || _ClasseCS != null)
             {
+                Form frm = this.FindForm();
+                string frmName = frm.Name;
                 string ControlId = this.txtCode.Name;
                 Assembly assembly;
-                Object[] args = { _NomTaula, _FormCS, _ControlID};
+                Object[] args = { _NomTaula, frmName, _ControlID};
 
                 assembly = Assembly.LoadFrom(_ClasseCS);
 
                 types = assembly.GetType(_FormCS);
                 dllBD = Activator.CreateInstance(types, args);
 
-                ((Form)dllBD).TopLevel = false;
+                ((Form)dllBD).TopLevel = true;
                 ((Form)dllBD).FormBorderStyle = FormBorderStyle.None;
                 ((Form)dllBD).Show();
             }
         }
-        private void Validacodi(object sender, CancelEventArgs e)
+        private void Validacodi(object sender, CancelEventArgs e) 
         {
             if (!isValidated)
             {

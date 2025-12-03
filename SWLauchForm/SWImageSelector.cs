@@ -14,13 +14,6 @@ namespace SWUserControls
 {
     public partial class ImageSelector : UserControl
     {
-
-        public string ImagePath
-        {
-            get { return this.pbSelectedImage.ImageLocation; }
-            set { this.pbSelectedImage.ImageLocation = value; }
-        }
-
         private string ctrlName;
 
         public string CtrlName
@@ -49,7 +42,7 @@ namespace SWUserControls
 
 
             ofd.Title = "Selecciona un archivo";
-            ofd.Filter = "Image Files (*.BMP;*.JPG;*.GIF;*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG|All files (*.*)|*.*";
+            ofd.Filter = "Image Files (*.BMP;*.JPG;*.GIF;*.PNG;*.JPEG)|*.BMP;*.JPG;*.GIF;*.PNG;*.JPEG|All files (*.*)|*.*";
             string ogFilePath;
             string appPath = destinationPath;
 
@@ -61,7 +54,10 @@ namespace SWUserControls
                 string FileName = Path.GetFileName(ogFilePath);
                 appPath += FileName;
 
-                File.Copy(ogFilePath, appPath, true);
+                if (!File.Exists(appPath))
+                {
+                    File.Copy(ogFilePath, appPath, false);
+                }
 
                 foreach (Control ctrl in this.Parent.Controls)
                 {
