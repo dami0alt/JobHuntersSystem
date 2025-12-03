@@ -32,8 +32,7 @@ namespace ManagementForms
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.dgvData = new System.Windows.Forms.DataGridView();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.swTextbox2 = new SecureCoreInheritedControl.SWTextbox();
-            this.swTextbox1 = new SecureCoreInheritedControl.SWTextbox();
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +60,7 @@ namespace ManagementForms
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(941, 274);
+            this.btnSearch.Location = new System.Drawing.Point(823, 274);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(105, 38);
             this.btnSearch.TabIndex = 6;
@@ -69,29 +68,15 @@ namespace ManagementForms
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // swTextbox2
+            // btnClose
             // 
-            this.swTextbox2.AllowedData = SecureCoreInheritedControl.DataType.Text;
-            this.swTextbox2.ControlID = null;
-            this.swTextbox2.DatabaseName = "";
-            this.swTextbox2.IsForeignKey = false;
-            this.swTextbox2.Location = new System.Drawing.Point(85, 138);
-            this.swTextbox2.Name = "swTextbox2";
-            this.swTextbox2.NullSpace = true;
-            this.swTextbox2.Size = new System.Drawing.Size(254, 26);
-            this.swTextbox2.TabIndex = 8;
-            // 
-            // swTextbox1
-            // 
-            this.swTextbox1.AllowedData = SecureCoreInheritedControl.DataType.Text;
-            this.swTextbox1.ControlID = "id";
-            this.swTextbox1.DatabaseName = "DescRank";
-            this.swTextbox1.IsForeignKey = false;
-            this.swTextbox1.Location = new System.Drawing.Point(85, 80);
-            this.swTextbox1.Name = "swTextbox1";
-            this.swTextbox1.NullSpace = true;
-            this.swTextbox1.Size = new System.Drawing.Size(254, 26);
-            this.swTextbox1.TabIndex = 7;
+            this.btnClose.Location = new System.Drawing.Point(943, 274);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(105, 38);
+            this.btnClose.TabIndex = 7;
+            this.btnClose.Text = "Exit";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // frmScreenCS
             // 
@@ -99,18 +84,18 @@ namespace ManagementForms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(86)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(1070, 643);
-            this.Controls.Add(this.swTextbox2);
-            this.Controls.Add(this.swTextbox1);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.dgvData);
             this.Controls.Add(this.pnlHeader);
+            this.KeyPreview = true;
             this.Name = "frmScreenCS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "      ";
             this.Load += new System.EventHandler(this.frmScreenCS_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmScreenCS_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -118,7 +103,6 @@ namespace ManagementForms
         private System.Windows.Forms.Panel pnlHeader;
         private System.Windows.Forms.DataGridView dgvData;
         private System.Windows.Forms.Button btnSearch;
-        private SecureCoreInheritedControl.SWTextbox swTextbox1;
-        private SecureCoreInheritedControl.SWTextbox swTextbox2;
+        private System.Windows.Forms.Button btnClose;
     }
 }

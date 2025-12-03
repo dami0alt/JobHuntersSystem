@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentesDeAcceso;
 using SecureCoreInheritedControl;
-using SWUserControls;
 
 namespace ManagementForms
 {
@@ -18,15 +17,14 @@ namespace ManagementForms
         protected BaseDeDades db;
         protected string _tableName, _controlId, _formName;
         protected DataSet dts;
-        protected SWTextbox txt;
-        public frmScreenCS(string tableName /*string controlId, string formName*/)
+        protected SWTextbox txt = new SWTextbox();
+        public frmScreenCS(string tableName, string formName, string controlId)
         {
             InitializeComponent();
             _tableName = tableName;
-            //_controlId = controlId;
-            //_formName = formName;
-            _controlId = "SWtxtUserCategoryId";
-            _formName = "frmUserRanks";
+            _controlId = controlId;
+            _formName = formName;
+
         }
         protected Dictionary<string, string> GetValues()
         {
@@ -72,6 +70,20 @@ namespace ManagementForms
             ConfigurateDataGridView();
         }
 
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void frmScreenCS_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F2)
+            {
+                this.Close();
+                e.Handled = true;
+            }
+        }
+
         private void btnSearch_Click(object sender, EventArgs e)
         {
             Dictionary<string, string> searchParameters = GetValues();
@@ -107,10 +119,9 @@ namespace ManagementForms
                     {
                         foreach (Control ctrl in frm.Controls)
                         {
-                            if ((ctrl is SWTextbox) && txt.ControlID == _controlId )
-                            {                                 
-                                //DataSet data = txt.SetId(idSelected);
-                                break;                                
+                            if(ctrl.Name == _controlId)
+                            {
+                                ((SWTextbox)ctrl).SetId(idSelected);
                             }
                         }
                         break;
