@@ -75,7 +75,7 @@ namespace JobHuntersSystem
             }
             else
             {
-                pctProfileImage.ImageLocation = AppDomain.CurrentDomain.BaseDirectory + "Multimedia/png/Anonym.png";
+                pctProfileImage.ImageLocation = AppDomain.CurrentDomain.BaseDirectory + "Multimedia/Users/Anonym.png";
             }
             //speech = new SpeechManager(this);
         }
