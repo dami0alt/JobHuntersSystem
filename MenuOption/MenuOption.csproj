@@ -97,6 +97,10 @@
       <Project>{03D30974-503E-4351-8F6B-6678ABC18454}</Project>
       <Name>SWInheritedControl</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SWLauchForm\SWUserControls.csproj">
+      <Project>{3D4AAD84-4203-4ACD-9C84-4021BAE48781}</Project>
+      <Name>SWUserControls</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

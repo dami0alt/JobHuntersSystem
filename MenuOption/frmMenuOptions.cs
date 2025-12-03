@@ -58,5 +58,10 @@ namespace MenuOption
                 MessageBox.Show("Error");
             }
         }
+
+        private void SWtxtPicturePathMain_TextChanged(object sender, EventArgs e)
+        {
+            isIcon.ImagePath = SWtxtPicturePathMain.Text;
+        }
     }
 }

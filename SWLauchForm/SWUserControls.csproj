@@ -44,6 +44,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SWImageSelector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SWImageSelector.Designer.cs">
+      <DependentUpon>SWImageSelector.cs</DependentUpon>
+    </Compile>
     <Compile Include="SWLauchForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -61,6 +67,9 @@
   <ItemGroup>
     <EmbeddedResource Include="SWCodi.resx">
       <DependentUpon>SWCodi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SWImageSelector.resx">
+      <DependentUpon>SWImageSelector.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SWLauchForm.resx">
       <DependentUpon>SWLauchForm.cs</DependentUpon>
