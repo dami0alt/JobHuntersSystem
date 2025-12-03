@@ -75,7 +75,7 @@ namespace ManagementForms
             // SWtxtUserCategoryId
             // 
             this.SWtxtUserCategoryId.AllowedData = SecureCoreInheritedControl.DataType.Number;
-            this.SWtxtUserCategoryId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(125)))), ((int)(((byte)(121)))));
+            this.SWtxtUserCategoryId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(194)))), ((int)(((byte)(204)))));
             this.SWtxtUserCategoryId.ControlID = "SWcdUserCategory";
             this.SWtxtUserCategoryId.DatabaseName = "idUserCategory";
             this.SWtxtUserCategoryId.IsForeignKey = true;
@@ -117,7 +117,7 @@ namespace ManagementForms
             // SWtxtUserRank
             // 
             this.SWtxtUserRank.AllowedData = SecureCoreInheritedControl.DataType.Number;
-            this.SWtxtUserRank.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(125)))), ((int)(((byte)(121)))));
+            this.SWtxtUserRank.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(194)))), ((int)(((byte)(204)))));
             this.SWtxtUserRank.ControlID = "SWcdUserRank";
             this.SWtxtUserRank.DatabaseName = "idUserRank";
             this.SWtxtUserRank.IsForeignKey = true;
@@ -156,7 +156,7 @@ namespace ManagementForms
             // SWtxtPlanet
             // 
             this.SWtxtPlanet.AllowedData = SecureCoreInheritedControl.DataType.Number;
-            this.SWtxtPlanet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(125)))), ((int)(((byte)(121)))));
+            this.SWtxtPlanet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(194)))), ((int)(((byte)(204)))));
             this.SWtxtPlanet.ControlID = "SWcdPlanet";
             this.SWtxtPlanet.DatabaseName = "idPlanet";
             this.SWtxtPlanet.IsForeignKey = true;
@@ -195,7 +195,7 @@ namespace ManagementForms
             // SWtxtSpecie
             // 
             this.SWtxtSpecie.AllowedData = SecureCoreInheritedControl.DataType.Number;
-            this.SWtxtSpecie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(125)))), ((int)(((byte)(121)))));
+            this.SWtxtSpecie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(194)))), ((int)(((byte)(204)))));
             this.SWtxtSpecie.ControlID = "SWcdSpecie";
             this.SWtxtSpecie.DatabaseName = "idSpecie";
             this.SWtxtSpecie.IsForeignKey = true;
@@ -259,7 +259,7 @@ namespace ManagementForms
             // 
             // SWtxtUserCode
             // 
-            this.SWtxtUserCode.AllowedData = SecureCoreInheritedControl.DataType.Text;
+            this.SWtxtUserCode.AllowedData = SecureCoreInheritedControl.DataType.Code;
             this.SWtxtUserCode.ControlID = null;
             this.SWtxtUserCode.DatabaseName = "CodeUser";
             this.SWtxtUserCode.IsForeignKey = false;
@@ -282,7 +282,7 @@ namespace ManagementForms
             // SWtxtLogin
             // 
             this.SWtxtLogin.AllowedData = SecureCoreInheritedControl.DataType.Text;
-            this.SWtxtLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(125)))), ((int)(((byte)(121)))));
+            this.SWtxtLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(194)))), ((int)(((byte)(204)))));
             this.SWtxtLogin.ControlID = null;
             this.SWtxtLogin.DatabaseName = "Login";
             this.SWtxtLogin.IsForeignKey = false;

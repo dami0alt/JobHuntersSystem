@@ -23,7 +23,9 @@ namespace JobHuntersSystem
         private SpeechManager speech;
 
         BaseDeDades dbManager;
-        
+
+        bool PanelMinimized = false;
+
         public frmMain()
         {
             InitializeComponent();
@@ -78,8 +80,36 @@ namespace JobHuntersSystem
             {
                 pctProfileImage.ImageLocation = AppDomain.CurrentDomain.BaseDirectory + "Multimedia/png/Anonym.png";
             }
-
             //speech = new SpeechManager(this);
+        }
+
+        private void pctExtender_Click(object sender, EventArgs e)
+        {
+            string iconPath = "";
+            if (PanelMinimized)
+            {
+                iconPath = AppDomain.CurrentDomain.BaseDirectory + "Multimedia/png/minimized.png";
+                pctExtender.ImageLocation = iconPath;
+                pnlOptions.Size = new Size(236, 852);
+                PanelMinimized = false;
+            }
+            else
+            {
+                iconPath = AppDomain.CurrentDomain.BaseDirectory + "Multimedia/png/list.png";
+                pctExtender.ImageLocation = iconPath;
+                pnlOptions.Size = new Size(72, 852);
+                PanelMinimized = true;
+            }
+        }
+
+        private void pctExtender_MouseEnter(object sender, EventArgs e)
+        {
+            pctExtender.BackColor = Color.FromArgb(220, 164, 69);
+        }
+
+        private void pctExtender_MouseLeave(object sender, EventArgs e)
+        {
+            pctExtender.BackColor = pnlTool.BackColor;
         }
     }
 }
