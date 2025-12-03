@@ -54,20 +54,18 @@ namespace MenuOption
             // 
             // lblTableName
             // 
-            this.lblTableName.Size = new System.Drawing.Size(1484, 25);
+            this.lblTableName.Size = new System.Drawing.Size(1592, 21);
             // 
             // SWtxtPicturePathMain
             // 
             this.SWtxtPicturePathMain.AllowedData = SecureCoreInheritedControl.DataType.Text;
             this.SWtxtPicturePathMain.ControlID = null;
             this.SWtxtPicturePathMain.DatabaseName = "PicturePathMain";
-            this.SWtxtPicturePathMain.Enabled = false;
             this.SWtxtPicturePathMain.IsForeignKey = false;
-            this.SWtxtPicturePathMain.Location = new System.Drawing.Point(237, 384);
-            this.SWtxtPicturePathMain.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SWtxtPicturePathMain.Location = new System.Drawing.Point(207, 323);
             this.SWtxtPicturePathMain.Name = "SWtxtPicturePathMain";
             this.SWtxtPicturePathMain.NullSpace = true;
-            this.SWtxtPicturePathMain.Size = new System.Drawing.Size(520, 24);
+            this.SWtxtPicturePathMain.Size = new System.Drawing.Size(456, 21);
             this.SWtxtPicturePathMain.TabIndex = 15;
             this.SWtxtPicturePathMain.TextChanged += new System.EventHandler(this.SWtxtPicturePathMain_TextChanged);
             // 
@@ -77,11 +75,10 @@ namespace MenuOption
             this.SWtxtFormName.ControlID = null;
             this.SWtxtFormName.DatabaseName = "FormName";
             this.SWtxtFormName.IsForeignKey = false;
-            this.SWtxtFormName.Location = new System.Drawing.Point(237, 140);
-            this.SWtxtFormName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SWtxtFormName.Location = new System.Drawing.Point(207, 118);
             this.SWtxtFormName.Name = "SWtxtFormName";
             this.SWtxtFormName.NullSpace = true;
-            this.SWtxtFormName.Size = new System.Drawing.Size(566, 24);
+            this.SWtxtFormName.Size = new System.Drawing.Size(496, 21);
             this.SWtxtFormName.TabIndex = 14;
             // 
             // SWtxtdllName
@@ -90,11 +87,10 @@ namespace MenuOption
             this.SWtxtdllName.ControlID = null;
             this.SWtxtdllName.DatabaseName = "dllName";
             this.SWtxtdllName.IsForeignKey = false;
-            this.SWtxtdllName.Location = new System.Drawing.Point(237, 80);
-            this.SWtxtdllName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SWtxtdllName.Location = new System.Drawing.Point(207, 67);
             this.SWtxtdllName.Name = "SWtxtdllName";
             this.SWtxtdllName.NullSpace = true;
-            this.SWtxtdllName.Size = new System.Drawing.Size(566, 24);
+            this.SWtxtdllName.Size = new System.Drawing.Size(496, 21);
             this.SWtxtdllName.TabIndex = 13;
             // 
             // lblLogin
@@ -102,9 +98,9 @@ namespace MenuOption
             this.lblLogin.AutoSize = true;
             this.lblLogin.Enabled = false;
             this.lblLogin.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogin.Location = new System.Drawing.Point(88, 384);
+            this.lblLogin.Location = new System.Drawing.Point(77, 323);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(147, 23);
+            this.lblLogin.Size = new System.Drawing.Size(117, 18);
             this.lblLogin.TabIndex = 12;
             this.lblLogin.Text = "Main Icon Path";
             // 
@@ -112,9 +108,9 @@ namespace MenuOption
             // 
             this.lblUserName.AutoSize = true;
             this.lblUserName.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserName.Location = new System.Drawing.Point(118, 141);
+            this.lblUserName.Location = new System.Drawing.Point(103, 119);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(117, 23);
+            this.lblUserName.Size = new System.Drawing.Size(93, 18);
             this.lblUserName.TabIndex = 11;
             this.lblUserName.Text = "Form Name";
             // 
@@ -122,9 +118,9 @@ namespace MenuOption
             // 
             this.lblCodeUser.AutoSize = true;
             this.lblCodeUser.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodeUser.Location = new System.Drawing.Point(134, 81);
+            this.lblCodeUser.Location = new System.Drawing.Point(117, 68);
             this.lblCodeUser.Name = "lblCodeUser";
-            this.lblCodeUser.Size = new System.Drawing.Size(101, 23);
+            this.lblCodeUser.Size = new System.Drawing.Size(82, 18);
             this.lblCodeUser.TabIndex = 10;
             this.lblCodeUser.Text = "DLL Name";
             // 
@@ -134,20 +130,19 @@ namespace MenuOption
             this.SWtxtPicturePathHover.ControlID = null;
             this.SWtxtPicturePathHover.DatabaseName = "PicturePathHover";
             this.SWtxtPicturePathHover.IsForeignKey = false;
-            this.SWtxtPicturePathHover.Location = new System.Drawing.Point(237, 200);
-            this.SWtxtPicturePathHover.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SWtxtPicturePathHover.Location = new System.Drawing.Point(207, 168);
             this.SWtxtPicturePathHover.Name = "SWtxtPicturePathHover";
             this.SWtxtPicturePathHover.NullSpace = true;
-            this.SWtxtPicturePathHover.Size = new System.Drawing.Size(566, 24);
+            this.SWtxtPicturePathHover.Size = new System.Drawing.Size(496, 21);
             this.SWtxtPicturePathHover.TabIndex = 19;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(80, 200);
+            this.label3.Location = new System.Drawing.Point(70, 168);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(155, 23);
+            this.label3.Size = new System.Drawing.Size(123, 18);
             this.label3.TabIndex = 16;
             this.label3.Text = "Hover Icon Path";
             // 
@@ -157,20 +152,19 @@ namespace MenuOption
             this.SWtxtFontColorHover.ControlID = null;
             this.SWtxtFontColorHover.DatabaseName = "FontColorHover";
             this.SWtxtFontColorHover.IsForeignKey = false;
-            this.SWtxtFontColorHover.Location = new System.Drawing.Point(997, 258);
-            this.SWtxtFontColorHover.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SWtxtFontColorHover.Location = new System.Drawing.Point(872, 217);
             this.SWtxtFontColorHover.Name = "SWtxtFontColorHover";
             this.SWtxtFontColorHover.NullSpace = true;
-            this.SWtxtFontColorHover.Size = new System.Drawing.Size(133, 24);
+            this.SWtxtFontColorHover.Size = new System.Drawing.Size(117, 21);
             this.SWtxtFontColorHover.TabIndex = 27;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(827, 256);
+            this.label1.Location = new System.Drawing.Point(724, 216);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 23);
+            this.label1.Size = new System.Drawing.Size(130, 18);
             this.label1.TabIndex = 26;
             this.label1.Text = "Hover Font Color";
             // 
@@ -180,11 +174,10 @@ namespace MenuOption
             this.SWtxtFontColorMain.ControlID = null;
             this.SWtxtFontColorMain.DatabaseName = "FontColorMain";
             this.SWtxtFontColorMain.IsForeignKey = false;
-            this.SWtxtFontColorMain.Location = new System.Drawing.Point(997, 200);
-            this.SWtxtFontColorMain.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SWtxtFontColorMain.Location = new System.Drawing.Point(872, 168);
             this.SWtxtFontColorMain.Name = "SWtxtFontColorMain";
             this.SWtxtFontColorMain.NullSpace = true;
-            this.SWtxtFontColorMain.Size = new System.Drawing.Size(133, 24);
+            this.SWtxtFontColorMain.Size = new System.Drawing.Size(117, 21);
             this.SWtxtFontColorMain.TabIndex = 25;
             // 
             // SWtxtBackColorHover
@@ -193,11 +186,10 @@ namespace MenuOption
             this.SWtxtBackColorHover.ControlID = null;
             this.SWtxtBackColorHover.DatabaseName = "BackColorHover";
             this.SWtxtBackColorHover.IsForeignKey = false;
-            this.SWtxtBackColorHover.Location = new System.Drawing.Point(997, 137);
-            this.SWtxtBackColorHover.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SWtxtBackColorHover.Location = new System.Drawing.Point(872, 115);
             this.SWtxtBackColorHover.Name = "SWtxtBackColorHover";
             this.SWtxtBackColorHover.NullSpace = true;
-            this.SWtxtBackColorHover.Size = new System.Drawing.Size(133, 24);
+            this.SWtxtBackColorHover.Size = new System.Drawing.Size(117, 21);
             this.SWtxtBackColorHover.TabIndex = 24;
             // 
             // SWtxtBackColorMain
@@ -206,11 +198,10 @@ namespace MenuOption
             this.SWtxtBackColorMain.ControlID = null;
             this.SWtxtBackColorMain.DatabaseName = "BackColorMain";
             this.SWtxtBackColorMain.IsForeignKey = false;
-            this.SWtxtBackColorMain.Location = new System.Drawing.Point(997, 77);
-            this.SWtxtBackColorMain.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SWtxtBackColorMain.Location = new System.Drawing.Point(872, 65);
             this.SWtxtBackColorMain.Name = "SWtxtBackColorMain";
             this.SWtxtBackColorMain.NullSpace = true;
-            this.SWtxtBackColorMain.Size = new System.Drawing.Size(133, 24);
+            this.SWtxtBackColorMain.Size = new System.Drawing.Size(117, 21);
             this.SWtxtBackColorMain.TabIndex = 23;
             this.SWtxtBackColorMain.Validating += new System.ComponentModel.CancelEventHandler(this.SWtxtBackColorMain_Validating);
             // 
@@ -218,9 +209,9 @@ namespace MenuOption
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(885, 200);
+            this.label2.Location = new System.Drawing.Point(774, 168);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 23);
+            this.label2.Size = new System.Drawing.Size(83, 18);
             this.label2.TabIndex = 22;
             this.label2.Text = "Font Color";
             // 
@@ -228,9 +219,9 @@ namespace MenuOption
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(853, 137);
+            this.label4.Location = new System.Drawing.Point(746, 115);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(135, 23);
+            this.label4.Size = new System.Drawing.Size(109, 18);
             this.label4.TabIndex = 21;
             this.label4.Text = "Hover B.Color";
             // 
@@ -238,9 +229,9 @@ namespace MenuOption
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(911, 80);
+            this.label5.Location = new System.Drawing.Point(797, 67);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 23);
+            this.label5.Size = new System.Drawing.Size(62, 18);
             this.label5.TabIndex = 20;
             this.label5.Text = "B.Color";
             // 
@@ -250,61 +241,59 @@ namespace MenuOption
             this.SWtxtDescription.ControlID = null;
             this.SWtxtDescription.DatabaseName = "Description";
             this.SWtxtDescription.IsForeignKey = false;
-            this.SWtxtDescription.Location = new System.Drawing.Point(237, 260);
-            this.SWtxtDescription.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SWtxtDescription.Location = new System.Drawing.Point(207, 219);
             this.SWtxtDescription.Name = "SWtxtDescription";
             this.SWtxtDescription.NullSpace = true;
-            this.SWtxtDescription.Size = new System.Drawing.Size(566, 24);
+            this.SWtxtDescription.Size = new System.Drawing.Size(496, 21);
             this.SWtxtDescription.TabIndex = 29;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(118, 260);
+            this.label6.Location = new System.Drawing.Point(103, 219);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(113, 23);
+            this.label6.Size = new System.Drawing.Size(91, 18);
             this.label6.TabIndex = 28;
             this.label6.Text = "Description";
             // 
             // SWtxtAccesLevel
             // 
-            this.SWtxtAccesLevel.AllowedData = SecureCoreInheritedControl.DataType.Text;
+            this.SWtxtAccesLevel.AllowedData = SecureCoreInheritedControl.DataType.Number;
             this.SWtxtAccesLevel.ControlID = null;
             this.SWtxtAccesLevel.DatabaseName = "AccesLevel";
             this.SWtxtAccesLevel.IsForeignKey = false;
-            this.SWtxtAccesLevel.Location = new System.Drawing.Point(237, 324);
-            this.SWtxtAccesLevel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SWtxtAccesLevel.Location = new System.Drawing.Point(207, 273);
             this.SWtxtAccesLevel.Name = "SWtxtAccesLevel";
             this.SWtxtAccesLevel.NullSpace = true;
-            this.SWtxtAccesLevel.Size = new System.Drawing.Size(133, 24);
+            this.SWtxtAccesLevel.Size = new System.Drawing.Size(117, 21);
             this.SWtxtAccesLevel.TabIndex = 31;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(99, 322);
+            this.label7.Location = new System.Drawing.Point(87, 271);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(129, 23);
+            this.label7.Size = new System.Drawing.Size(104, 18);
             this.label7.TabIndex = 30;
             this.label7.Text = "Access Level";
             // 
             // isIcon
             // 
             this.isIcon.CtrlName = "SWtxtPicturePathMain";
-            this.isIcon.DestinationPath = "./Multimedia/png/";
+            this.isIcon.DestinationPath = "Multimedia/png/";
             this.isIcon.ImagePath = null;
-            this.isIcon.Location = new System.Drawing.Point(794, 295);
-            this.isIcon.Margin = new System.Windows.Forms.Padding(4);
+            this.isIcon.Location = new System.Drawing.Point(695, 248);
+            this.isIcon.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.isIcon.Name = "isIcon";
-            this.isIcon.Size = new System.Drawing.Size(336, 119);
+            this.isIcon.Size = new System.Drawing.Size(294, 100);
             this.isIcon.TabIndex = 32;
             // 
             // frmMenuOptions
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
-            this.ClientSize = new System.Drawing.Size(1370, 721);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.ClientSize = new System.Drawing.Size(1201, 729);
             this.Controls.Add(this.isIcon);
             this.Controls.Add(this.SWtxtAccesLevel);
             this.Controls.Add(this.label7);
@@ -326,7 +315,7 @@ namespace MenuOption
             this.Controls.Add(this.lblLogin);
             this.Controls.Add(this.lblUserName);
             this.Controls.Add(this.lblCodeUser);
-            this.MinimumSize = new System.Drawing.Size(1217, 767);
+            this.MinimumSize = new System.Drawing.Size(1067, 652);
             this.Name = "frmMenuOptions";
             this.Controls.SetChildIndex(this.lblCodeUser, 0);
             this.Controls.SetChildIndex(this.lblUserName, 0);

@@ -67,6 +67,7 @@ namespace ImageSelector
                 {
                     if (ctrl.Name.Equals(ctrlName))
                     {
+                        ctrl.Focus();
                         ctrl.Text = appPath;
                     }
                 }
