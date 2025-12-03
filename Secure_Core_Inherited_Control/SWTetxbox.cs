@@ -128,8 +128,8 @@ namespace SecureCoreInheritedControl
             if (validation && AllowedData == DataType.Rgb && text.Length > 0)
             {
                 string pattern = @"^([1]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5]);" +
-            "([1]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5]);" +
-            "([1]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$";
+                "([1]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5]);" +
+                "([1]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$";
                 validation = Regex.IsMatch(text, pattern);
             }
 
@@ -167,11 +167,20 @@ namespace SecureCoreInheritedControl
                 Form parentForm = this.FindForm();
                 foreach (Control ctrl in parentForm.Controls)
                 {
+                    
                     if (ctrl.Name == _ControlID)
                     {
-                        DataSet ds = new DataSet();
-                        ds = ((SWCodi)ctrl).GetData(value);
-                        ((SWCodi)ctrl).SetSWCodiData(ds);
+                        if(ctrl is SWCodi)
+                        {
+                            DataSet ds = new DataSet();
+                            ds = ((SWCodi)ctrl).GetData(value);
+                            ((SWCodi)ctrl).SetSWCodiData(ds);
+                        }
+                        else if (ctrl is ImageSelector)
+                        {
+                            string path = this.Text;
+                            ((ImageSelector)ctrl).SetPhoto(path);
+                        }
                     }
                 }
             }      

@@ -106,7 +106,7 @@ namespace SWUserControls
             DataSet _ds = new DataSet();
             if(int.TryParse(idString,out int id))
             {
-                string query = $"SELECT {_NomDesc},{_NomCodi},{_NomId} FROM {_NomTaula} WHERE {_NomId}='{id}'";
+                string query = $"SELECT {_NomDesc},{_NomCodi},{_NomId} FROM {_NomTaula} WHERE {_NomId}={id}";
                 _ds = dbManagement.PortarPerConsulta(query);
             }
             return _ds;

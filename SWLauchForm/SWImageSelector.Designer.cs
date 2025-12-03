@@ -1,5 +1,5 @@
 ﻿
-namespace ImageSelector
+namespace SWUserControls
 {
     partial class ImageSelector
     {
@@ -30,34 +30,25 @@ namespace ImageSelector
         private void InitializeComponent()
         {
             this.pbSelectedImage = new System.Windows.Forms.PictureBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnSelectImage = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pbSelectedImage)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pbSelectedImage
             // 
-            this.pbSelectedImage.Location = new System.Drawing.Point(10, 10);
+            this.pbSelectedImage.Location = new System.Drawing.Point(6, 5);
             this.pbSelectedImage.Margin = new System.Windows.Forms.Padding(10);
             this.pbSelectedImage.Name = "pbSelectedImage";
-            this.pbSelectedImage.Size = new System.Drawing.Size(60, 60);
-            this.pbSelectedImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSelectedImage.Size = new System.Drawing.Size(69, 70);
+            this.pbSelectedImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbSelectedImage.TabIndex = 0;
             this.pbSelectedImage.TabStop = false;
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.flowLayoutPanel1.Controls.Add(this.pbSelectedImage);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(168, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(80, 80);
-            this.flowLayoutPanel1.TabIndex = 1;
-            // 
             // btnSelectImage
             // 
-            this.btnSelectImage.Location = new System.Drawing.Point(3, 57);
+            this.btnSelectImage.Location = new System.Drawing.Point(9, 58);
             this.btnSelectImage.Name = "btnSelectImage";
             this.btnSelectImage.Size = new System.Drawing.Size(145, 23);
             this.btnSelectImage.TabIndex = 2;
@@ -65,16 +56,25 @@ namespace ImageSelector
             this.btnSelectImage.UseVisualStyleBackColor = true;
             this.btnSelectImage.Click += new System.EventHandler(this.btnSelectImage_Click_1);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panel1.Controls.Add(this.pbSelectedImage);
+            this.panel1.Location = new System.Drawing.Point(172, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(81, 79);
+            this.panel1.TabIndex = 3;
+            // 
             // ImageSelector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSelectImage);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "ImageSelector";
             this.Size = new System.Drawing.Size(253, 82);
             ((System.ComponentModel.ISupportInitialize)(this.pbSelectedImage)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -82,7 +82,7 @@ namespace ImageSelector
         #endregion
 
         private System.Windows.Forms.PictureBox pbSelectedImage;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button btnSelectImage;
+        private System.Windows.Forms.Panel panel1;
     }
 }

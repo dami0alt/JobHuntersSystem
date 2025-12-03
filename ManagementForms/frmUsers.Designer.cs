@@ -49,6 +49,9 @@ namespace ManagementForms
             this.lblUserCode = new System.Windows.Forms.Label();
             this.SWtxtLogin = new SecureCoreInheritedControl.SWTextbox();
             this.lblLogin = new System.Windows.Forms.Label();
+            this.SWisUserProfile = new SWUserControls.ImageSelector();
+            this.SWtxtPhoto = new SecureCoreInheritedControl.SWTextbox();
+            this.lblPhoto = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblTableName
@@ -302,10 +305,46 @@ namespace ManagementForms
             this.lblLogin.TabIndex = 24;
             this.lblLogin.Text = "Login";
             // 
+            // SWisUserProfile
+            // 
+            this.SWisUserProfile.CtrlName = "SWtxtPhoto";
+            this.SWisUserProfile.DestinationPath = "Multimedia/Users/";
+            this.SWisUserProfile.ImagePath = null;
+            this.SWisUserProfile.Location = new System.Drawing.Point(773, 120);
+            this.SWisUserProfile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SWisUserProfile.Name = "SWisUserProfile";
+            this.SWisUserProfile.Size = new System.Drawing.Size(291, 113);
+            this.SWisUserProfile.TabIndex = 25;
+            // 
+            // SWtxtPhoto
+            // 
+            this.SWtxtPhoto.AllowedData = SecureCoreInheritedControl.DataType.Text;
+            this.SWtxtPhoto.ControlID = "SWisUserProfile";
+            this.SWtxtPhoto.DatabaseName = "Photo";
+            this.SWtxtPhoto.IsForeignKey = true;
+            this.SWtxtPhoto.Location = new System.Drawing.Point(664, 122);
+            this.SWtxtPhoto.Name = "SWtxtPhoto";
+            this.SWtxtPhoto.NullSpace = true;
+            this.SWtxtPhoto.Size = new System.Drawing.Size(292, 21);
+            this.SWtxtPhoto.TabIndex = 26;
+            // 
+            // lblPhoto
+            // 
+            this.lblPhoto.AutoSize = true;
+            this.lblPhoto.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhoto.Location = new System.Drawing.Point(611, 122);
+            this.lblPhoto.Name = "lblPhoto";
+            this.lblPhoto.Size = new System.Drawing.Size(49, 18);
+            this.lblPhoto.TabIndex = 27;
+            this.lblPhoto.Text = "Photo";
+            // 
             // frmUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.ClientSize = new System.Drawing.Size(1201, 729);
+            this.Controls.Add(this.lblPhoto);
+            this.Controls.Add(this.SWtxtPhoto);
+            this.Controls.Add(this.SWisUserProfile);
             this.Controls.Add(this.SWtxtLogin);
             this.Controls.Add(this.lblLogin);
             this.Controls.Add(this.SWtxtUserCode);
@@ -346,6 +385,9 @@ namespace ManagementForms
             this.Controls.SetChildIndex(this.SWtxtUserCode, 0);
             this.Controls.SetChildIndex(this.lblLogin, 0);
             this.Controls.SetChildIndex(this.SWtxtLogin, 0);
+            this.Controls.SetChildIndex(this.SWisUserProfile, 0);
+            this.Controls.SetChildIndex(this.SWtxtPhoto, 0);
+            this.Controls.SetChildIndex(this.lblPhoto, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -373,5 +415,8 @@ namespace ManagementForms
         private System.Windows.Forms.Label lblUserCode;
         private SecureCoreInheritedControl.SWTextbox SWtxtLogin;
         private System.Windows.Forms.Label lblLogin;
+        private SWUserControls.ImageSelector SWisUserProfile;
+        private SecureCoreInheritedControl.SWTextbox SWtxtPhoto;
+        private System.Windows.Forms.Label lblPhoto;
     }
 }
