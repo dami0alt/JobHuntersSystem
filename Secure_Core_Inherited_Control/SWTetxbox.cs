@@ -32,10 +32,16 @@ namespace SecureCoreInheritedControl
         Color notNullColor = Color.FromArgb(168, 194, 204);
         Color defaultColor = Color.White;
 
+        string rgbFormat= @"^([1]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5]);" +
+                "([1]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5]);" +
+                "([1]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$";
         public DataType AllowedData
         {
             get { return _AllowedData; }
-            set { _AllowedData = value; }
+            set 
+            { 
+                _AllowedData = value;
+            }
         }
 
         public string DatabaseName
@@ -122,15 +128,12 @@ namespace SecureCoreInheritedControl
 
             if (validation && AllowedData == DataType.Text && text.Length > 0)
             {
-                validation = Regex.IsMatch(text, @"^(?=.*[a-zA-Z])[a-zA-Z0-9\s\p{P}\p{S}]+$");
+                validation = Regex.IsMatch(text, @"^(?=.*\p{L})[a-zA-Z0-9\s\p{P}\p{S}\p{L}]+$");
             }
 
             if (validation && AllowedData == DataType.Rgb && text.Length > 0)
             {
-                string pattern = @"^([1]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5]);" +
-                "([1]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5]);" +
-                "([1]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$";
-                validation = Regex.IsMatch(text, pattern);
+                validation = Regex.IsMatch(text, rgbFormat);
             }
 
             _IsValid = validation;
@@ -153,7 +156,6 @@ namespace SecureCoreInheritedControl
             // SWTextbox
             // 
             this.TextChanged += new System.EventHandler(this.SWTextbox_TextChanged);
-            this.Validated += new System.EventHandler(this.SWTextbox_Validated);
             this.ResumeLayout(false);
 
         }
@@ -183,12 +185,23 @@ namespace SecureCoreInheritedControl
                         }
                     }
                 }
-            }      
-        }
+            }
+            if (_AllowedData == DataType.Rgb)
+            {
+                Form parentForm = this.FindForm();
+                foreach (Control ctrl in parentForm.Controls)
+                {
 
-        private void SWTextbox_Validated(object sender, EventArgs e)
-        {
-          
+                    if (ctrl.Name == _ControlID)
+                    {
+                        if (ctrl is SWColorPicker)
+                        {
+                            Boolean formatValidated = Regex.IsMatch(value, rgbFormat);
+                            ((SWColorPicker)ctrl).SetColor(value,formatValidated);
+                        }
+                    }
+                }
+            }
         }
     }
 }

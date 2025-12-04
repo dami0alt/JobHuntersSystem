@@ -127,6 +127,10 @@ namespace SWUserControls
                 if (ctrl.Name == _ControlID)
                 {
                     ctrl.Text = id;
+                    if(ctrl.DataBindings.Count > 0)
+                    {
+                        ctrl.DataBindings[0].BindingManagerBase.EndCurrentEdit();
+                    }
                 }
             }
             

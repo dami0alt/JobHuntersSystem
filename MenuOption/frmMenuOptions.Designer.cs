@@ -50,6 +50,14 @@ namespace MenuOption
             this.SWtxtAccesLevel = new SecureCoreInheritedControl.SWTextbox();
             this.label7 = new System.Windows.Forms.Label();
             this.isIcon = new SWUserControls.ImageSelector();
+            this.SWcpBackColor = new SecureCoreInheritedControl.SWColorPicker();
+            this.SWcpHoveColor = new SecureCoreInheritedControl.SWColorPicker();
+            this.SWcpFontColor = new SecureCoreInheritedControl.SWColorPicker();
+            this.SWcpFontHoverColor = new SecureCoreInheritedControl.SWColorPicker();
+            ((System.ComponentModel.ISupportInitialize)(this.SWcpBackColor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SWcpHoveColor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SWcpFontColor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SWcpFontHoverColor)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTableName
@@ -149,7 +157,7 @@ namespace MenuOption
             // SWtxtFontColorHover
             // 
             this.SWtxtFontColorHover.AllowedData = SecureCoreInheritedControl.DataType.Rgb;
-            this.SWtxtFontColorHover.ControlID = null;
+            this.SWtxtFontColorHover.ControlID = "SWcpFontHoverColor";
             this.SWtxtFontColorHover.DatabaseName = "FontColorHover";
             this.SWtxtFontColorHover.IsForeignKey = false;
             this.SWtxtFontColorHover.Location = new System.Drawing.Point(872, 217);
@@ -183,7 +191,7 @@ namespace MenuOption
             // SWtxtBackColorHover
             // 
             this.SWtxtBackColorHover.AllowedData = SecureCoreInheritedControl.DataType.Rgb;
-            this.SWtxtBackColorHover.ControlID = null;
+            this.SWtxtBackColorHover.ControlID = "SWcpHoveColor";
             this.SWtxtBackColorHover.DatabaseName = "BackColorHover";
             this.SWtxtBackColorHover.IsForeignKey = false;
             this.SWtxtBackColorHover.Location = new System.Drawing.Point(872, 115);
@@ -195,7 +203,7 @@ namespace MenuOption
             // SWtxtBackColorMain
             // 
             this.SWtxtBackColorMain.AllowedData = SecureCoreInheritedControl.DataType.Rgb;
-            this.SWtxtBackColorMain.ControlID = null;
+            this.SWtxtBackColorMain.ControlID = "SWcpBackColor";
             this.SWtxtBackColorMain.DatabaseName = "BackColorMain";
             this.SWtxtBackColorMain.IsForeignKey = false;
             this.SWtxtBackColorMain.Location = new System.Drawing.Point(872, 65);
@@ -288,10 +296,54 @@ namespace MenuOption
             this.isIcon.Size = new System.Drawing.Size(294, 100);
             this.isIcon.TabIndex = 32;
             // 
+            // SWcpBackColor
+            // 
+            this.SWcpBackColor.BackColor = System.Drawing.Color.Silver;
+            this.SWcpBackColor.ControlID = "SWtxtBackColorMain";
+            this.SWcpBackColor.Location = new System.Drawing.Point(994, 64);
+            this.SWcpBackColor.Name = "SWcpBackColor";
+            this.SWcpBackColor.Size = new System.Drawing.Size(26, 23);
+            this.SWcpBackColor.TabIndex = 33;
+            this.SWcpBackColor.TabStop = false;
+            // 
+            // SWcpHoveColor
+            // 
+            this.SWcpHoveColor.BackColor = System.Drawing.Color.Silver;
+            this.SWcpHoveColor.ControlID = "SWtxtBackColorHover";
+            this.SWcpHoveColor.Location = new System.Drawing.Point(995, 115);
+            this.SWcpHoveColor.Name = "SWcpHoveColor";
+            this.SWcpHoveColor.Size = new System.Drawing.Size(26, 23);
+            this.SWcpHoveColor.TabIndex = 34;
+            this.SWcpHoveColor.TabStop = false;
+            // 
+            // SWcpFontColor
+            // 
+            this.SWcpFontColor.BackColor = System.Drawing.Color.Silver;
+            this.SWcpFontColor.ControlID = "SWtxtFontColorMain";
+            this.SWcpFontColor.Location = new System.Drawing.Point(994, 167);
+            this.SWcpFontColor.Name = "SWcpFontColor";
+            this.SWcpFontColor.Size = new System.Drawing.Size(26, 23);
+            this.SWcpFontColor.TabIndex = 35;
+            this.SWcpFontColor.TabStop = false;
+            // 
+            // SWcpFontHoverColor
+            // 
+            this.SWcpFontHoverColor.BackColor = System.Drawing.Color.Silver;
+            this.SWcpFontHoverColor.ControlID = "SWtxtFontColorHover";
+            this.SWcpFontHoverColor.Location = new System.Drawing.Point(994, 216);
+            this.SWcpFontHoverColor.Name = "SWcpFontHoverColor";
+            this.SWcpFontHoverColor.Size = new System.Drawing.Size(26, 23);
+            this.SWcpFontHoverColor.TabIndex = 36;
+            this.SWcpFontHoverColor.TabStop = false;
+            // 
             // frmMenuOptions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.ClientSize = new System.Drawing.Size(1201, 729);
+            this.Controls.Add(this.SWcpFontHoverColor);
+            this.Controls.Add(this.SWcpFontColor);
+            this.Controls.Add(this.SWcpHoveColor);
+            this.Controls.Add(this.SWcpBackColor);
             this.Controls.Add(this.isIcon);
             this.Controls.Add(this.SWtxtAccesLevel);
             this.Controls.Add(this.label7);
@@ -315,6 +367,7 @@ namespace MenuOption
             this.Controls.Add(this.lblCodeUser);
             this.MinimumSize = new System.Drawing.Size(1067, 652);
             this.Name = "frmMenuOptions";
+            this.Load += new System.EventHandler(this.frmMenuOptions_Load);
             this.Controls.SetChildIndex(this.lblCodeUser, 0);
             this.Controls.SetChildIndex(this.lblUserName, 0);
             this.Controls.SetChildIndex(this.lblLogin, 0);
@@ -336,6 +389,14 @@ namespace MenuOption
             this.Controls.SetChildIndex(this.label7, 0);
             this.Controls.SetChildIndex(this.SWtxtAccesLevel, 0);
             this.Controls.SetChildIndex(this.isIcon, 0);
+            this.Controls.SetChildIndex(this.SWcpBackColor, 0);
+            this.Controls.SetChildIndex(this.SWcpHoveColor, 0);
+            this.Controls.SetChildIndex(this.SWcpFontColor, 0);
+            this.Controls.SetChildIndex(this.SWcpFontHoverColor, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.SWcpBackColor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SWcpHoveColor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SWcpFontColor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SWcpFontHoverColor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -364,5 +425,9 @@ namespace MenuOption
         private SecureCoreInheritedControl.SWTextbox SWtxtAccesLevel;
         private System.Windows.Forms.Label label7;
         private SWUserControls.ImageSelector isIcon;
+        private SecureCoreInheritedControl.SWColorPicker SWcpBackColor;
+        private SecureCoreInheritedControl.SWColorPicker SWcpHoveColor;
+        private SecureCoreInheritedControl.SWColorPicker SWcpFontColor;
+        private SecureCoreInheritedControl.SWColorPicker SWcpFontHoverColor;
     }
 }

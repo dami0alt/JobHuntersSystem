@@ -91,7 +91,7 @@ namespace ManagementForms
             this.dgtData.Name = "dgtData";
             this.dgtData.ReadOnly = true;
             this.dgtData.Size = new System.Drawing.Size(1079, 313);
-            this.dgtData.TabIndex = 1;
+            this.dgtData.TabIndex = 22;
             // 
             // btnUpdate
             // 
@@ -100,7 +100,7 @@ namespace ManagementForms
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(87, 28);
-            this.btnUpdate.TabIndex = 2;
+            this.btnUpdate.TabIndex = 20;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -111,7 +111,7 @@ namespace ManagementForms
             this.btnCreate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(87, 28);
-            this.btnCreate.TabIndex = 3;
+            this.btnCreate.TabIndex = 21;
             this.btnCreate.Text = "Create";
             this.btnCreate.UseVisualStyleBackColor = true;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
