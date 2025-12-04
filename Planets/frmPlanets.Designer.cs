@@ -56,11 +56,13 @@ namespace Planets
             this.SWtxtFiliation = new SecureCoreInheritedControl.SWTextbox();
             this.SWtxtPortPlanet1 = new SecureCoreInheritedControl.SWTextbox();
             this.label11 = new System.Windows.Forms.Label();
+            this.isPlanet = new SWUserControls.ImageSelector();
             this.SuspendLayout();
             // 
             // lblTableName
             // 
-            this.lblTableName.Size = new System.Drawing.Size(881, 25);
+            this.lblTableName.Location = new System.Drawing.Point(110, 9);
+            this.lblTableName.Size = new System.Drawing.Size(1019, 25);
             // 
             // SWtxtCodePlanet
             // 
@@ -130,22 +132,22 @@ namespace Planets
             // 
             // SWtxtPlanetPicture
             // 
-            this.SWtxtPlanetPicture.AllowedData = SecureCoreInheritedControl.DataType.Text;
+            this.SWtxtPlanetPicture.AllowedData = SecureCoreInheritedControl.DataType.Path;
             this.SWtxtPlanetPicture.BackColor = System.Drawing.SystemColors.Window;
-            this.SWtxtPlanetPicture.ControlID = null;
+            this.SWtxtPlanetPicture.ControlID = "isPlanet";
             this.SWtxtPlanetPicture.DatabaseName = "PlanetPicture";
             this.SWtxtPlanetPicture.IsForeignKey = false;
             this.SWtxtPlanetPicture.Location = new System.Drawing.Point(160, 274);
             this.SWtxtPlanetPicture.Name = "SWtxtPlanetPicture";
             this.SWtxtPlanetPicture.NullSpace = true;
-            this.SWtxtPlanetPicture.Size = new System.Drawing.Size(567, 21);
+            this.SWtxtPlanetPicture.Size = new System.Drawing.Size(663, 21);
             this.SWtxtPlanetPicture.TabIndex = 35;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(40, 274);
+            this.label4.Location = new System.Drawing.Point(49, 274);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(105, 18);
             this.label4.TabIndex = 36;
@@ -153,7 +155,7 @@ namespace Planets
             // 
             // SWtxtparsecs
             // 
-            this.SWtxtparsecs.AllowedData = SecureCoreInheritedControl.DataType.Text;
+            this.SWtxtparsecs.AllowedData = SecureCoreInheritedControl.DataType.Number;
             this.SWtxtparsecs.BackColor = System.Drawing.SystemColors.Window;
             this.SWtxtparsecs.ControlID = null;
             this.SWtxtparsecs.DatabaseName = "parsecs";
@@ -186,7 +188,7 @@ namespace Planets
             // 
             // SWtxtPortPlanet
             // 
-            this.SWtxtPortPlanet.AllowedData = SecureCoreInheritedControl.DataType.Text;
+            this.SWtxtPortPlanet.AllowedData = SecureCoreInheritedControl.DataType.Number;
             this.SWtxtPortPlanet.BackColor = System.Drawing.SystemColors.Window;
             this.SWtxtPortPlanet.ControlID = null;
             this.SWtxtPortPlanet.DatabaseName = "PortPlanet";
@@ -209,7 +211,7 @@ namespace Planets
             // 
             // SWtxtIPPlanet
             // 
-            this.SWtxtIPPlanet.AllowedData = SecureCoreInheritedControl.DataType.Text;
+            this.SWtxtIPPlanet.AllowedData = SecureCoreInheritedControl.DataType.Path;
             this.SWtxtIPPlanet.BackColor = System.Drawing.SystemColors.Window;
             this.SWtxtIPPlanet.ControlID = null;
             this.SWtxtIPPlanet.DatabaseName = "IPPlanet";
@@ -232,7 +234,7 @@ namespace Planets
             // 
             // SWtxtlong
             // 
-            this.SWtxtlong.AllowedData = SecureCoreInheritedControl.DataType.Text;
+            this.SWtxtlong.AllowedData = SecureCoreInheritedControl.DataType.Number;
             this.SWtxtlong.BackColor = System.Drawing.SystemColors.Window;
             this.SWtxtlong.ControlID = null;
             this.SWtxtlong.DatabaseName = "long";
@@ -245,7 +247,7 @@ namespace Planets
             // 
             // SWtxtlat
             // 
-            this.SWtxtlat.AllowedData = SecureCoreInheritedControl.DataType.Text;
+            this.SWtxtlat.AllowedData = SecureCoreInheritedControl.DataType.Number;
             this.SWtxtlat.BackColor = System.Drawing.SystemColors.Window;
             this.SWtxtlat.ControlID = null;
             this.SWtxtlat.DatabaseName = "lat";
@@ -365,7 +367,7 @@ namespace Planets
             // 
             // SWtxtPortPlanet1
             // 
-            this.SWtxtPortPlanet1.AllowedData = SecureCoreInheritedControl.DataType.Text;
+            this.SWtxtPortPlanet1.AllowedData = SecureCoreInheritedControl.DataType.Number;
             this.SWtxtPortPlanet1.BackColor = System.Drawing.SystemColors.Window;
             this.SWtxtPortPlanet1.ControlID = null;
             this.SWtxtPortPlanet1.DatabaseName = "PortPlanet";
@@ -386,10 +388,22 @@ namespace Planets
             this.label11.TabIndex = 55;
             this.label11.Text = "\tPlanet Port 1 ";
             // 
+            // isPlanet
+            // 
+            this.isPlanet.CtrlName = "SWtxtPlanetPicture";
+            this.isPlanet.DefaultPath = null;
+            this.isPlanet.DestinationPath = null;
+            this.isPlanet.Location = new System.Drawing.Point(831, 199);
+            this.isPlanet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.isPlanet.Name = "isPlanet";
+            this.isPlanet.Size = new System.Drawing.Size(298, 105);
+            this.isPlanet.TabIndex = 56;
+            // 
             // frmPlanets
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.ClientSize = new System.Drawing.Size(1224, 729);
+            this.Controls.Add(this.isPlanet);
             this.Controls.Add(this.SWtxtPortPlanet1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.SWtxtFiliation);
@@ -446,6 +460,7 @@ namespace Planets
             this.Controls.SetChildIndex(this.SWtxtFiliation, 0);
             this.Controls.SetChildIndex(this.label11, 0);
             this.Controls.SetChildIndex(this.SWtxtPortPlanet1, 0);
+            this.Controls.SetChildIndex(this.isPlanet, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -480,5 +495,6 @@ namespace Planets
         private SecureCoreInheritedControl.SWTextbox SWtxtFiliation;
         private SecureCoreInheritedControl.SWTextbox SWtxtPortPlanet1;
         private System.Windows.Forms.Label label11;
+        private SWUserControls.ImageSelector isPlanet;
     }
 }
