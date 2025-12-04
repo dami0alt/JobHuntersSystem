@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagementForms", "Manageme
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuOption", "MenuOption\MenuOption.csproj", "{55BFC198-63F0-4D06-9510-FE6FCA4DA9E3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Planets", "Planets\Planets.csproj", "{AB32F9D4-4DEA-4C1E-840E-A42DE7D27D10}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Users", "Users\Users.csproj", "{A042C088-63EB-4D6F-ABA0-D10A6CD53443}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserRanks", "UserRanks\UserRanks.csproj", "{E4DF5167-D2D9-4D00-B58F-3C9ED69595F7}"
@@ -29,6 +31,7 @@ Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+		Description = Imagenes/Default.png
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{AAB73736-725E-4825-A224-130A2B2F8EDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -63,6 +66,10 @@ Global
 		{55BFC198-63F0-4D06-9510-FE6FCA4DA9E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55BFC198-63F0-4D06-9510-FE6FCA4DA9E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55BFC198-63F0-4D06-9510-FE6FCA4DA9E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB32F9D4-4DEA-4C1E-840E-A42DE7D27D10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB32F9D4-4DEA-4C1E-840E-A42DE7D27D10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB32F9D4-4DEA-4C1E-840E-A42DE7D27D10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB32F9D4-4DEA-4C1E-840E-A42DE7D27D10}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A042C088-63EB-4D6F-ABA0-D10A6CD53443}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A042C088-63EB-4D6F-ABA0-D10A6CD53443}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A042C088-63EB-4D6F-ABA0-D10A6CD53443}.Release|Any CPU.ActiveCfg = Release|Any CPU
