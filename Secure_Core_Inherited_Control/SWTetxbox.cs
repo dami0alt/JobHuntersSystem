@@ -17,7 +17,8 @@ namespace SecureCoreInheritedControl
         Number,
         Text,
         Code,
-        Rgb
+        Rgb,
+        Path
     }
 
     public class SWTextbox : TextBox
@@ -28,6 +29,7 @@ namespace SecureCoreInheritedControl
         private bool _IsValid = true;
         private bool _IsForeignKey = false;
 
+        ErrorProvider error = new ErrorProvider();
 
         Color notNullColor = Color.FromArgb(168, 194, 204);
         Color defaultColor = Color.White;
@@ -142,7 +144,6 @@ namespace SecureCoreInheritedControl
             {
                 e.Cancel = true;
             }
-            
         }
         public void SetId(string id)
         {
@@ -159,7 +160,7 @@ namespace SecureCoreInheritedControl
             this.ResumeLayout(false);
 
         }
-
+                     
         private void SWTextbox_TextChanged(object sender, EventArgs e)
         {
             string value = this.Text;
@@ -178,15 +179,10 @@ namespace SecureCoreInheritedControl
                             ds = ((SWCodi)ctrl).GetData(value);
                             ((SWCodi)ctrl).SetSWCodiData(ds);
                         }
-                        else if (ctrl is ImageSelector)
-                        {
-                            string path = this.Text;
-                            ((ImageSelector)ctrl).SetPhoto(path);
-                        }
                     }
                 }
             }
-            if (_AllowedData == DataType.Rgb)
+            else if (_AllowedData == DataType.Rgb)
             {
                 Form parentForm = this.FindForm();
                 foreach (Control ctrl in parentForm.Controls)
@@ -198,6 +194,21 @@ namespace SecureCoreInheritedControl
                         {
                             Boolean formatValidated = Regex.IsMatch(value, rgbFormat);
                             ((SWColorPicker)ctrl).SetColor(value,formatValidated);
+                        }
+                    }
+                }
+            }
+            else if (_AllowedData == DataType.Path)
+            {
+                Form parentForm = this.FindForm();
+                foreach (Control ctrl in parentForm.Controls)
+                {
+                    if (ctrl.Name == _ControlID)
+                    {
+                        if (ctrl is ImageSelector)
+                        {
+                            string path = this.Text;
+                            ((ImageSelector)ctrl).SetPhoto(path);
                         }
                     }
                 }

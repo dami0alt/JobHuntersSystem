@@ -30,6 +30,13 @@ namespace SWUserControls
             set { destinationPath = value; }
         }
 
+        private string defaultPath;
+        public string DefaultPath
+        {
+            get { return defaultPath; }
+            set { defaultPath = value; }
+        }
+
 
         public ImageSelector()
         {
@@ -71,7 +78,15 @@ namespace SWUserControls
         }
         public void SetPhoto(string path)
         {
-            pbSelectedImage.ImageLocation = path;
+            if (File.Exists(path))
+            {
+                pbSelectedImage.ImageLocation = path;
+            }
+            else
+            {
+                pbSelectedImage.ImageLocation = defaultPath;
+            }
+
         }
     }
 }

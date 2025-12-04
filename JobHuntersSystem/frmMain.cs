@@ -15,7 +15,6 @@ namespace JobHuntersSystem
 {
     public partial class frmMain : Form
     {
-        
         private int _AccessLevelUser = CurrentUser.MainUser.AccesLevel;
         private string _UserName = CurrentUser.MainUser.UserName;
         private string _RoleUser = CurrentUser.MainUser.DescRank;
@@ -24,6 +23,7 @@ namespace JobHuntersSystem
 
         BaseDeDades dbManager;
 
+        string logoPath = AppDomain.CurrentDomain.BaseDirectory + "Multimedia/png/Banner.png";
         bool PanelMinimized = false;
 
         public frmMain()
@@ -68,6 +68,8 @@ namespace JobHuntersSystem
 
             lblUserName.Text = _UserName;
             lblRoleUser.Text = _RoleUser;
+
+            pctLogo.ImageLocation = logoPath;
             if (File.Exists(_ProfileImagePath))
             {
                 pctProfileImage.ImageLocation = _ProfileImagePath;
@@ -77,6 +79,10 @@ namespace JobHuntersSystem
             {
                 pctProfileImage.ImageLocation = AppDomain.CurrentDomain.BaseDirectory + "Multimedia/Users/Anonym.png";
             }
+            if(CurrentUser.MainUser.AccesLevel == 100)
+            {
+                pctSecretItem.ImageLocation = AppDomain.CurrentDomain.BaseDirectory + "Multimedia/png/crown.png";
+            }
             //speech = new SpeechManager(this);
         }
 
@@ -85,6 +91,7 @@ namespace JobHuntersSystem
             string iconPath = "";
             if (PanelMinimized)
             {
+                pctLogo.Visible = true;
                 iconPath = AppDomain.CurrentDomain.BaseDirectory + "Multimedia/png/minimized.png";
                 pctExtender.ImageLocation = iconPath;
                 pnlOptions.Size = new Size(236, 852);
@@ -92,6 +99,7 @@ namespace JobHuntersSystem
             }
             else
             {
+                pctLogo.Visible = false;
                 iconPath = AppDomain.CurrentDomain.BaseDirectory + "Multimedia/png/list.png";
                 pctExtender.ImageLocation = iconPath;
                 pnlOptions.Size = new Size(72, 852);

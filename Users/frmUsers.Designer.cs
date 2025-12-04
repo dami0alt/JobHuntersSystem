@@ -136,7 +136,7 @@ namespace Users
             // 
             this.SWcdUserRank.ClasseCS = "ManagementForms.dll";
             this.SWcdUserRank.ControlID = "SWtxtUserRank";
-            this.SWcdUserRank.FormCS = "ManagementForms.frmUsers";
+            this.SWcdUserRank.FormCS = "ManagementForms.frmScreenCS";
             this.SWcdUserRank.Location = new System.Drawing.Point(167, 233);
             this.SWcdUserRank.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SWcdUserRank.Name = "SWcdUserRank";
@@ -174,9 +174,9 @@ namespace Users
             // 
             // SWcdPlanet
             // 
-            this.SWcdPlanet.ClasseCS = null;
+            this.SWcdPlanet.ClasseCS = "ManagementForms.dll";
             this.SWcdPlanet.ControlID = "SWtxtPlanet";
-            this.SWcdPlanet.FormCS = null;
+            this.SWcdPlanet.FormCS = "ManagementForms.frmScreenCS";
             this.SWcdPlanet.Location = new System.Drawing.Point(168, 280);
             this.SWcdPlanet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SWcdPlanet.Name = "SWcdPlanet";
@@ -214,9 +214,9 @@ namespace Users
             // 
             // SWcdSpecie
             // 
-            this.SWcdSpecie.ClasseCS = null;
+            this.SWcdSpecie.ClasseCS = "ManagementForms.dll";
             this.SWcdSpecie.ControlID = "SWtxtSpecie";
-            this.SWcdSpecie.FormCS = null;
+            this.SWcdSpecie.FormCS = "ManagementForms.frmScreenCS";
             this.SWcdSpecie.Location = new System.Drawing.Point(657, 49);
             this.SWcdSpecie.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SWcdSpecie.Name = "SWcdSpecie";
@@ -312,6 +312,7 @@ namespace Users
             // SWisUserProfile
             // 
             this.SWisUserProfile.CtrlName = "SWtxtPhoto";
+            this.SWisUserProfile.DefaultPath = "Multimedia/Users/Anonym.png";
             this.SWisUserProfile.DestinationPath = "Multimedia/Users/";
             this.SWisUserProfile.Location = new System.Drawing.Point(773, 120);
             this.SWisUserProfile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -322,10 +323,10 @@ namespace Users
             // 
             // SWtxtPhoto
             // 
-            this.SWtxtPhoto.AllowedData = SecureCoreInheritedControl.DataType.Text;
+            this.SWtxtPhoto.AllowedData = SecureCoreInheritedControl.DataType.Path;
             this.SWtxtPhoto.ControlID = "SWisUserProfile";
             this.SWtxtPhoto.DatabaseName = "Photo";
-            this.SWtxtPhoto.IsForeignKey = true;
+            this.SWtxtPhoto.IsForeignKey = false;
             this.SWtxtPhoto.Location = new System.Drawing.Point(664, 122);
             this.SWtxtPhoto.Name = "SWtxtPhoto";
             this.SWtxtPhoto.NullSpace = true;
