@@ -169,7 +169,7 @@ namespace SWUserControls
 
                 ((Form)dllBD).TopLevel = true;
                 ((Form)dllBD).FormBorderStyle = FormBorderStyle.None;
-                ((Form)dllBD).Show();
+                ((Form)dllBD).ShowDialog();
             }
         }
         private void Validacodi(object sender, CancelEventArgs e) 

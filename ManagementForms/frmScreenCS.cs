@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentesDeAcceso;
 using SecureCoreInheritedControl;
+using System.Runtime.InteropServices;
 
 namespace ManagementForms
 {
@@ -18,6 +19,13 @@ namespace ManagementForms
         protected string _tableName, _controlId, _formName;
         protected DataSet dts;
         protected SWTextbox txt = new SWTextbox();
+        #region cursor(Opcional)
+        [DllImport("user32.dll")]
+        public static extern IntPtr LoadCursorFromFile(string lpFileName);
+        string cursorPath = "Multimedia/ani/Busy.ani";
+        #endregion
+
+
         public frmScreenCS(string tableName, string formName, string controlId)
         {
             InitializeComponent();
@@ -25,6 +33,21 @@ namespace ManagementForms
             _controlId = controlId;
             _formName = formName;
 
+        }
+        private void LoadAniCursor()
+        {
+            // Reemplaza "ruta\\al\\tu_cursor.ani" con la ruta real de tu archivo .ani
+            cursorPath = AppDomain.CurrentDomain.BaseDirectory + cursorPath;
+            IntPtr hCursor = LoadCursorFromFile(cursorPath);
+            if (hCursor != IntPtr.Zero)
+            {
+                this.Cursor = new Cursor(hCursor);
+            }
+            else
+            {
+                // Manejar error si no se puede cargar el cursor
+                MessageBox.Show("The cursor couldn't be loaded","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
         }
         protected Dictionary<string, string> GetValues()
         {
@@ -63,6 +86,7 @@ namespace ManagementForms
         {
             if (DesignMode) return;
 
+            LoadAniCursor();
             db = new BaseDeDades();
             dts = new DataSet();
 

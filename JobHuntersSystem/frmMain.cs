@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using ManagementForms;
 using ComponentesDeAcceso;
 using IdentityUser;
+using System.Runtime.InteropServices;
+
 namespace JobHuntersSystem
 {
     public partial class frmMain : Form
@@ -25,6 +27,11 @@ namespace JobHuntersSystem
 
         string logoPath = AppDomain.CurrentDomain.BaseDirectory + "Multimedia/png/Banner.png";
         bool PanelMinimized = false;
+        #region cursor
+        [DllImport("user32.dll")]
+        public static extern IntPtr LoadCursorFromFile(string lpFileName);
+        string cursorPath = "Multimedia/ani/Working.ani";
+        #endregion
 
         public frmMain()
         {
@@ -56,6 +63,19 @@ namespace JobHuntersSystem
                 }
             }
         }
+        private void LoadAniCursor()
+        {
+            cursorPath = AppDomain.CurrentDomain.BaseDirectory + cursorPath;
+            IntPtr hCursor = LoadCursorFromFile(cursorPath);
+            if (hCursor != IntPtr.Zero)
+            {
+                this.Cursor = new Cursor(hCursor);
+            }
+            else
+            {
+                MessageBox.Show("The cursor couldn't be loaded", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -64,6 +84,7 @@ namespace JobHuntersSystem
 
         private void frmMain_Load(object sender, EventArgs e)
         {
+            LoadAniCursor();
             LoadUserOptions();
 
             lblUserName.Text = _UserName;
