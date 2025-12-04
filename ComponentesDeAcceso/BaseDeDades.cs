@@ -151,9 +151,10 @@ namespace ComponentesDeAcceso
 
             foreach (var item in keyValuePairs)
             {
+                string paramValue = $"%{item.Value}%";
                 string paramName = "@" + item.Key;
-                query += $" {item.Key} = {paramName} AND";
-                cmd.Parameters.Add(new SqlParameter(paramName, item.Value));
+                query += $" {item.Key} LIKE {paramName} AND";
+                cmd.Parameters.Add(new SqlParameter(paramName, paramValue));
             }
             query = query.Substring(0, query.Length - 3);
 

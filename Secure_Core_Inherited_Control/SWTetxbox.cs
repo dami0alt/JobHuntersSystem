@@ -16,7 +16,9 @@ namespace SecureCoreInheritedControl
     {
         Number,
         Text,
-        Code
+        Code,
+        Rgb,
+        Path
     }
 
     public class SWTextbox : TextBox
@@ -27,14 +29,21 @@ namespace SecureCoreInheritedControl
         private bool _IsValid = true;
         private bool _IsForeignKey = false;
 
+        ErrorProvider error = new ErrorProvider();
 
         Color notNullColor = Color.FromArgb(168, 194, 204);
         Color defaultColor = Color.White;
 
+        string rgbFormat= @"^([1]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5]);" +
+                "([1]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5]);" +
+                "([1]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$";
         public DataType AllowedData
         {
             get { return _AllowedData; }
-            set { _AllowedData = value; }
+            set 
+            { 
+                _AllowedData = value;
+            }
         }
 
         public string DatabaseName
@@ -121,7 +130,12 @@ namespace SecureCoreInheritedControl
 
             if (validation && AllowedData == DataType.Text && text.Length > 0)
             {
-                validation = Regex.IsMatch(text, @"^(?=.*[a-zA-Z])[a-zA-Z0-9\s\p{P}\p{S}]+$");
+                validation = Regex.IsMatch(text, @"^(?=.*\p{L})[a-zA-Z0-9\s\p{P}\p{S}\p{L}]+$");
+            }
+
+            if (validation && AllowedData == DataType.Rgb && text.Length > 0)
+            {
+                validation = Regex.IsMatch(text, rgbFormat);
             }
 
             _IsValid = validation;
@@ -130,7 +144,6 @@ namespace SecureCoreInheritedControl
             {
                 e.Cancel = true;
             }
-            
         }
         public void SetId(string id)
         {
@@ -144,11 +157,10 @@ namespace SecureCoreInheritedControl
             // SWTextbox
             // 
             this.TextChanged += new System.EventHandler(this.SWTextbox_TextChanged);
-            this.Validated += new System.EventHandler(this.SWTextbox_Validated);
             this.ResumeLayout(false);
 
         }
-
+                     
         private void SWTextbox_TextChanged(object sender, EventArgs e)
         {
             string value = this.Text;
@@ -158,19 +170,49 @@ namespace SecureCoreInheritedControl
                 Form parentForm = this.FindForm();
                 foreach (Control ctrl in parentForm.Controls)
                 {
+                    
                     if (ctrl.Name == _ControlID)
                     {
-                        DataSet ds = new DataSet();
-                        ds = ((SWCodi)ctrl).GetData(value);
-                        ((SWCodi)ctrl).SetSWCodiData(ds);
+                        if(ctrl is SWCodi)
+                        {
+                            DataSet ds = new DataSet();
+                            ds = ((SWCodi)ctrl).GetData(value);
+                            ((SWCodi)ctrl).SetSWCodiData(ds);
+                        }
                     }
                 }
-            }      
-        }
+            }
+            else if (_AllowedData == DataType.Rgb)
+            {
+                Form parentForm = this.FindForm();
+                foreach (Control ctrl in parentForm.Controls)
+                {
 
-        private void SWTextbox_Validated(object sender, EventArgs e)
-        {
-          
+                    if (ctrl.Name == _ControlID)
+                    {
+                        if (ctrl is SWColorPicker)
+                        {
+                            Boolean formatValidated = Regex.IsMatch(value, rgbFormat);
+                            ((SWColorPicker)ctrl).SetColor(value,formatValidated);
+                        }
+                    }
+                }
+            }
+            else if (_AllowedData == DataType.Path)
+            {
+                Form parentForm = this.FindForm();
+                foreach (Control ctrl in parentForm.Controls)
+                {
+                    if (ctrl.Name == _ControlID)
+                    {
+                        if (ctrl is ImageSelector)
+                        {
+                            string path = this.Text;
+                            ((ImageSelector)ctrl).SetPhoto(path);
+                        }
+                    }
+                }
+            }
         }
     }
 }

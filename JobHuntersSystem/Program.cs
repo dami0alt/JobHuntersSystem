@@ -27,17 +27,17 @@ namespace JobHuntersSystem
             }
             else
             {
-                using (frmLogin frmLogin = new frmLogin())
-                {
-                    DialogResult result = frmLogin.ShowDialog();
-                    if (result == DialogResult.OK)
+                    using (frmLogin frmLogin = new frmLogin())
                     {
-                        Application.Run(new frmMain());
-                    }
-                    else
-                    {
-                        Application.Exit();
-                    }
+                        DialogResult result = frmLogin.ShowDialog();
+                        if (result == DialogResult.OK)
+                        {
+                            Application.Run(new frmMain());
+                        }
+                        else
+                        {
+                            Application.Exit();
+                        }
                 }
             }
 

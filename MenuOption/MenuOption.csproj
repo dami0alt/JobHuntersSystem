@@ -82,9 +82,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\ComponentesDeAcceso\ComponentesDeAcceso.csproj">
       <Project>{6D09F3BE-9853-4B5B-9234-6D9120321A2F}</Project>
       <Name>ComponentesDeAcceso</Name>

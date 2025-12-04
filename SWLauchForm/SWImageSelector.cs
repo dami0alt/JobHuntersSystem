@@ -10,17 +10,10 @@ using System.Windows.Forms;
 using System.IO;
 
 
-namespace ImageSelector
+namespace SWUserControls
 {
     public partial class ImageSelector : UserControl
     {
-
-        public string ImagePath
-        {
-            get { return this.pbSelectedImage.ImageLocation; }
-            set { this.pbSelectedImage.ImageLocation = value; }
-        }
-
         private string ctrlName;
 
         public string CtrlName
@@ -37,6 +30,13 @@ namespace ImageSelector
             set { destinationPath = value; }
         }
 
+        private string defaultPath;
+        public string DefaultPath
+        {
+            get { return defaultPath; }
+            set { defaultPath = value; }
+        }
+
 
         public ImageSelector()
         {
@@ -49,7 +49,7 @@ namespace ImageSelector
 
 
             ofd.Title = "Selecciona un archivo";
-            ofd.Filter = "Image Files (*.BMP;*.JPG;*.GIF;*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG|All files (*.*)|*.*";
+            ofd.Filter = "Image Files (*.BMP;*.JPG;*.GIF;*.PNG;*.JPEG)|*.BMP;*.JPG;*.GIF;*.PNG;*.JPEG|All files (*.*)|*.*";
             string ogFilePath;
             string appPath = destinationPath;
 
@@ -61,7 +61,10 @@ namespace ImageSelector
                 string FileName = Path.GetFileName(ogFilePath);
                 appPath += FileName;
 
-                File.Copy(ogFilePath, appPath, true);
+                if (!File.Exists(appPath))
+                {
+                    File.Copy(ogFilePath, appPath, false);
+                }
 
                 foreach (Control ctrl in this.Parent.Controls)
                 {
@@ -72,6 +75,18 @@ namespace ImageSelector
                     }
                 }
             }
+        }
+        public void SetPhoto(string path)
+        {
+            if (File.Exists(path))
+            {
+                pbSelectedImage.ImageLocation = path;
+            }
+            else
+            {
+                pbSelectedImage.ImageLocation = defaultPath;
+            }
+
         }
     }
 }

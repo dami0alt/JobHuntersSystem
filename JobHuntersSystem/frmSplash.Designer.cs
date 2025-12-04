@@ -40,10 +40,11 @@ namespace JobHuntersSystem
             // 
             // pgbSplash
             // 
-            this.pgbSplash.Location = new System.Drawing.Point(97, 296);
+            this.pgbSplash.Location = new System.Drawing.Point(65, 192);
+            this.pgbSplash.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pgbSplash.Maximum = 101;
             this.pgbSplash.Name = "pgbSplash";
-            this.pgbSplash.Size = new System.Drawing.Size(607, 41);
+            this.pgbSplash.Size = new System.Drawing.Size(405, 27);
             this.pgbSplash.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.pgbSplash.TabIndex = 0;
             // 
@@ -52,9 +53,10 @@ namespace JobHuntersSystem
             this.lblProgress.AutoSize = true;
             this.lblProgress.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProgress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(143)))), ((int)(((byte)(82)))));
-            this.lblProgress.Location = new System.Drawing.Point(375, 355);
+            this.lblProgress.Location = new System.Drawing.Point(250, 231);
+            this.lblProgress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblProgress.Name = "lblProgress";
-            this.lblProgress.Size = new System.Drawing.Size(46, 28);
+            this.lblProgress.Size = new System.Drawing.Size(32, 19);
             this.lblProgress.TabIndex = 1;
             this.lblProgress.Text = "0%";
             // 
@@ -67,9 +69,10 @@ namespace JobHuntersSystem
             // 
             this.lblOrg.AutoSize = true;
             this.lblOrg.Font = new System.Drawing.Font("Century Gothic", 28F, System.Drawing.FontStyle.Bold);
-            this.lblOrg.Location = new System.Drawing.Point(96, 117);
+            this.lblOrg.Location = new System.Drawing.Point(64, 76);
+            this.lblOrg.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblOrg.Name = "lblOrg";
-            this.lblOrg.Size = new System.Drawing.Size(592, 66);
+            this.lblOrg.Size = new System.Drawing.Size(398, 44);
             this.lblOrg.TabIndex = 2;
             this.lblOrg.Text = "SdS Software Factory";
             // 
@@ -77,17 +80,19 @@ namespace JobHuntersSystem
             // 
             this.lblClan.AutoSize = true;
             this.lblClan.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
-            this.lblClan.Location = new System.Drawing.Point(297, 241);
+            this.lblClan.Location = new System.Drawing.Point(198, 157);
+            this.lblClan.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblClan.Name = "lblClan";
-            this.lblClan.Size = new System.Drawing.Size(196, 38);
+            this.lblClan.Size = new System.Drawing.Size(137, 26);
             this.lblClan.TabIndex = 3;
             this.lblClan.Text = "Job Hunters";
             // 
             // btnSkip
             // 
-            this.btnSkip.Location = new System.Drawing.Point(107, 43);
+            this.btnSkip.Location = new System.Drawing.Point(71, 28);
+            this.btnSkip.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSkip.Name = "btnSkip";
-            this.btnSkip.Size = new System.Drawing.Size(296, 121);
+            this.btnSkip.Size = new System.Drawing.Size(197, 79);
             this.btnSkip.TabIndex = 4;
             this.btnSkip.Text = "skip";
             this.btnSkip.UseVisualStyleBackColor = true;
@@ -95,10 +100,10 @@ namespace JobHuntersSystem
             // 
             // frmSplash
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(79)))), ((int)(((byte)(56)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(533, 292);
             this.Controls.Add(this.btnSkip);
             this.Controls.Add(this.lblClan);
             this.Controls.Add(this.lblOrg);
@@ -106,6 +111,7 @@ namespace JobHuntersSystem
             this.Controls.Add(this.pgbSplash);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(143)))), ((int)(((byte)(82)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmSplash";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSplash";

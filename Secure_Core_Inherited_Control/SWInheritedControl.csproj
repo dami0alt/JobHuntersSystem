@@ -43,12 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SWColorPicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="SWTetxbox.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="SWColorPicker.resx">
+      <DependentUpon>SWColorPicker.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SWTetxbox.resx">
       <DependentUpon>SWTetxbox.cs</DependentUpon>
     </EmbeddedResource>

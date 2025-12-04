@@ -13,19 +13,6 @@ namespace MenuOption
     {
         private string _tableName = "UserOptions";
 
-        #region Methods
-        string pattern = @"^([1]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5]);" +
-            "([1]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5]);" +
-            "([1]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$";
-
-        private bool ValidRGBCode(string color)
-        {
-            bool ValidCode = Regex.IsMatch(color, pattern);
-            return ValidCode;
-        }
-
-        #endregion
-
         public frmMenuOptions()
         {
             InitializeComponent();
@@ -49,19 +36,9 @@ namespace MenuOption
             dgtData.Columns["idControl"].Visible = false;
         }
 
-        private void SWtxtBackColorMain_Validating(object sender, CancelEventArgs e)
+        private void frmMenuOptions_Load(object sender, EventArgs e)
         {
-            string color = SWtxtBackColorMain.Text;
-            if (!ValidRGBCode(color))
-            {
-                SWtxtAccesLevel.Text = "";
-                MessageBox.Show("Error");
-            }
-        }
 
-        private void SWtxtPicturePathMain_TextChanged(object sender, EventArgs e)
-        {
-            isIcon.ImagePath = SWtxtPicturePathMain.Text;
         }
     }
 }

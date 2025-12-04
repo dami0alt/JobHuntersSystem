@@ -35,6 +35,12 @@ namespace ManagementForms
             this.lblCodeRank = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
+            // lblTableName
+            // 
+            this.lblTableName.Location = new System.Drawing.Point(352, 7);
+            this.lblTableName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTableName.Size = new System.Drawing.Size(496, 28);
+            // 
             // SWtxtDescRank
             // 
             this.SWtxtDescRank.AllowedData = SecureCoreInheritedControl.DataType.Text;
@@ -50,7 +56,7 @@ namespace ManagementForms
             // SWtxtCodeRank
             // 
             this.SWtxtCodeRank.AllowedData = SecureCoreInheritedControl.DataType.Code;
-            this.SWtxtCodeRank.ControlID = null;
+            this.SWtxtCodeRank.ControlID = "";
             this.SWtxtCodeRank.DatabaseName = "CodeRank";
             this.SWtxtCodeRank.IsForeignKey = false;
             this.SWtxtCodeRank.Location = new System.Drawing.Point(155, 116);
@@ -88,9 +94,8 @@ namespace ManagementForms
             this.Controls.Add(this.lblDescription);
             this.Controls.Add(this.lblCodeRank);
             this.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this.MinimumSize = new System.Drawing.Size(857, 594);
+            this.MinimumSize = new System.Drawing.Size(855, 590);
             this.Name = "frmUserRanks";
-            this.Load += new System.EventHandler(this.frmUserRanks_Load);
             this.Controls.SetChildIndex(this.lblCodeRank, 0);
             this.Controls.SetChildIndex(this.lblDescription, 0);
             this.Controls.SetChildIndex(this.SWtxtCodeRank, 0);
