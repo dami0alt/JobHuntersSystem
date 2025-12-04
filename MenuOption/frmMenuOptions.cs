@@ -35,5 +35,10 @@ namespace MenuOption
 
             dgtData.Columns["idControl"].Visible = false;
         }
+
+        private void frmMenuOptions_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

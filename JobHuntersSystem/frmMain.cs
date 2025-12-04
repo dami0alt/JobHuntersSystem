@@ -51,7 +51,7 @@ namespace JobHuntersSystem
                         FormName = row["FormName"].ToString(),
                         InitialImagePath = row["PicturePathMain"].ToString(),
                         HoverImagePath = row["PicturePathHover"].ToString(),
-                      
+                        HoverBackColor = row["BackColorHover"].ToString(),
                     });
                 }
             }

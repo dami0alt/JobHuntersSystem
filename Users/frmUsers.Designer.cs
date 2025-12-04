@@ -1,5 +1,5 @@
 ﻿
-namespace ManagementForms
+namespace Users
 {
     partial class frmUsers
     {
@@ -56,7 +56,6 @@ namespace ManagementForms
             // 
             // lblTableName
             // 
-            this.lblTableName.Location = new System.Drawing.Point(384, 9);
             this.lblTableName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTableName.Size = new System.Drawing.Size(432, 25);
             // 
@@ -88,6 +87,7 @@ namespace ManagementForms
             this.SWtxtUserCategoryId.NullSpace = false;
             this.SWtxtUserCategoryId.Size = new System.Drawing.Size(60, 21);
             this.SWtxtUserCategoryId.TabIndex = 5;
+            this.SWtxtUserCategoryId.TabStop = false;
             // 
             // lblUserCategory
             // 
@@ -130,6 +130,7 @@ namespace ManagementForms
             this.SWtxtUserRank.NullSpace = false;
             this.SWtxtUserRank.Size = new System.Drawing.Size(60, 21);
             this.SWtxtUserRank.TabIndex = 7;
+            this.SWtxtUserRank.TabStop = false;
             // 
             // SWcdUserRank
             // 
@@ -145,7 +146,7 @@ namespace ManagementForms
             this.SWcdUserRank.NomTaula = "UserRanks";
             this.SWcdUserRank.NullSpace = false;
             this.SWcdUserRank.Size = new System.Drawing.Size(340, 74);
-            this.SWcdUserRank.TabIndex = 6;
+            this.SWcdUserRank.TabIndex = 5;
             // 
             // lblPlanet
             // 
@@ -169,6 +170,7 @@ namespace ManagementForms
             this.SWtxtPlanet.NullSpace = false;
             this.SWtxtPlanet.Size = new System.Drawing.Size(60, 21);
             this.SWtxtPlanet.TabIndex = 9;
+            this.SWtxtPlanet.TabStop = false;
             // 
             // SWcdPlanet
             // 
@@ -184,7 +186,7 @@ namespace ManagementForms
             this.SWcdPlanet.NomTaula = "Planets";
             this.SWcdPlanet.NullSpace = false;
             this.SWcdPlanet.Size = new System.Drawing.Size(339, 60);
-            this.SWcdPlanet.TabIndex = 8;
+            this.SWcdPlanet.TabIndex = 6;
             // 
             // lblSpecie
             // 
@@ -208,6 +210,7 @@ namespace ManagementForms
             this.SWtxtSpecie.NullSpace = false;
             this.SWtxtSpecie.Size = new System.Drawing.Size(60, 21);
             this.SWtxtSpecie.TabIndex = 11;
+            this.SWtxtSpecie.TabStop = false;
             // 
             // SWcdSpecie
             // 
@@ -223,7 +226,7 @@ namespace ManagementForms
             this.SWcdSpecie.NomTaula = "Species";
             this.SWcdSpecie.NullSpace = false;
             this.SWcdSpecie.Size = new System.Drawing.Size(340, 78);
-            this.SWcdSpecie.TabIndex = 10;
+            this.SWcdSpecie.TabIndex = 7;
             // 
             // btnClose
             // 
@@ -315,6 +318,7 @@ namespace ManagementForms
             this.SWisUserProfile.Name = "SWisUserProfile";
             this.SWisUserProfile.Size = new System.Drawing.Size(305, 113);
             this.SWisUserProfile.TabIndex = 25;
+            this.SWisUserProfile.TabStop = false;
             // 
             // SWtxtPhoto
             // 
@@ -326,7 +330,7 @@ namespace ManagementForms
             this.SWtxtPhoto.Name = "SWtxtPhoto";
             this.SWtxtPhoto.NullSpace = true;
             this.SWtxtPhoto.Size = new System.Drawing.Size(292, 21);
-            this.SWtxtPhoto.TabIndex = 26;
+            this.SWtxtPhoto.TabIndex = 8;
             // 
             // lblPhoto
             // 
