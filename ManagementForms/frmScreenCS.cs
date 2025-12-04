@@ -68,6 +68,7 @@ namespace ManagementForms
 
             dgvData.DataSource = null;
             ConfigurateDataGridView();
+            lblTableName.Text = _tableName;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
