@@ -225,6 +225,9 @@ namespace ManagementForms
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(842, 584);
             this.Controls.Add(this.lblInfo);
+            this.Controls.Add(this.pnlFooter);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.dgvData);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.pctGif3);
