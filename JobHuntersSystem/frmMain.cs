@@ -105,6 +105,31 @@ namespace JobHuntersSystem
             {
                 pctSecretItem.ImageLocation = AppDomain.CurrentDomain.BaseDirectory + "Multimedia/png/crown.png";
             }
+
+            if (_AccessLevelUser <= 10)
+            {
+                lblHonor.Text = "★";
+            }
+            else if(_AccessLevelUser <= 20)
+            {
+                lblHonor.Text = "★ ★";
+            }
+            else if (_AccessLevelUser <= 40)
+            {
+                lblHonor.Text = "★ ★ ★";
+            }
+            else if (_AccessLevelUser <= 60)
+            {
+                lblHonor.Text = "★ ★ ★ ★";
+            }
+            else if (_AccessLevelUser <= 80)
+            {
+                lblHonor.Text = "★ ★ ★ ★ ★";
+            }
+            else
+            {
+                lblHonor.Text = "★ ★ ★ ★ ★ ♚";
+            }
             //speech = new SpeechManager(this);
         }
 

@@ -45,6 +45,7 @@ namespace JobHuntersSystem
             this.pctSecretItem = new System.Windows.Forms.PictureBox();
             this.pnlRectangleLeft = new System.Windows.Forms.Panel();
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.lblHonor = new System.Windows.Forms.Label();
             this.pnlHeader.SuspendLayout();
             this.pnlOptions.SuspendLayout();
             this.pnlTool.SuspendLayout();
@@ -58,6 +59,7 @@ namespace JobHuntersSystem
             // pnlHeader
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.pnlHeader.Controls.Add(this.lblHonor);
             this.pnlHeader.Controls.Add(this.lblSystemName);
             this.pnlHeader.Controls.Add(this.btnClose);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
@@ -153,7 +155,7 @@ namespace JobHuntersSystem
             // 
             // pnlRectangleTop
             // 
-            this.pnlRectangleTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.pnlRectangleTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
             this.pnlRectangleTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlRectangleTop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(143)))), ((int)(((byte)(82)))));
             this.pnlRectangleTop.Location = new System.Drawing.Point(236, 110);
@@ -242,6 +244,17 @@ namespace JobHuntersSystem
             this.pnlMain.Size = new System.Drawing.Size(1193, 761);
             this.pnlMain.TabIndex = 7;
             // 
+            // lblHonor
+            // 
+            this.lblHonor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblHonor.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHonor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(171)))), ((int)(((byte)(82)))));
+            this.lblHonor.Location = new System.Drawing.Point(4, -3);
+            this.lblHonor.Name = "lblHonor";
+            this.lblHonor.Size = new System.Drawing.Size(255, 35);
+            this.lblHonor.TabIndex = 6;
+            // 
             // frmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -291,5 +304,6 @@ namespace JobHuntersSystem
         private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.PictureBox pctLogo;
         private System.Windows.Forms.PictureBox pctSecretItem;
+        private System.Windows.Forms.Label lblHonor;
     }
 }

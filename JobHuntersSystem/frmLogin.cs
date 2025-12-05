@@ -19,6 +19,9 @@ namespace JobHuntersSystem
         clsHash hash = new clsHash();
         private int errorCount = 0;
         private string path;
+
+        private int loadingStep = 0;
+        private int redirectionTime = 5;
         public frmLogin()
         {
             frmSplash frmSplash = new frmSplash();
@@ -60,8 +63,10 @@ namespace JobHuntersSystem
 
                 if (db.Rows.Count == 0 || db == null)
                 {
-                    lblMessage.Text = ("Invalid or nonexistent user credentials");
-                    lblMessage.ForeColor = Color.Red;
+                    lblMessage.Text = ("Invalid or nonexistent user credentials ☹");
+                    lblBody.Text = ("Insert a correct credential or contact the administrator");
+                    lblMessage.ForeColor = Color.Salmon;
+                    lblBody.ForeColor = Color.Salmon;
                 }
                 else
                 {
@@ -104,7 +109,7 @@ namespace JobHuntersSystem
             string validatePass, salt;
             if (passValidateInitial)
             {
-                MessageBox.Show("You will now be redirected to create your new password");
+                MessageBox.Show("Default Password Detected!!\nYou will be redirected to change your password","Security Alert!!",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 frmConfirmPassword changePass = new frmConfirmPassword(user);
                 changePass.Show();
                 txtPass.Clear();
@@ -118,10 +123,11 @@ namespace JobHuntersSystem
                 if (passHashed)
                 {
                     string userName = db.Rows[0]["UserName"].ToString();
-                    lblMessage.Text = $"Welcome {userName}! Your user validation was successful. \nWe are currently verifying your access level and preparing your profile data. \nYou will be redirected to the main application shortly.";
-                    lblMessage.ForeColor = Color.Green;
-
-                    timerMessage.Start();
+                    lblMessage.Text = $"Welcome {userName} ★";
+                    lblMessage.ForeColor = Color.LightGreen;
+                    lblBody.Text = "We are currently verifying your access level and preparing your profile data. \nYou will be redirected to the main application shortly.";
+                    lblBody.ForeColor = Color.LightGreen;
+                    timerRedirection.Start();
 
                     SaveLinkedData(user);
                 }
@@ -156,18 +162,14 @@ namespace JobHuntersSystem
                            "The corresponding security measures have been taken.\n\n" +
                            "The system will shut down immediately for security reasons.\n\n" +
                            "Consider this your final warning!";
-                    MessageBox.Show(message);
+                    MessageBox.Show(message,"Critical Alert!!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                     Application.Exit();
                     break;
             }
-            lblMessage.Text = message;
-            lblMessage.ForeColor = Color.Red;
-        }
-
-        private void timerMessage_Tick(object sender, EventArgs e)
-        {
-            timerMessage.Stop();
-            this.DialogResult = DialogResult.OK;
+            lblMessage.Text = "Incorrect password";
+            lblBody.Text = message;
+            lblMessage.ForeColor = Color.Salmon;
+            lblBody.ForeColor = Color.Salmon;
         }
         private void SaveLinkedData(string user)
         {
@@ -229,6 +231,36 @@ namespace JobHuntersSystem
             path = AppDomain.CurrentDomain.BaseDirectory + "Multimedia\\png\\closeEye.png";
             pbPass.ImageLocation = path;
             txtPass.PasswordChar = '*';
+        }
+
+        private void timerRedirection_Tick(object sender, EventArgs e)
+        {
+            if (loadingStep==0)
+            {
+                lblInfo.Visible = true;
+                pctGif3.Visible = true;
+            }
+
+            loadingStep++;
+
+            if (loadingStep % 3 == 0)
+            {
+                redirectionTime--;
+            }
+
+            int dots = (loadingStep % 3) + 1;
+
+            lblInfo.Text = $"Redirecting in {redirectionTime}" + new string('.', dots);
+
+            if (loadingStep >= 15)
+            {
+                timerRedirection.Stop();
+
+                timerRedirection.Dispose();
+
+                this.DialogResult = DialogResult.OK;
+            }
+
         }
     }
 }

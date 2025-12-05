@@ -54,7 +54,7 @@ namespace JobHuntersSystem
             this.lblConfirmPassword.Location = new System.Drawing.Point(84, 157);
             this.lblConfirmPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblConfirmPassword.Name = "lblConfirmPassword";
-            this.lblConfirmPassword.Size = new System.Drawing.Size(189, 23);
+            this.lblConfirmPassword.Size = new System.Drawing.Size(151, 21);
             this.lblConfirmPassword.TabIndex = 9;
             this.lblConfirmPassword.Text = "Confirm Password:";
             // 
@@ -65,7 +65,7 @@ namespace JobHuntersSystem
             this.lblNewPassword.Location = new System.Drawing.Point(165, 90);
             this.lblNewPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNewPassword.Name = "lblNewPassword";
-            this.lblNewPassword.Size = new System.Drawing.Size(108, 23);
+            this.lblNewPassword.Size = new System.Drawing.Size(86, 21);
             this.lblNewPassword.TabIndex = 8;
             this.lblNewPassword.Text = "Password:";
             // 

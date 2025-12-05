@@ -160,7 +160,7 @@ namespace ManagementForms
             // pctBackGround
             // 
             this.pctBackGround.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pctBackGround.ImageLocation = "Multimedia/jpg/space.jpeg";
+            this.pctBackGround.ImageLocation = "Multimedia/jpg/space.jpg";
             this.pctBackGround.Location = new System.Drawing.Point(0, 0);
             this.pctBackGround.Name = "pctBackGround";
             this.pctBackGround.Size = new System.Drawing.Size(842, 584);
@@ -225,9 +225,6 @@ namespace ManagementForms
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(842, 584);
             this.Controls.Add(this.lblInfo);
-            this.Controls.Add(this.pnlFooter);
-            this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.dgvData);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.pctGif3);
