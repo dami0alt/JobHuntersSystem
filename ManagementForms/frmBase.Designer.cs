@@ -30,19 +30,20 @@ namespace ManagementForms
         private void InitializeComponent()
         {
             this.pnlHeader = new System.Windows.Forms.Panel();
-            this.btnClose = new System.Windows.Forms.Button();
             this.lblTableName = new System.Windows.Forms.Label();
             this.dgtData = new System.Windows.Forms.DataGridView();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
+            this.SWcbClose = new SecureCoreInheritedControl.SWCloseButton();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgtData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SWcbClose)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.pnlHeader.Controls.Add(this.btnClose);
+            this.pnlHeader.Controls.Add(this.SWcbClose);
             this.pnlHeader.Controls.Add(this.lblTableName);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
@@ -50,20 +51,6 @@ namespace ManagementForms
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(1201, 43);
             this.pnlHeader.TabIndex = 0;
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.BackColor = System.Drawing.Color.Red;
-            this.btnClose.ForeColor = System.Drawing.Color.Black;
-            this.btnClose.Location = new System.Drawing.Point(1145, 7);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(30, 29);
-            this.btnClose.TabIndex = 1;
-            this.btnClose.Text = "X";
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click_1);
             // 
             // lblTableName
             // 
@@ -115,6 +102,21 @@ namespace ManagementForms
             this.btnCreate.UseVisualStyleBackColor = true;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
+            // SWcbClose
+            // 
+            this.SWcbClose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.SWcbClose.HoverIconPath = "Multimedia/png/CloseButtonShinyYellow.png";
+            this.SWcbClose.ImageLocation = "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE\\Multime" +
+    "dia/png/CloseButtonYellow.png";
+            this.SWcbClose.Location = new System.Drawing.Point(9, 3);
+            this.SWcbClose.MainIconPath = "Multimedia/png/CloseButtonYellow.png";
+            this.SWcbClose.Name = "SWcbClose";
+            this.SWcbClose.Size = new System.Drawing.Size(36, 36);
+            this.SWcbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.SWcbClose.TabIndex = 10;
+            this.SWcbClose.TabStop = false;
+            // 
             // frmBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -135,6 +137,7 @@ namespace ManagementForms
             this.Load += new System.EventHandler(this.frmBase_Load);
             this.pnlHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgtData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SWcbClose)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -146,6 +149,6 @@ namespace ManagementForms
         private System.Windows.Forms.Button btnCreate;
         protected System.Windows.Forms.DataGridView dgtData;
         protected System.Windows.Forms.Label lblTableName;
-        protected System.Windows.Forms.Button btnClose;
+        private SecureCoreInheritedControl.SWCloseButton SWcbClose;
     }
 }

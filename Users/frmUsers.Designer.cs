@@ -82,7 +82,7 @@ namespace Users
             this.SWtxtUserCategoryId.ControlID = "SWcdUserCategory";
             this.SWtxtUserCategoryId.DatabaseName = "idUserCategory";
             this.SWtxtUserCategoryId.IsForeignKey = true;
-            this.SWtxtUserCategoryId.Location = new System.Drawing.Point(513, 212);
+            this.SWtxtUserCategoryId.Location = new System.Drawing.Point(444, 212);
             this.SWtxtUserCategoryId.Name = "SWtxtUserCategoryId";
             this.SWtxtUserCategoryId.NullSpace = false;
             this.SWtxtUserCategoryId.Size = new System.Drawing.Size(60, 21);
@@ -125,7 +125,7 @@ namespace Users
             this.SWtxtUserRank.ControlID = "SWcdUserRank";
             this.SWtxtUserRank.DatabaseName = "idUserRank";
             this.SWtxtUserRank.IsForeignKey = true;
-            this.SWtxtUserRank.Location = new System.Drawing.Point(513, 259);
+            this.SWtxtUserRank.Location = new System.Drawing.Point(444, 259);
             this.SWtxtUserRank.Name = "SWtxtUserRank";
             this.SWtxtUserRank.NullSpace = false;
             this.SWtxtUserRank.Size = new System.Drawing.Size(60, 21);
@@ -134,9 +134,9 @@ namespace Users
             // 
             // SWcdUserRank
             // 
-            this.SWcdUserRank.ClasseCS = "ManagementForms.dll";
+            this.SWcdUserRank.ClasseCS = "UserRanks.dll";
             this.SWcdUserRank.ControlID = "SWtxtUserRank";
-            this.SWcdUserRank.FormCS = "ManagementForms.frmScreenCS";
+            this.SWcdUserRank.FormCS = "UserRanks.frmUserRanksScreenCS";
             this.SWcdUserRank.Location = new System.Drawing.Point(167, 233);
             this.SWcdUserRank.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SWcdUserRank.Name = "SWcdUserRank";
@@ -145,7 +145,7 @@ namespace Users
             this.SWcdUserRank.NomId = "idUserRank";
             this.SWcdUserRank.NomTaula = "UserRanks";
             this.SWcdUserRank.NullSpace = false;
-            this.SWcdUserRank.Size = new System.Drawing.Size(340, 74);
+            this.SWcdUserRank.Size = new System.Drawing.Size(339, 74);
             this.SWcdUserRank.TabIndex = 5;
             // 
             // lblPlanet
@@ -165,7 +165,7 @@ namespace Users
             this.SWtxtPlanet.ControlID = "SWcdPlanet";
             this.SWtxtPlanet.DatabaseName = "idPlanet";
             this.SWtxtPlanet.IsForeignKey = true;
-            this.SWtxtPlanet.Location = new System.Drawing.Point(513, 307);
+            this.SWtxtPlanet.Location = new System.Drawing.Point(444, 307);
             this.SWtxtPlanet.Name = "SWtxtPlanet";
             this.SWtxtPlanet.NullSpace = false;
             this.SWtxtPlanet.Size = new System.Drawing.Size(60, 21);
@@ -174,10 +174,10 @@ namespace Users
             // 
             // SWcdPlanet
             // 
-            this.SWcdPlanet.ClasseCS = "ManagementForms.dll";
+            this.SWcdPlanet.ClasseCS = "Planets.dll";
             this.SWcdPlanet.ControlID = "SWtxtPlanet";
-            this.SWcdPlanet.FormCS = "ManagementForms.frmScreenCS";
-            this.SWcdPlanet.Location = new System.Drawing.Point(168, 280);
+            this.SWcdPlanet.FormCS = "Planets.frmPlanetsScreenCS";
+            this.SWcdPlanet.Location = new System.Drawing.Point(168, 281);
             this.SWcdPlanet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SWcdPlanet.Name = "SWcdPlanet";
             this.SWcdPlanet.NomCodi = "CodePlanet";
@@ -205,7 +205,7 @@ namespace Users
             this.SWtxtSpecie.ControlID = "SWcdSpecie";
             this.SWtxtSpecie.DatabaseName = "idSpecie";
             this.SWtxtSpecie.IsForeignKey = true;
-            this.SWtxtSpecie.Location = new System.Drawing.Point(1004, 75);
+            this.SWtxtSpecie.Location = new System.Drawing.Point(935, 75);
             this.SWtxtSpecie.Name = "SWtxtSpecie";
             this.SWtxtSpecie.NullSpace = false;
             this.SWtxtSpecie.Size = new System.Drawing.Size(60, 21);
@@ -214,9 +214,9 @@ namespace Users
             // 
             // SWcdSpecie
             // 
-            this.SWcdSpecie.ClasseCS = "ManagementForms.dll";
+            this.SWcdSpecie.ClasseCS = "Species.dll";
             this.SWcdSpecie.ControlID = "SWtxtSpecie";
-            this.SWcdSpecie.FormCS = "ManagementForms.frmScreenCS";
+            this.SWcdSpecie.FormCS = "Species.frmSpeciesScreenCS";
             this.SWcdSpecie.Location = new System.Drawing.Point(657, 49);
             this.SWcdSpecie.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SWcdSpecie.Name = "SWcdSpecie";
@@ -225,7 +225,7 @@ namespace Users
             this.SWcdSpecie.NomId = "idSpecie";
             this.SWcdSpecie.NomTaula = "Species";
             this.SWcdSpecie.NullSpace = false;
-            this.SWcdSpecie.Size = new System.Drawing.Size(340, 78);
+            this.SWcdSpecie.Size = new System.Drawing.Size(339, 78);
             this.SWcdSpecie.TabIndex = 7;
             // 
             // btnClose
@@ -314,10 +314,10 @@ namespace Users
             this.SWisUserProfile.CtrlName = "SWtxtPhoto";
             this.SWisUserProfile.DefaultPath = "Multimedia/Users/Anonym.png";
             this.SWisUserProfile.DestinationPath = "Multimedia/Users/";
-            this.SWisUserProfile.Location = new System.Drawing.Point(773, 120);
+            this.SWisUserProfile.Location = new System.Drawing.Point(773, 121);
             this.SWisUserProfile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SWisUserProfile.Name = "SWisUserProfile";
-            this.SWisUserProfile.Size = new System.Drawing.Size(305, 113);
+            this.SWisUserProfile.Size = new System.Drawing.Size(304, 113);
             this.SWisUserProfile.TabIndex = 25;
             this.SWisUserProfile.TabStop = false;
             // 
@@ -347,9 +347,12 @@ namespace Users
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.ClientSize = new System.Drawing.Size(1201, 729);
-            this.Controls.Add(this.lblPhoto);
             this.Controls.Add(this.SWtxtPhoto);
             this.Controls.Add(this.SWisUserProfile);
+            this.Controls.Add(this.SWcdSpecie);
+            this.Controls.Add(this.SWcdUserRank);
+            this.Controls.Add(this.SWcdUserCategory);
+            this.Controls.Add(this.lblPhoto);
             this.Controls.Add(this.SWtxtLogin);
             this.Controls.Add(this.lblLogin);
             this.Controls.Add(this.SWtxtUserCode);
@@ -359,28 +362,22 @@ namespace Users
             this.Controls.Add(this.SWcdPlanet);
             this.Controls.Add(this.lblSpecie);
             this.Controls.Add(this.SWtxtSpecie);
-            this.Controls.Add(this.SWcdSpecie);
             this.Controls.Add(this.lblPlanet);
             this.Controls.Add(this.SWtxtPlanet);
             this.Controls.Add(this.lblUserRank);
             this.Controls.Add(this.SWtxtUserRank);
-            this.Controls.Add(this.SWcdUserRank);
             this.Controls.Add(this.UserCategories);
             this.Controls.Add(this.lblUserCategory);
             this.Controls.Add(this.SWtxtUserCategoryId);
-            this.Controls.Add(this.SWcdUserCategory);
             this.MinimumSize = new System.Drawing.Size(782, 558);
             this.Name = "frmUsers";
-            this.Controls.SetChildIndex(this.SWcdUserCategory, 0);
             this.Controls.SetChildIndex(this.SWtxtUserCategoryId, 0);
             this.Controls.SetChildIndex(this.lblUserCategory, 0);
             this.Controls.SetChildIndex(this.UserCategories, 0);
-            this.Controls.SetChildIndex(this.SWcdUserRank, 0);
             this.Controls.SetChildIndex(this.SWtxtUserRank, 0);
             this.Controls.SetChildIndex(this.lblUserRank, 0);
             this.Controls.SetChildIndex(this.SWtxtPlanet, 0);
             this.Controls.SetChildIndex(this.lblPlanet, 0);
-            this.Controls.SetChildIndex(this.SWcdSpecie, 0);
             this.Controls.SetChildIndex(this.SWtxtSpecie, 0);
             this.Controls.SetChildIndex(this.lblSpecie, 0);
             this.Controls.SetChildIndex(this.SWcdPlanet, 0);
@@ -390,9 +387,12 @@ namespace Users
             this.Controls.SetChildIndex(this.SWtxtUserCode, 0);
             this.Controls.SetChildIndex(this.lblLogin, 0);
             this.Controls.SetChildIndex(this.SWtxtLogin, 0);
+            this.Controls.SetChildIndex(this.lblPhoto, 0);
+            this.Controls.SetChildIndex(this.SWcdUserCategory, 0);
+            this.Controls.SetChildIndex(this.SWcdUserRank, 0);
+            this.Controls.SetChildIndex(this.SWcdSpecie, 0);
             this.Controls.SetChildIndex(this.SWisUserProfile, 0);
             this.Controls.SetChildIndex(this.SWtxtPhoto, 0);
-            this.Controls.SetChildIndex(this.lblPhoto, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 

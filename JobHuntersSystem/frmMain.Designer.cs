@@ -31,9 +31,9 @@ namespace JobHuntersSystem
         {
             this.components = new System.ComponentModel.Container();
             this.pnlHeader = new System.Windows.Forms.Panel();
-            this.lblHonor = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.lblTime = new System.Windows.Forms.Label();
-            this.btnClose = new System.Windows.Forms.Button();
+            this.lblHonor = new System.Windows.Forms.Label();
             this.pnlOptions = new System.Windows.Forms.Panel();
             this.flpOptions = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlTool = new System.Windows.Forms.Panel();
@@ -48,8 +48,9 @@ namespace JobHuntersSystem
             this.pnlRectangleLeft = new System.Windows.Forms.Panel();
             this.pnlMain = new System.Windows.Forms.Panel();
             this.timerTime = new System.Windows.Forms.Timer(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.SWcbClose = new SecureCoreInheritedControl.SWCloseButton();
             this.pnlHeader.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.pnlOptions.SuspendLayout();
             this.pnlTool.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
@@ -57,15 +58,15 @@ namespace JobHuntersSystem
             ((System.ComponentModel.ISupportInitialize)(this.pctProfileImage)).BeginInit();
             this.pnlUserInformation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctSecretItem)).BeginInit();
-            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SWcbClose)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.pnlHeader.Controls.Add(this.SWcbClose);
             this.pnlHeader.Controls.Add(this.panel1);
             this.pnlHeader.Controls.Add(this.lblHonor);
-            this.pnlHeader.Controls.Add(this.btnClose);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(143)))), ((int)(((byte)(82)))));
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
@@ -73,16 +74,14 @@ namespace JobHuntersSystem
             this.pnlHeader.Size = new System.Drawing.Size(1440, 29);
             this.pnlHeader.TabIndex = 0;
             // 
-            // lblHonor
+            // panel1
             // 
-            this.lblHonor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblHonor.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHonor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(171)))), ((int)(((byte)(82)))));
-            this.lblHonor.Location = new System.Drawing.Point(4, -3);
-            this.lblHonor.Name = "lblHonor";
-            this.lblHonor.Size = new System.Drawing.Size(255, 35);
-            this.lblHonor.TabIndex = 6;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(48)))));
+            this.panel1.Controls.Add(this.lblTime);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(120, 29);
+            this.panel1.TabIndex = 7;
             // 
             // lblTime
             // 
@@ -94,18 +93,16 @@ namespace JobHuntersSystem
             this.lblTime.TabIndex = 5;
             this.lblTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // btnClose
+            // lblHonor
             // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btnClose.BackColor = System.Drawing.Color.Red;
-            this.btnClose.ForeColor = System.Drawing.Color.Black;
-            this.btnClose.Location = new System.Drawing.Point(1408, 1);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(30, 26);
-            this.btnClose.TabIndex = 0;
-            this.btnClose.Text = "X";
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.lblHonor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblHonor.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHonor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(171)))), ((int)(((byte)(82)))));
+            this.lblHonor.Location = new System.Drawing.Point(122, -3);
+            this.lblHonor.Name = "lblHonor";
+            this.lblHonor.Size = new System.Drawing.Size(255, 35);
+            this.lblHonor.TabIndex = 6;
             // 
             // pnlOptions
             // 
@@ -264,14 +261,20 @@ namespace JobHuntersSystem
             this.timerTime.Interval = 1000;
             this.timerTime.Tick += new System.EventHandler(this.timerTime_Tick);
             // 
-            // panel1
+            // SWcbClose
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(48)))));
-            this.panel1.Controls.Add(this.lblTime);
-            this.panel1.Location = new System.Drawing.Point(660, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(120, 32);
-            this.panel1.TabIndex = 7;
+            this.SWcbClose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SWcbClose.HoverIconPath = "Multimedia/png/CloseButtonShiny.png";
+            this.SWcbClose.ImageLocation = "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE\\Multime" +
+    "dia/png/CloseButton.png";
+            this.SWcbClose.Location = new System.Drawing.Point(1409, 1);
+            this.SWcbClose.MainIconPath = "Multimedia/png/CloseButton.png";
+            this.SWcbClose.Name = "SWcbClose";
+            this.SWcbClose.Size = new System.Drawing.Size(27, 27);
+            this.SWcbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.SWcbClose.TabIndex = 8;
+            this.SWcbClose.TabStop = false;
             // 
             // frmMain
             // 
@@ -292,6 +295,7 @@ namespace JobHuntersSystem
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.pnlHeader.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.pnlOptions.ResumeLayout(false);
             this.pnlTool.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
@@ -299,7 +303,7 @@ namespace JobHuntersSystem
             ((System.ComponentModel.ISupportInitialize)(this.pctProfileImage)).EndInit();
             this.pnlUserInformation.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pctSecretItem)).EndInit();
-            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SWcbClose)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -317,7 +321,6 @@ namespace JobHuntersSystem
         private System.Windows.Forms.Panel pnlUserInformation;
         private System.Windows.Forms.PictureBox pctExtender;
         private System.Windows.Forms.Panel pnlRectangleLeft;
-        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.PictureBox pctLogo;
@@ -325,5 +328,6 @@ namespace JobHuntersSystem
         private System.Windows.Forms.Label lblHonor;
         private System.Windows.Forms.Timer timerTime;
         private System.Windows.Forms.Panel panel1;
+        private SecureCoreInheritedControl.SWCloseButton SWcbClose;
     }
 }

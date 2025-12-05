@@ -127,6 +127,8 @@ namespace JobHuntersSystem
                     lblMessage.ForeColor = Color.LightGreen;
                     lblBody.Text = "We are currently verifying your access level and preparing your profile data. \nYou will be redirected to the main application shortly.";
                     lblBody.ForeColor = Color.LightGreen;
+                    lblInfo.Visible = true;
+                    pctGif3.Visible = true;
                     timerRedirection.Start();
 
                     SaveLinkedData(user);
@@ -235,12 +237,6 @@ namespace JobHuntersSystem
 
         private void timerRedirection_Tick(object sender, EventArgs e)
         {
-            if (loadingStep==0)
-            {
-                lblInfo.Visible = true;
-                pctGif3.Visible = true;
-            }
-
             loadingStep++;
 
             if (loadingStep % 3 == 0)

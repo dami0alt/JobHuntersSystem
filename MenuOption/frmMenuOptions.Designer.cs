@@ -291,7 +291,7 @@ namespace MenuOption
             // 
             this.isIcon.CtrlName = "SWtxtPicturePathMain";
             this.isIcon.DefaultPath = null;
-            this.isIcon.DestinationPath = "Multimedia/png/";
+            this.isIcon.DestinationPath = "Multimedia/ControlIcons/";
             this.isIcon.Location = new System.Drawing.Point(207, 158);
             this.isIcon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.isIcon.Name = "isIcon";
@@ -342,7 +342,7 @@ namespace MenuOption
             // 
             this.isIconHover.CtrlName = "SWtxtPicturePathHover";
             this.isIconHover.DefaultPath = null;
-            this.isIconHover.DestinationPath = "Multimedia/png/";
+            this.isIconHover.DestinationPath = "Multimedia/ControlIcons/";
             this.isIconHover.Location = new System.Drawing.Point(686, 162);
             this.isIconHover.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.isIconHover.Name = "isIconHover";
