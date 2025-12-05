@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace UserCategories
 {
-    public partial class frmUserCategoriesScreen : ManagementForms.frmScreenCS
+    public partial class frmUserCategoriesScreenCS : ManagementForms.frmScreenCS
     {
-        public frmUserCategoriesScreen(string tableName, string formName, string controlId) : base(tableName, formName, controlId)
+        public frmUserCategoriesScreenCS(string tableName, string formName, string controlId) : base(tableName, formName, controlId)
         {
             InitializeComponent();
         }

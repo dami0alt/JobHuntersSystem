@@ -1,7 +1,7 @@
 ﻿
 namespace UserCategories
 {
-    partial class frmUserCategoriesScreen
+    partial class frmUserCategoriesScreenCS
     {
         /// <summary>
         /// Variable del diseñador necesaria.
