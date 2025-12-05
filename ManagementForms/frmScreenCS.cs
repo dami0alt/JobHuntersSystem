@@ -18,12 +18,17 @@ namespace ManagementForms
         protected BaseDeDades db;
         protected string _tableName, _controlId, _formName;
         protected DataSet dts;
-        protected SWTextbox txt = new SWTextbox();
+
+        //protected SWTextbox txt = new SWTextbox();
         #region cursor(Opcional)
         [DllImport("user32.dll")]
         public static extern IntPtr LoadCursorFromFile(string lpFileName);
         string cursorPath = "Multimedia/ani/Busy.ani";
         #endregion
+
+        private int loadingStep = 0;
+
+        Dictionary<string, string> searchParameters;
 
         public frmScreenCS() //Solución provisional debido a un bug con el diseñador.
         {
@@ -60,9 +65,9 @@ namespace ManagementForms
             
             foreach (Control ctrl in this.Controls)
             {
-                if(ctrl is SWTextbox && !string.IsNullOrEmpty(txt.Text))
+                if(ctrl is SWTextbox && !string.IsNullOrEmpty(ctrl.Text))
                 {
-                    keyValuePairs.Add(txt.DatabaseName, txt.Text);
+                    keyValuePairs.Add(((SWTextbox)ctrl).DatabaseName, ctrl.Text);
                 }                                
             }
             return keyValuePairs;
@@ -114,27 +119,61 @@ namespace ManagementForms
             }
         }
 
+        private void btnClearFilters_Click(object sender, EventArgs e)
+        {
+            foreach(Control ctrl in this.Controls)
+            {
+                if(ctrl is SWTextbox)
+                {
+                    ((SWTextbox)ctrl).Clear();
+                }
+            }
+            dgvData.DataSource = null;
+        }
+
+        private void timerinfo_Tick(object sender, EventArgs e)
+        {
+            loadingStep++;
+
+            // Actualiza el texto con puntos
+            lblInfo.Text = "Loading" + new string('.', loadingStep % 5);
+
+            // Después de 3 ticks (~1 segundo), detiene el timer y carga los datos
+            if (loadingStep >= 4)
+            {
+                timerInfo.Stop();
+                lblInfo.Visible = false;
+                pctGif3.Visible = false;
+                try
+                {
+                    dts = db.GeneraConsultaCerca(_tableName, searchParameters);
+                    if (dts.Tables.Count > 0)
+                    {
+                        dgvData.DataSource = dts.Tables[0];
+                        ConfigurateDataGridView();
+                    }
+                    else
+                    {
+                        dgvData.DataSource = null;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error to search: {ex.Message}");
+                }
+
+                searchParameters.Clear();
+            }
+        }
+
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            Dictionary<string, string> searchParameters = GetValues();
-            try
-            {
-                dts = db.GeneraConsultaCerca(_tableName, searchParameters);
-                if(dts.Tables.Count > 0)
-                {
-                    dgvData.DataSource = dts.Tables[0];
-                    ConfigurateDataGridView();
-                }
-                else
-                {
-                    dgvData.DataSource = null;
-                }
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show($"Error to search: {ex.Message}");
-            }
-            searchParameters.Clear();
+            searchParameters = GetValues();
+            loadingStep = 0;
+            lblInfo.Text = "Loading";
+            lblInfo.Visible = true;
+            pctGif3.Visible = true;
+            timerInfo.Start();
         }
 
         private void dgvData_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

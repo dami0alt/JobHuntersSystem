@@ -31,7 +31,7 @@ namespace UserCategories
         {
             this.lblCodeUser = new System.Windows.Forms.Label();
             this.SWtxtCodeUser = new SecureCoreInheritedControl.SWTextbox();
-            this.swTextbox4 = new SecureCoreInheritedControl.SWTextbox();
+            this.SWtxtDescCategory = new SecureCoreInheritedControl.SWTextbox();
             this.lblDescUser = new System.Windows.Forms.Label();
             this.SWtxtAccessLevel = new SecureCoreInheritedControl.SWTextbox();
             this.lblAccessLevel = new System.Windows.Forms.Label();
@@ -51,7 +51,7 @@ namespace UserCategories
             // 
             this.SWtxtCodeUser.AllowedData = SecureCoreInheritedControl.DataType.Text;
             this.SWtxtCodeUser.ControlID = null;
-            this.SWtxtCodeUser.DatabaseName = "CodeUser";
+            this.SWtxtCodeUser.DatabaseName = "CodeCategory";
             this.SWtxtCodeUser.IsForeignKey = false;
             this.SWtxtCodeUser.Location = new System.Drawing.Point(168, 93);
             this.SWtxtCodeUser.Name = "SWtxtCodeUser";
@@ -59,17 +59,17 @@ namespace UserCategories
             this.SWtxtCodeUser.Size = new System.Drawing.Size(133, 20);
             this.SWtxtCodeUser.TabIndex = 24;
             // 
-            // swTextbox4
+            // SWtxtDescCategory
             // 
-            this.swTextbox4.AllowedData = SecureCoreInheritedControl.DataType.Text;
-            this.swTextbox4.ControlID = null;
-            this.swTextbox4.DatabaseName = "DescUser";
-            this.swTextbox4.IsForeignKey = false;
-            this.swTextbox4.Location = new System.Drawing.Point(168, 152);
-            this.swTextbox4.Name = "swTextbox4";
-            this.swTextbox4.NullSpace = true;
-            this.swTextbox4.Size = new System.Drawing.Size(133, 20);
-            this.swTextbox4.TabIndex = 26;
+            this.SWtxtDescCategory.AllowedData = SecureCoreInheritedControl.DataType.Text;
+            this.SWtxtDescCategory.ControlID = null;
+            this.SWtxtDescCategory.DatabaseName = "DescCategory";
+            this.SWtxtDescCategory.IsForeignKey = false;
+            this.SWtxtDescCategory.Location = new System.Drawing.Point(168, 152);
+            this.SWtxtDescCategory.Name = "SWtxtDescCategory";
+            this.SWtxtDescCategory.NullSpace = true;
+            this.SWtxtDescCategory.Size = new System.Drawing.Size(133, 20);
+            this.SWtxtDescCategory.TabIndex = 26;
             // 
             // lblDescUser
             // 
@@ -109,7 +109,7 @@ namespace UserCategories
             this.ClientSize = new System.Drawing.Size(842, 584);
             this.Controls.Add(this.SWtxtAccessLevel);
             this.Controls.Add(this.lblAccessLevel);
-            this.Controls.Add(this.swTextbox4);
+            this.Controls.Add(this.SWtxtDescCategory);
             this.Controls.Add(this.lblDescUser);
             this.Controls.Add(this.SWtxtCodeUser);
             this.Controls.Add(this.lblCodeUser);
@@ -117,7 +117,7 @@ namespace UserCategories
             this.Controls.SetChildIndex(this.lblCodeUser, 0);
             this.Controls.SetChildIndex(this.SWtxtCodeUser, 0);
             this.Controls.SetChildIndex(this.lblDescUser, 0);
-            this.Controls.SetChildIndex(this.swTextbox4, 0);
+            this.Controls.SetChildIndex(this.SWtxtDescCategory, 0);
             this.Controls.SetChildIndex(this.lblAccessLevel, 0);
             this.Controls.SetChildIndex(this.SWtxtAccessLevel, 0);
             this.ResumeLayout(false);
@@ -133,7 +133,7 @@ namespace UserCategories
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblCodeUser;
         private SecureCoreInheritedControl.SWTextbox SWtxtCodeUser;
-        private SecureCoreInheritedControl.SWTextbox swTextbox4;
+        private SecureCoreInheritedControl.SWTextbox SWtxtDescCategory;
         private System.Windows.Forms.Label lblDescUser;
         private SecureCoreInheritedControl.SWTextbox SWtxtAccessLevel;
         private System.Windows.Forms.Label lblAccessLevel;
