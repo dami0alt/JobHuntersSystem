@@ -260,9 +260,9 @@ namespace Planets
             // 
             // SWcdSpecies
             // 
-            this.SWcdSpecies.ClasseCS = null;
+            this.SWcdSpecies.ClasseCS = "Species.dll";
             this.SWcdSpecies.ControlID = "SWtxtSpecies";
-            this.SWcdSpecies.FormCS = null;
+            this.SWcdSpecies.FormCS = "Species.frmSpeciesScreenCS";
             this.SWcdSpecies.Location = new System.Drawing.Point(685, 94);
             this.SWcdSpecies.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SWcdSpecies.Name = "SWcdSpecies";
@@ -280,9 +280,9 @@ namespace Planets
             this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(624, 123);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 18);
+            this.label5.Size = new System.Drawing.Size(60, 18);
             this.label5.TabIndex = 46;
-            this.label5.Text = "Sector";
+            this.label5.Text = "Specie";
             // 
             // label8
             // 
@@ -290,15 +290,15 @@ namespace Planets
             this.label8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(624, 167);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(55, 18);
+            this.label8.Size = new System.Drawing.Size(64, 18);
             this.label8.TabIndex = 47;
-            this.label8.Text = "Sector";
+            this.label8.Text = "Filiation";
             // 
             // SWcdFiliation
             // 
-            this.SWcdFiliation.ClasseCS = null;
+            this.SWcdFiliation.ClasseCS = "Filiations.dll";
             this.SWcdFiliation.ControlID = "SWtxtFiliation";
-            this.SWcdFiliation.FormCS = null;
+            this.SWcdFiliation.FormCS = "Filiations.frmFiliationsScreenCS";
             this.SWcdFiliation.Location = new System.Drawing.Point(685, 139);
             this.SWcdFiliation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SWcdFiliation.Name = "SWcdFiliation";
@@ -312,9 +312,9 @@ namespace Planets
             // 
             // SWcdSector
             // 
-            this.SWcdSector.ClasseCS = null;
-            this.SWcdSector.ControlID = "SWtxtPlanet";
-            this.SWcdSector.FormCS = null;
+            this.SWcdSector.ClasseCS = "Sectors.dll";
+            this.SWcdSector.ControlID = "SWtxtIdSectorsPlanet";
+            this.SWcdSector.FormCS = "Sectors.frmSectorsScreenCS";
             this.SWcdSector.Location = new System.Drawing.Point(685, 49);
             this.SWcdSector.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SWcdSector.Name = "SWcdSector";

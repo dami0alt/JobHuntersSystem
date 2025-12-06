@@ -1,4 +1,3 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.36602.28
@@ -32,7 +31,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceShipCategories", "SpaceShipCategories\SpaceShipCategories.csproj", "{A0150855-F451-4A1D-8D0F-7D9E288810C1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Filiations", "Filiations\Filiations.csproj", "{E3C04CD2-0B68-4A91-91A4-103375A1EC0A}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Species", "Species\Species.csproj", "{30D238D9-85E3-4724-9417-A8F9773CC854}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sectors", "Sectors\Sectors.csproj", "{981AD7F9-E117-483E-99C6-B8B284C795D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +107,10 @@ Global
 		{30D238D9-85E3-4724-9417-A8F9773CC854}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30D238D9-85E3-4724-9417-A8F9773CC854}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30D238D9-85E3-4724-9417-A8F9773CC854}.Release|Any CPU.Build.0 = Release|Any CPU
+		{981AD7F9-E117-483E-99C6-B8B284C795D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{981AD7F9-E117-483E-99C6-B8B284C795D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{981AD7F9-E117-483E-99C6-B8B284C795D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{981AD7F9-E117-483E-99C6-B8B284C795D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
