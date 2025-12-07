@@ -31,6 +31,7 @@ namespace JobHuntersSystem
         {
             this.components = new System.ComponentModel.Container();
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.SWcbClose = new SecureCoreInheritedControl.SWCloseButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTime = new System.Windows.Forms.Label();
             this.lblHonor = new System.Windows.Forms.Label();
@@ -48,8 +49,10 @@ namespace JobHuntersSystem
             this.pnlRectangleLeft = new System.Windows.Forms.Panel();
             this.pnlMain = new System.Windows.Forms.Panel();
             this.timerTime = new System.Windows.Forms.Timer(this.components);
-            this.SWcbClose = new SecureCoreInheritedControl.SWCloseButton();
+            this.pctSpaceShip = new System.Windows.Forms.PictureBox();
+            this.lblVersion = new System.Windows.Forms.Label();
             this.pnlHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SWcbClose)).BeginInit();
             this.panel1.SuspendLayout();
             this.pnlOptions.SuspendLayout();
             this.pnlTool.SuspendLayout();
@@ -58,7 +61,8 @@ namespace JobHuntersSystem
             ((System.ComponentModel.ISupportInitialize)(this.pctProfileImage)).BeginInit();
             this.pnlUserInformation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctSecretItem)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SWcbClose)).BeginInit();
+            this.pnlMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctSpaceShip)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -73,6 +77,21 @@ namespace JobHuntersSystem
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(1440, 29);
             this.pnlHeader.TabIndex = 0;
+            // 
+            // SWcbClose
+            // 
+            this.SWcbClose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SWcbClose.HoverIconPath = "Multimedia/png/CloseButtonShiny.png";
+            this.SWcbClose.ImageLocation = "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE\\Multime" +
+    "dia/png/CloseButton.png";
+            this.SWcbClose.Location = new System.Drawing.Point(1409, 1);
+            this.SWcbClose.MainIconPath = "Multimedia/png/CloseButton.png";
+            this.SWcbClose.Name = "SWcbClose";
+            this.SWcbClose.Size = new System.Drawing.Size(27, 27);
+            this.SWcbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.SWcbClose.TabIndex = 8;
+            this.SWcbClose.TabStop = false;
             // 
             // panel1
             // 
@@ -249,7 +268,9 @@ namespace JobHuntersSystem
             // 
             // pnlMain
             // 
-            this.pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(50)))), ((int)(((byte)(51)))));
+            this.pnlMain.Controls.Add(this.lblVersion);
+            this.pnlMain.Controls.Add(this.pctSpaceShip);
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMain.Location = new System.Drawing.Point(247, 120);
             this.pnlMain.Name = "pnlMain";
@@ -261,20 +282,26 @@ namespace JobHuntersSystem
             this.timerTime.Interval = 1000;
             this.timerTime.Tick += new System.EventHandler(this.timerTime_Tick);
             // 
-            // SWcbClose
+            // pctSpaceShip
             // 
-            this.SWcbClose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.SWcbClose.HoverIconPath = "Multimedia/png/CloseButtonShiny.png";
-            this.SWcbClose.ImageLocation = "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE\\Multime" +
-    "dia/png/CloseButton.png";
-            this.SWcbClose.Location = new System.Drawing.Point(1409, 1);
-            this.SWcbClose.MainIconPath = "Multimedia/png/CloseButton.png";
-            this.SWcbClose.Name = "SWcbClose";
-            this.SWcbClose.Size = new System.Drawing.Size(27, 27);
-            this.SWcbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.SWcbClose.TabIndex = 8;
-            this.SWcbClose.TabStop = false;
+            this.pctSpaceShip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pctSpaceShip.ImageLocation = "Multimedia/gifs/Spaceship2.gif";
+            this.pctSpaceShip.Location = new System.Drawing.Point(1, 675);
+            this.pctSpaceShip.Name = "pctSpaceShip";
+            this.pctSpaceShip.Size = new System.Drawing.Size(108, 113);
+            this.pctSpaceShip.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctSpaceShip.TabIndex = 0;
+            this.pctSpaceShip.TabStop = false;
+            // 
+            // lblVersion
+            // 
+            this.lblVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblVersion.Location = new System.Drawing.Point(1011, 736);
+            this.lblVersion.Name = "lblVersion";
+            this.lblVersion.Size = new System.Drawing.Size(178, 19);
+            this.lblVersion.TabIndex = 1;
+            this.lblVersion.Text = "Version";
+            this.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmMain
             // 
@@ -295,6 +322,7 @@ namespace JobHuntersSystem
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.pnlHeader.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SWcbClose)).EndInit();
             this.panel1.ResumeLayout(false);
             this.pnlOptions.ResumeLayout(false);
             this.pnlTool.ResumeLayout(false);
@@ -303,7 +331,8 @@ namespace JobHuntersSystem
             ((System.ComponentModel.ISupportInitialize)(this.pctProfileImage)).EndInit();
             this.pnlUserInformation.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pctSecretItem)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SWcbClose)).EndInit();
+            this.pnlMain.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pctSpaceShip)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -329,5 +358,7 @@ namespace JobHuntersSystem
         private System.Windows.Forms.Timer timerTime;
         private System.Windows.Forms.Panel panel1;
         private SecureCoreInheritedControl.SWCloseButton SWcbClose;
+        private System.Windows.Forms.PictureBox pctSpaceShip;
+        private System.Windows.Forms.Label lblVersion;
     }
 }

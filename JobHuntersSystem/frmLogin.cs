@@ -56,7 +56,6 @@ namespace JobHuntersSystem
             string user = txtUser.Text;
             string pass = txtPass.Text;
             string passInitial = "12345aA";
-
             try
             {
                 DataTable db = consultationDataBase(user);
@@ -145,31 +144,20 @@ namespace JobHuntersSystem
             errorCount++;
             int attempts = 4 - errorCount;
             string message = "";
-            switch (attempts)
+            if(attempts == 0)
             {
-                case 3:
-                    message = "The password you entered is incorrect. Please check your credentials and try again.";
-                    break;
-
-                case 2:
-                    message = "The password is still incorrect. Continued failed attempts may trigger security measures.";
-                    break;
-                case 1:
-                    message = "Only one attempt remains before your account is temporarily locked for protection.";
-                    break;
-                case 0:
-                    message = "SECURITY ALERT!\n\n" +
-                           "You have exceeded the maximum number of access attempts.\n\n" +
-                           "⚠️ FIRST ORDER WARNING ⚠️\n\n" +
-                           "The corresponding security measures have been taken.\n\n" +
-                           "The system will shut down immediately for security reasons.\n\n" +
-                           "Consider this your final warning!";
-                    MessageBox.Show(message,"Critical Alert!!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
-                    Application.Exit();
-                    break;
+                message = "SECURITY ALERT!\n\n" +
+                          "You have exceeded the maximum number of access attempts.\n\n" +
+                          "⚠️ FIRST ORDER WARNING ⚠️\n\n" +
+                          "The corresponding security measures have been taken.\n\n" +
+                          "The system will shut down immediately for security reasons.\n\n" +
+                          "Consider this your final warning!";
+                MessageBox.Show(message, "Critical Alert!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Application.Exit();
             }
-            lblMessage.Text = "Incorrect password";
-            lblBody.Text = message;
+          
+            lblMessage.Text = "Invalid or nonexistent user credentials ☹";
+            lblBody.Text = "Insert a correct credential or contact the administrator";
             lblMessage.ForeColor = Color.Salmon;
             lblBody.ForeColor = Color.Salmon;
         }

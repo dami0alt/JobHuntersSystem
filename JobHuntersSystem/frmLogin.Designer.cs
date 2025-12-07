@@ -303,9 +303,9 @@ namespace JobHuntersSystem
             // pnlMessage
             // 
             this.pnlMessage.Controls.Add(this.lblMessage);
+            this.pnlMessage.Controls.Add(this.lblBody);
             this.pnlMessage.Controls.Add(this.lblInfo);
             this.pnlMessage.Controls.Add(this.pctGif3);
-            this.pnlMessage.Controls.Add(this.lblBody);
             this.pnlMessage.Controls.Add(this.pctBackGround);
             this.pnlMessage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMessage.Location = new System.Drawing.Point(0, 289);
