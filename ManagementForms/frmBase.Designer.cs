@@ -29,12 +29,15 @@ namespace ManagementForms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.lblTableName = new System.Windows.Forms.Label();
             this.dgtData = new System.Windows.Forms.DataGridView();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
             this.SWcbClose = new SecureCoreInheritedControl.SWCloseButton();
+            this.lblInfo = new System.Windows.Forms.Label();
+            this.timerInfo = new System.Windows.Forms.Timer(this.components);
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgtData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SWcbClose)).BeginInit();
@@ -117,12 +120,30 @@ namespace ManagementForms
             this.SWcbClose.TabIndex = 10;
             this.SWcbClose.TabStop = false;
             // 
+            // lblInfo
+            // 
+            this.lblInfo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblInfo.Location = new System.Drawing.Point(327, 341);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(602, 23);
+            this.lblInfo.TabIndex = 5;
+            this.lblInfo.Text = "Wrong Message ";
+            this.lblInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblInfo.Visible = false;
+            // 
+            // timerInfo
+            // 
+            this.timerInfo.Interval = 3000;
+            this.timerInfo.Tick += new System.EventHandler(this.timerInfo_Tick);
+            // 
             // frmBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(86)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(1201, 729);
+            this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.dgtData);
@@ -150,5 +171,7 @@ namespace ManagementForms
         protected System.Windows.Forms.DataGridView dgtData;
         protected System.Windows.Forms.Label lblTableName;
         private SecureCoreInheritedControl.SWCloseButton SWcbClose;
+        private System.Windows.Forms.Label lblInfo;
+        private System.Windows.Forms.Timer timerInfo;
     }
 }

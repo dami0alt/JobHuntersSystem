@@ -46,7 +46,7 @@ namespace JobHuntersSystem
 
         private void LoadUserOptions()
         {
-            string query = "SELECT * FROM UserOptions";
+            string query = "SELECT * FROM UserOptions ORDER BY RenderingOrder ASC";
             dtUserOptions = dbManager.PortarDataTable(query);
 
             foreach (DataRow row in dtUserOptions.Rows)
