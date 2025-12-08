@@ -52,6 +52,9 @@ namespace Users
             this.SWisUserProfile = new SWUserControls.ImageSelector();
             this.SWtxtPhoto = new SecureCoreInheritedControl.SWTextbox();
             this.lblPhoto = new System.Windows.Forms.Label();
+            this.btnResetPassword = new System.Windows.Forms.Button();
+            this.SWtxtPassword = new SecureCoreInheritedControl.SWTextbox();
+            this.SWtxtHash = new SecureCoreInheritedControl.SWTextbox();
             this.SuspendLayout();
             // 
             // lblTableName
@@ -205,7 +208,7 @@ namespace Users
             this.SWtxtSpecie.ControlID = "SWcdSpecie";
             this.SWtxtSpecie.DatabaseName = "idSpecie";
             this.SWtxtSpecie.IsForeignKey = true;
-            this.SWtxtSpecie.Location = new System.Drawing.Point(935, 75);
+            this.SWtxtSpecie.Location = new System.Drawing.Point(896, 75);
             this.SWtxtSpecie.Name = "SWtxtSpecie";
             this.SWtxtSpecie.NullSpace = false;
             this.SWtxtSpecie.Size = new System.Drawing.Size(60, 21);
@@ -225,7 +228,7 @@ namespace Users
             this.SWcdSpecie.NomId = "idSpecie";
             this.SWcdSpecie.NomTaula = "Species";
             this.SWcdSpecie.NullSpace = false;
-            this.SWcdSpecie.Size = new System.Drawing.Size(339, 78);
+            this.SWcdSpecie.Size = new System.Drawing.Size(299, 78);
             this.SWcdSpecie.TabIndex = 7;
             // 
             // btnClose
@@ -254,7 +257,7 @@ namespace Users
             // SWtxtUserName
             // 
             this.SWtxtUserName.AllowedData = SecureCoreInheritedControl.DataType.Text;
-            this.SWtxtUserName.BackColor = System.Drawing.SystemColors.Window;
+            this.SWtxtUserName.BackColor = System.Drawing.Color.White;
             this.SWtxtUserName.ControlID = null;
             this.SWtxtUserName.DatabaseName = "UserName";
             this.SWtxtUserName.IsForeignKey = false;
@@ -267,6 +270,7 @@ namespace Users
             // SWtxtUserCode
             // 
             this.SWtxtUserCode.AllowedData = SecureCoreInheritedControl.DataType.Code;
+            this.SWtxtUserCode.BackColor = System.Drawing.Color.White;
             this.SWtxtUserCode.ControlID = null;
             this.SWtxtUserCode.DatabaseName = "CodeUser";
             this.SWtxtUserCode.IsForeignKey = false;
@@ -324,6 +328,7 @@ namespace Users
             // SWtxtPhoto
             // 
             this.SWtxtPhoto.AllowedData = SecureCoreInheritedControl.DataType.Path;
+            this.SWtxtPhoto.BackColor = System.Drawing.Color.White;
             this.SWtxtPhoto.ControlID = "SWisUserProfile";
             this.SWtxtPhoto.DatabaseName = "Photo";
             this.SWtxtPhoto.IsForeignKey = false;
@@ -343,10 +348,52 @@ namespace Users
             this.lblPhoto.TabIndex = 27;
             this.lblPhoto.Text = "Photo";
             // 
+            // btnResetPassword
+            // 
+            this.btnResetPassword.Location = new System.Drawing.Point(664, 305);
+            this.btnResetPassword.Name = "btnResetPassword";
+            this.btnResetPassword.Size = new System.Drawing.Size(101, 27);
+            this.btnResetPassword.TabIndex = 10;
+            this.btnResetPassword.Text = "Reset Password";
+            this.btnResetPassword.UseVisualStyleBackColor = true;
+            this.btnResetPassword.Click += new System.EventHandler(this.btnResetPassword_Click);
+            // 
+            // SWtxtPassword
+            // 
+            this.SWtxtPassword.AllowedData = SecureCoreInheritedControl.DataType.Text;
+            this.SWtxtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(194)))), ((int)(((byte)(204)))));
+            this.SWtxtPassword.ControlID = null;
+            this.SWtxtPassword.DatabaseName = "Password";
+            this.SWtxtPassword.IsForeignKey = false;
+            this.SWtxtPassword.Location = new System.Drawing.Point(677, 308);
+            this.SWtxtPassword.Name = "SWtxtPassword";
+            this.SWtxtPassword.NullSpace = false;
+            this.SWtxtPassword.Size = new System.Drawing.Size(32, 21);
+            this.SWtxtPassword.TabIndex = 29;
+            this.SWtxtPassword.TabStop = false;
+            this.SWtxtPassword.TextChanged += new System.EventHandler(this.SWtxtPassword_TextChanged);
+            // 
+            // SWtxtHash
+            // 
+            this.SWtxtHash.AllowedData = SecureCoreInheritedControl.DataType.Text;
+            this.SWtxtHash.BackColor = System.Drawing.Color.White;
+            this.SWtxtHash.ControlID = null;
+            this.SWtxtHash.DatabaseName = "Hash";
+            this.SWtxtHash.IsForeignKey = false;
+            this.SWtxtHash.Location = new System.Drawing.Point(723, 308);
+            this.SWtxtHash.Name = "SWtxtHash";
+            this.SWtxtHash.NullSpace = true;
+            this.SWtxtHash.Size = new System.Drawing.Size(32, 21);
+            this.SWtxtHash.TabIndex = 30;
+            this.SWtxtHash.TabStop = false;
+            // 
             // frmUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.ClientSize = new System.Drawing.Size(1201, 729);
+            this.Controls.Add(this.btnResetPassword);
+            this.Controls.Add(this.SWtxtHash);
+            this.Controls.Add(this.SWtxtPassword);
             this.Controls.Add(this.SWtxtPhoto);
             this.Controls.Add(this.SWisUserProfile);
             this.Controls.Add(this.SWcdSpecie);
@@ -393,6 +440,9 @@ namespace Users
             this.Controls.SetChildIndex(this.SWcdSpecie, 0);
             this.Controls.SetChildIndex(this.SWisUserProfile, 0);
             this.Controls.SetChildIndex(this.SWtxtPhoto, 0);
+            this.Controls.SetChildIndex(this.SWtxtPassword, 0);
+            this.Controls.SetChildIndex(this.SWtxtHash, 0);
+            this.Controls.SetChildIndex(this.btnResetPassword, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -423,5 +473,8 @@ namespace Users
         private SWUserControls.ImageSelector SWisUserProfile;
         private SecureCoreInheritedControl.SWTextbox SWtxtPhoto;
         private System.Windows.Forms.Label lblPhoto;
+        private System.Windows.Forms.Button btnResetPassword;
+        private SecureCoreInheritedControl.SWTextbox SWtxtPassword;
+        private SecureCoreInheritedControl.SWTextbox SWtxtHash;
     }
 }

@@ -28,6 +28,8 @@ namespace JobHuntersSystem
         private string salt;
         private string passHash;
 
+        string PasswordLevel = "";
+
         private bool AreEqual()
         {
             if (txtConfirmPassword.Text.Equals(txtNewPassword.Text))
@@ -65,29 +67,43 @@ namespace JobHuntersSystem
         {
             if (!string.IsNullOrEmpty(txtNewPassword.Text))
             {
-                if (!AreEqual())
+                if(PasswordLevel != "Weak")
                 {
-                    lblInformation.Visible = true;
-                    string message = "Passwords need to be equals";
-                    lblInformation.Text = message;
-                    lblInformation.ForeColor = Color.Salmon;
+                    if (!AreEqual())
+                    {
+                        lblInformation.Visible = true;
+                        string message = "Passwords need to be equals.";
+                        lblInformation.Text = message;
+                        lblInformation.ForeColor = Color.Salmon;
+                        timerInfo.Start();
+                    }
+                    else
+                    {
+                        string pass = txtNewPassword.Text;
+                        HashPassword(pass);
+                        UpdatePass();
+                        this.Dispose();
+                    }
                 }
                 else
                 {
-                    string pass = txtNewPassword.Text;
-                    HashPassword(pass);
-                    UpdatePass();
-                    this.Dispose();
+                    lblInformation.Visible = true;
+                    string message = "The password is very vulnerable.";
+                    lblInformation.Text = message;
+                    lblInformation.ForeColor = Color.Salmon;
+                    timerInfo.Start();
                 }
+                
             }
             else
             {
                 txtConfirmPassword.Clear();
 
                 lblInformation.Visible = true;
-                string message = "Passwords couldn't be null";
+                string message = "Passwords couldn't be null.";
                 lblInformation.Text = message;
                 lblInformation.ForeColor = Color.Salmon;
+                timerInfo.Start();
             }
            
         }
@@ -102,18 +118,6 @@ namespace JobHuntersSystem
             lblInformation.Visible = false;
             timerInfo.Stop();
         }
-        // Al menos una mayúscula
-        Regex hasUpperCase = new Regex(@"[A-Z]");
-
-        // Al menos una minúscula
-        Regex hasLowerCase = new Regex(@"[a-z]");
-
-        // Al menos un dígito
-        Regex hasDigit = new Regex(@"\d");
-
-        // Al menos un carácter especial
-        Regex hasSpecialChar = new Regex(@"[!@#$%^&*(),.?""{}|<>]");
-
 
         private void txtNewPassword_TextChanged(object sender, EventArgs e)
         {
@@ -121,15 +125,21 @@ namespace JobHuntersSystem
             {
                 string pwd = txtNewPassword.Text;
 
+                // Al menos una mayúscula
                 bool hasUpper = Regex.IsMatch(pwd, @"[A-Z]");
+                // Al menos una minúscula
                 bool hasLower = Regex.IsMatch(pwd, @"[a-z]");
+                // Al menos un dígito
                 bool hasDigit = Regex.IsMatch(pwd, @"\d");
+                // Al menos un carácter especial
                 bool hasSpecial = Regex.IsMatch(pwd, @"[!@#$%^&*(),.?""{}|<>]");
+                // 8 caracteres minimo
                 bool minLength8 = pwd.Length >= 8;
 
                 if (hasUpper && hasLower && hasDigit && hasSpecial && minLength8 && minLength8)
                 {
-                    lblSecurity.Text = "Strong";
+                    PasswordLevel = "Strong";
+                    lblSecurity.Text = PasswordLevel;
                     lblSecurity.ForeColor = Color.LightGreen;
 
                     pnlSecurityLevel.Size = new Size(128,14);
@@ -137,7 +147,8 @@ namespace JobHuntersSystem
                 }
                 else if ((hasUpper || hasLower) && hasDigit && pwd.Length >= 6)
                 {
-                    lblSecurity.Text = "Medium";
+                    PasswordLevel = "Medium";
+                    lblSecurity.Text = PasswordLevel;
                     lblSecurity.ForeColor = Color.Orange;
 
                     pnlSecurityLevel.Size = new Size(80, 14);
@@ -145,7 +156,8 @@ namespace JobHuntersSystem
                 }
                 else
                 {
-                    lblSecurity.Text = "Weak";
+                    PasswordLevel = "Weak";
+                    lblSecurity.Text = PasswordLevel;
                     lblSecurity.ForeColor = Color.Salmon;
 
                     pnlSecurityLevel.Size = new Size(35,14);
