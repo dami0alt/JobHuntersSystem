@@ -76,6 +76,10 @@ namespace SWUserControls
                 {
                     txtCode.BackColor = notNullColor;
                 }
+                else
+                {
+                    txtCode.BackColor = defaultColor;
+                }
             }
         }
         private string _FormCS;

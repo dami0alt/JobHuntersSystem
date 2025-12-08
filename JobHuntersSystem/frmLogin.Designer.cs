@@ -274,7 +274,7 @@ namespace JobHuntersSystem
             // 
             // pnlHeader
             // 
-            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
@@ -283,6 +283,7 @@ namespace JobHuntersSystem
             // 
             // pnlMain
             // 
+            this.pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.pnlMain.Controls.Add(this.pnlCredentials);
             this.pnlMain.Controls.Add(this.pnlTitle);
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Top;
@@ -303,9 +304,9 @@ namespace JobHuntersSystem
             // pnlMessage
             // 
             this.pnlMessage.Controls.Add(this.lblMessage);
+            this.pnlMessage.Controls.Add(this.lblBody);
             this.pnlMessage.Controls.Add(this.lblInfo);
             this.pnlMessage.Controls.Add(this.pctGif3);
-            this.pnlMessage.Controls.Add(this.lblBody);
             this.pnlMessage.Controls.Add(this.pctBackGround);
             this.pnlMessage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMessage.Location = new System.Drawing.Point(0, 289);

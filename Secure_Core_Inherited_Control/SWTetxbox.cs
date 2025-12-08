@@ -29,10 +29,10 @@ namespace SecureCoreInheritedControl
         private bool _IsValid = true;
         private bool _IsForeignKey = false;
 
-        ErrorProvider error = new ErrorProvider();
 
         Color notNullColor = Color.FromArgb(168, 194, 204);
         Color defaultColor = Color.White;
+        Color errorColor = Color.Salmon;
 
         string rgbFormat= @"^([1]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5]);" +
                 "([1]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5]);" +
@@ -59,6 +59,10 @@ namespace SecureCoreInheritedControl
                 if (!_NullSpace)
                 {
                     this.BackColor = notNullColor;
+                }
+                else
+                {
+                    this.BackColor = defaultColor;
                 }
             }
         }
@@ -142,7 +146,20 @@ namespace SecureCoreInheritedControl
 
             if (!_IsValid)
             {
+                this.BackColor = errorColor;
                 e.Cancel = true;
+            }
+            else
+            {
+                if (_NullSpace)
+                {
+                    this.BackColor = defaultColor;
+                }
+                else
+                {
+                    this.BackColor = notNullColor;
+                }
+
             }
         }
         public void SetId(string id)

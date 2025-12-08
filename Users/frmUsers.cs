@@ -101,9 +101,8 @@ namespace Users
         {
             base.NewRegister();
 
-            DataRow lastRow = ds.Tables[0].Rows[ds.Tables[0].Rows.Count - 1];
-            lastRow["Password"] = "12345aA";
-
+            int index = ds.Tables[0].Rows.Count - 1;
+            ds.Tables[0].Rows[index]["Password"] = "12345aA";
         }
     }
 }

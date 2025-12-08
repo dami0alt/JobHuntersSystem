@@ -55,6 +55,8 @@ namespace MenuOption
             this.SWcpFontColor = new SecureCoreInheritedControl.SWColorPicker();
             this.SWcpFontHoverColor = new SecureCoreInheritedControl.SWColorPicker();
             this.isIconHover = new SWUserControls.ImageSelector();
+            this.SWtxtRenderingOrder = new SecureCoreInheritedControl.SWTextbox();
+            this.lblRenderingOrder = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.SWcpBackColor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SWcpHoveColor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SWcpFontColor)).BeginInit();
@@ -81,24 +83,26 @@ namespace MenuOption
             // SWtxtFormName
             // 
             this.SWtxtFormName.AllowedData = SecureCoreInheritedControl.DataType.Text;
+            this.SWtxtFormName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(194)))), ((int)(((byte)(204)))));
             this.SWtxtFormName.ControlID = null;
             this.SWtxtFormName.DatabaseName = "FormName";
             this.SWtxtFormName.IsForeignKey = false;
             this.SWtxtFormName.Location = new System.Drawing.Point(186, 118);
             this.SWtxtFormName.Name = "SWtxtFormName";
-            this.SWtxtFormName.NullSpace = true;
+            this.SWtxtFormName.NullSpace = false;
             this.SWtxtFormName.Size = new System.Drawing.Size(315, 21);
             this.SWtxtFormName.TabIndex = 14;
             // 
             // SWtxtdllName
             // 
             this.SWtxtdllName.AllowedData = SecureCoreInheritedControl.DataType.Text;
+            this.SWtxtdllName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(194)))), ((int)(((byte)(204)))));
             this.SWtxtdllName.ControlID = null;
             this.SWtxtdllName.DatabaseName = "dllName";
             this.SWtxtdllName.IsForeignKey = false;
             this.SWtxtdllName.Location = new System.Drawing.Point(186, 67);
             this.SWtxtdllName.Name = "SWtxtdllName";
-            this.SWtxtdllName.NullSpace = true;
+            this.SWtxtdllName.NullSpace = false;
             this.SWtxtdllName.Size = new System.Drawing.Size(315, 21);
             this.SWtxtdllName.TabIndex = 13;
             // 
@@ -246,12 +250,13 @@ namespace MenuOption
             // SWtxtDescription
             // 
             this.SWtxtDescription.AllowedData = SecureCoreInheritedControl.DataType.Text;
+            this.SWtxtDescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(194)))), ((int)(((byte)(204)))));
             this.SWtxtDescription.ControlID = null;
             this.SWtxtDescription.DatabaseName = "Description";
             this.SWtxtDescription.IsForeignKey = false;
             this.SWtxtDescription.Location = new System.Drawing.Point(184, 289);
             this.SWtxtDescription.Name = "SWtxtDescription";
-            this.SWtxtDescription.NullSpace = true;
+            this.SWtxtDescription.NullSpace = false;
             this.SWtxtDescription.Size = new System.Drawing.Size(315, 21);
             this.SWtxtDescription.TabIndex = 29;
             // 
@@ -268,12 +273,13 @@ namespace MenuOption
             // SWtxtAccesLevel
             // 
             this.SWtxtAccesLevel.AllowedData = SecureCoreInheritedControl.DataType.Number;
+            this.SWtxtAccesLevel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(194)))), ((int)(((byte)(204)))));
             this.SWtxtAccesLevel.ControlID = null;
             this.SWtxtAccesLevel.DatabaseName = "AccesLevel";
             this.SWtxtAccesLevel.IsForeignKey = false;
             this.SWtxtAccesLevel.Location = new System.Drawing.Point(184, 338);
             this.SWtxtAccesLevel.Name = "SWtxtAccesLevel";
-            this.SWtxtAccesLevel.NullSpace = true;
+            this.SWtxtAccesLevel.NullSpace = false;
             this.SWtxtAccesLevel.Size = new System.Drawing.Size(104, 21);
             this.SWtxtAccesLevel.TabIndex = 31;
             // 
@@ -349,10 +355,36 @@ namespace MenuOption
             this.isIconHover.Size = new System.Drawing.Size(343, 123);
             this.isIconHover.TabIndex = 37;
             // 
+            // SWtxtRenderingOrder
+            // 
+            this.SWtxtRenderingOrder.AllowedData = SecureCoreInheritedControl.DataType.Number;
+            this.SWtxtRenderingOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(194)))), ((int)(((byte)(204)))));
+            this.SWtxtRenderingOrder.ControlID = "";
+            this.SWtxtRenderingOrder.DatabaseName = "RenderingOrder";
+            this.SWtxtRenderingOrder.IsForeignKey = false;
+            this.SWtxtRenderingOrder.Location = new System.Drawing.Point(661, 290);
+            this.SWtxtRenderingOrder.Name = "SWtxtRenderingOrder";
+            this.SWtxtRenderingOrder.NullSpace = true;
+            this.SWtxtRenderingOrder.Size = new System.Drawing.Size(71, 21);
+            this.SWtxtRenderingOrder.TabIndex = 39;
+            this.SWtxtRenderingOrder.Validating += new System.ComponentModel.CancelEventHandler(this.SWtxtRenderingOrder_Validating);
+            // 
+            // lblRenderingOrder
+            // 
+            this.lblRenderingOrder.AutoSize = true;
+            this.lblRenderingOrder.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRenderingOrder.Location = new System.Drawing.Point(528, 290);
+            this.lblRenderingOrder.Name = "lblRenderingOrder";
+            this.lblRenderingOrder.Size = new System.Drawing.Size(127, 18);
+            this.lblRenderingOrder.TabIndex = 38;
+            this.lblRenderingOrder.Text = "RenderingOrder";
+            // 
             // frmMenuOptions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.ClientSize = new System.Drawing.Size(1201, 729);
+            this.Controls.Add(this.SWtxtRenderingOrder);
+            this.Controls.Add(this.lblRenderingOrder);
             this.Controls.Add(this.SWtxtPicturePathHover);
             this.Controls.Add(this.SWtxtPicturePathMain);
             this.Controls.Add(this.SWcpFontHoverColor);
@@ -381,7 +413,6 @@ namespace MenuOption
             this.Controls.Add(this.isIconHover);
             this.MinimumSize = new System.Drawing.Size(1067, 652);
             this.Name = "frmMenuOptions";
-            this.Load += new System.EventHandler(this.frmMenuOptions_Load);
             this.Controls.SetChildIndex(this.isIconHover, 0);
             this.Controls.SetChildIndex(this.lblCodeUser, 0);
             this.Controls.SetChildIndex(this.lblUserName, 0);
@@ -408,6 +439,8 @@ namespace MenuOption
             this.Controls.SetChildIndex(this.SWcpFontHoverColor, 0);
             this.Controls.SetChildIndex(this.SWtxtPicturePathMain, 0);
             this.Controls.SetChildIndex(this.SWtxtPicturePathHover, 0);
+            this.Controls.SetChildIndex(this.lblRenderingOrder, 0);
+            this.Controls.SetChildIndex(this.SWtxtRenderingOrder, 0);
             ((System.ComponentModel.ISupportInitialize)(this.SWcpBackColor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SWcpHoveColor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SWcpFontColor)).EndInit();
@@ -445,5 +478,7 @@ namespace MenuOption
         private SecureCoreInheritedControl.SWColorPicker SWcpFontColor;
         private SecureCoreInheritedControl.SWColorPicker SWcpFontHoverColor;
         private SWUserControls.ImageSelector isIconHover;
+        private SecureCoreInheritedControl.SWTextbox SWtxtRenderingOrder;
+        private System.Windows.Forms.Label lblRenderingOrder;
     }
 }

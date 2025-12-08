@@ -26,6 +26,7 @@ namespace JobHuntersSystem
         BaseDeDades dbManager;
 
         string logoPath = AppDomain.CurrentDomain.BaseDirectory + "Multimedia/png/Banner.png";
+        string version = "Version 1.0";
         bool PanelMinimized = false;
         #region cursor
         [DllImport("user32.dll")]
@@ -41,12 +42,14 @@ namespace JobHuntersSystem
             string timeFrame = DateTime.Now.ToString("HH:mm:ss");
             lblTime.Text = timeFrame;
             timerTime.Start();
+
+            lblVersion.Text = version;
         }
         DataTable dtUserOptions;
 
         private void LoadUserOptions()
         {
-            string query = "SELECT * FROM UserOptions";
+            string query = "SELECT * FROM UserOptions ORDER BY RenderingOrder ASC";
             dtUserOptions = dbManager.PortarDataTable(query);
 
             foreach (DataRow row in dtUserOptions.Rows)
@@ -172,6 +175,19 @@ namespace JobHuntersSystem
         {
             string timeFrame = DateTime.Now.ToString("HH:mm:ss");
             lblTime.Text = timeFrame;
+        }
+
+        private void pctSpaceShip_MouseHover(object sender, EventArgs e)
+        {
+            pctMessage1.Visible = true;
+        }
+
+        private void pctSpaceShip_MouseLeave(object sender, EventArgs e)
+        {
+            if (pctMessage1.Visible)
+            {
+                pctMessage1.Visible = false;
+            }
         }
     }
 }
