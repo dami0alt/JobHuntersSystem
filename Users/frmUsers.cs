@@ -15,6 +15,7 @@ namespace Users
         private List<string> FkTableNams = new List<string>{
         "UserRanks","Species","UserCategories","Planets"
         };
+        private string defaultPassword = "12345aA";
         public frmUsers()
         {
             InitializeComponent();
@@ -102,7 +103,46 @@ namespace Users
             base.NewRegister();
 
             int index = ds.Tables[0].Rows.Count - 1;
-            ds.Tables[0].Rows[index]["Password"] = "12345aA";
+            ds.Tables[0].Rows[index]["Password"] = defaultPassword;
+        }
+        private void SetDefaultPassword()
+        {
+            SWtxtPassword.Text = defaultPassword;
+            SWtxtHash.Text = string.Empty;
+            if (SWtxtPassword.DataBindings.Count > 0)
+            {
+                SWtxtPassword.DataBindings[0].BindingManagerBase.EndCurrentEdit();
+                SWtxtHash.DataBindings[0].BindingManagerBase.EndCurrentEdit();
+            }
+
+        }
+
+        private void btnResetPassword_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show(
+                "Are you sure you want to set the default password in this user?",
+                "Security Alert !!",
+                MessageBoxButtons.OKCancel,
+                MessageBoxIcon.Question
+            );
+            if (result == DialogResult.OK)
+            {
+                SetDefaultPassword();
+            }
+        }
+
+        private void SWtxtPassword_TextChanged(object sender, EventArgs e)
+        {
+            if(((SWTextbox)sender).Text == "12345aA")
+            {
+                btnResetPassword.BackColor = Color.LightGray;
+                btnResetPassword.Enabled = false;
+            }
+            else
+            {
+                btnResetPassword.BackColor = Color.White;
+                btnResetPassword.Enabled = true;
+            }
         }
     }
 }

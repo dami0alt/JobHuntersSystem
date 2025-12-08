@@ -30,28 +30,29 @@ namespace JobHuntersSystem
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConfirmPassword));
             this.btnConfirmPassword = new System.Windows.Forms.Button();
             this.lblConfirmPassword = new System.Windows.Forms.Label();
             this.lblNewPassword = new System.Windows.Forms.Label();
             this.txtConfirmPassword = new System.Windows.Forms.TextBox();
             this.txtNewPassword = new System.Windows.Forms.TextBox();
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.pnlProtection = new System.Windows.Forms.Panel();
+            this.pnlSecurityLevel = new System.Windows.Forms.Panel();
+            this.lblSecurity = new System.Windows.Forms.Label();
+            this.lblInformation = new System.Windows.Forms.Label();
             this.pnlTitle = new System.Windows.Forms.Panel();
             this.pctRectangle = new System.Windows.Forms.PictureBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblChange = new System.Windows.Forms.Label();
             this.pctBackground = new System.Windows.Forms.PictureBox();
-            this.lblInformation = new System.Windows.Forms.Label();
-            this.lblSecurity = new System.Windows.Forms.Label();
-            this.pnlProtection = new System.Windows.Forms.Panel();
             this.timerInfo = new System.Windows.Forms.Timer(this.components);
-            this.pnlSecurityLevel = new System.Windows.Forms.Panel();
+            this.SWcbClose = new SecureCoreInheritedControl.SWCloseButton();
             this.pnlMain.SuspendLayout();
+            this.pnlProtection.SuspendLayout();
             this.pnlTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctRectangle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctBackground)).BeginInit();
-            this.pnlProtection.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SWcbClose)).BeginInit();
             this.SuspendLayout();
             // 
             // btnConfirmPassword
@@ -110,6 +111,7 @@ namespace JobHuntersSystem
             // pnlMain
             // 
             this.pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(9)))), ((int)(((byte)(13)))));
+            this.pnlMain.Controls.Add(this.SWcbClose);
             this.pnlMain.Controls.Add(this.pnlProtection);
             this.pnlMain.Controls.Add(this.lblSecurity);
             this.pnlMain.Controls.Add(this.lblInformation);
@@ -125,6 +127,48 @@ namespace JobHuntersSystem
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(722, 403);
             this.pnlMain.TabIndex = 11;
+            // 
+            // pnlProtection
+            // 
+            this.pnlProtection.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnlProtection.Controls.Add(this.pnlSecurityLevel);
+            this.pnlProtection.Location = new System.Drawing.Point(461, 164);
+            this.pnlProtection.Name = "pnlProtection";
+            this.pnlProtection.Size = new System.Drawing.Size(128, 10);
+            this.pnlProtection.TabIndex = 15;
+            // 
+            // pnlSecurityLevel
+            // 
+            this.pnlSecurityLevel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlSecurityLevel.Location = new System.Drawing.Point(0, 0);
+            this.pnlSecurityLevel.Name = "pnlSecurityLevel";
+            this.pnlSecurityLevel.Size = new System.Drawing.Size(128, 10);
+            this.pnlSecurityLevel.TabIndex = 0;
+            // 
+            // lblSecurity
+            // 
+            this.lblSecurity.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSecurity.ForeColor = System.Drawing.Color.White;
+            this.lblSecurity.Location = new System.Drawing.Point(345, 160);
+            this.lblSecurity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSecurity.Name = "lblSecurity";
+            this.lblSecurity.Size = new System.Drawing.Size(113, 19);
+            this.lblSecurity.TabIndex = 14;
+            this.lblSecurity.Text = "Protection Level";
+            this.lblSecurity.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblInformation
+            // 
+            this.lblInformation.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInformation.ForeColor = System.Drawing.Color.White;
+            this.lblInformation.Location = new System.Drawing.Point(183, 271);
+            this.lblInformation.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblInformation.Name = "lblInformation";
+            this.lblInformation.Size = new System.Drawing.Size(322, 19);
+            this.lblInformation.TabIndex = 13;
+            this.lblInformation.Text = "Confirm Password:";
+            this.lblInformation.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblInformation.Visible = false;
             // 
             // pnlTitle
             // 
@@ -172,7 +216,6 @@ namespace JobHuntersSystem
             // pctBackground
             // 
             this.pctBackground.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pctBackground.Image = ((System.Drawing.Image)(resources.GetObject("pctBackground.Image")));
             this.pctBackground.ImageLocation = "Multimedia/png/SpaceshipBk.png";
             this.pctBackground.Location = new System.Drawing.Point(0, 0);
             this.pctBackground.Name = "pctBackground";
@@ -180,52 +223,25 @@ namespace JobHuntersSystem
             this.pctBackground.TabIndex = 12;
             this.pctBackground.TabStop = false;
             // 
-            // lblInformation
-            // 
-            this.lblInformation.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInformation.ForeColor = System.Drawing.Color.White;
-            this.lblInformation.Location = new System.Drawing.Point(183, 271);
-            this.lblInformation.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblInformation.Name = "lblInformation";
-            this.lblInformation.Size = new System.Drawing.Size(322, 19);
-            this.lblInformation.TabIndex = 13;
-            this.lblInformation.Text = "Confirm Password:";
-            this.lblInformation.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblInformation.Visible = false;
-            // 
-            // lblSecurity
-            // 
-            this.lblSecurity.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSecurity.ForeColor = System.Drawing.Color.White;
-            this.lblSecurity.Location = new System.Drawing.Point(345, 160);
-            this.lblSecurity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblSecurity.Name = "lblSecurity";
-            this.lblSecurity.Size = new System.Drawing.Size(113, 19);
-            this.lblSecurity.TabIndex = 14;
-            this.lblSecurity.Text = "Protection Level";
-            this.lblSecurity.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // pnlProtection
-            // 
-            this.pnlProtection.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pnlProtection.Controls.Add(this.pnlSecurityLevel);
-            this.pnlProtection.Location = new System.Drawing.Point(461, 164);
-            this.pnlProtection.Name = "pnlProtection";
-            this.pnlProtection.Size = new System.Drawing.Size(128, 10);
-            this.pnlProtection.TabIndex = 15;
-            // 
             // timerInfo
             // 
             this.timerInfo.Interval = 1500;
             this.timerInfo.Tick += new System.EventHandler(this.timerInfo_Tick);
             // 
-            // pnlSecurityLevel
+            // SWcbClose
             // 
-            this.pnlSecurityLevel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlSecurityLevel.Location = new System.Drawing.Point(0, 0);
-            this.pnlSecurityLevel.Name = "pnlSecurityLevel";
-            this.pnlSecurityLevel.Size = new System.Drawing.Size(128, 10);
-            this.pnlSecurityLevel.TabIndex = 0;
+            this.SWcbClose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SWcbClose.HoverIconPath = "Multimedia/png/CloseButtonShiny.png";
+            this.SWcbClose.ImageLocation = "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE\\Multime" +
+    "dia/png/CloseButton.png";
+            this.SWcbClose.Location = new System.Drawing.Point(692, 3);
+            this.SWcbClose.MainIconPath = "Multimedia/png/CloseButton.png";
+            this.SWcbClose.Name = "SWcbClose";
+            this.SWcbClose.Size = new System.Drawing.Size(27, 27);
+            this.SWcbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.SWcbClose.TabIndex = 16;
+            this.SWcbClose.TabStop = false;
             // 
             // frmConfirmPassword
             // 
@@ -243,11 +259,12 @@ namespace JobHuntersSystem
             this.TopMost = true;
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();
+            this.pnlProtection.ResumeLayout(false);
             this.pnlTitle.ResumeLayout(false);
             this.pnlTitle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctRectangle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctBackground)).EndInit();
-            this.pnlProtection.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SWcbClose)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -270,5 +287,6 @@ namespace JobHuntersSystem
         private System.Windows.Forms.Label lblSecurity;
         private System.Windows.Forms.Timer timerInfo;
         private System.Windows.Forms.Panel pnlSecurityLevel;
+        private SecureCoreInheritedControl.SWCloseButton SWcbClose;
     }
 }
