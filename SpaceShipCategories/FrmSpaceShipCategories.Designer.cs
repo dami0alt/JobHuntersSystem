@@ -68,18 +68,20 @@ namespace SpaceShipCategories
             // lblCodeShip
             // 
             this.lblCodeShip.AutoSize = true;
-            this.lblCodeShip.Location = new System.Drawing.Point(66, 198);
+            this.lblCodeShip.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.lblCodeShip.Location = new System.Drawing.Point(27, 196);
             this.lblCodeShip.Name = "lblCodeShip";
-            this.lblCodeShip.Size = new System.Drawing.Size(122, 19);
+            this.lblCodeShip.Size = new System.Drawing.Size(161, 23);
             this.lblCodeShip.TabIndex = 8;
             this.lblCodeShip.Text = "SpaceShipCode";
             // 
             // lblDescShip
             // 
             this.lblDescShip.AutoSize = true;
-            this.lblDescShip.Location = new System.Drawing.Point(72, 256);
+            this.lblDescShip.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.lblDescShip.Location = new System.Drawing.Point(34, 253);
             this.lblDescShip.Name = "lblDescShip";
-            this.lblDescShip.Size = new System.Drawing.Size(116, 19);
+            this.lblDescShip.Size = new System.Drawing.Size(154, 23);
             this.lblDescShip.TabIndex = 9;
             this.lblDescShip.Text = "SpaceShipDesc";
             // 
