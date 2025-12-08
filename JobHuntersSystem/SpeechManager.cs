@@ -39,7 +39,7 @@ namespace JobHuntersSystem
         private void Recognizer_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
 
-            if (e.Result.Confidence < 0.60f)
+            if (e.Result.Confidence < 0.75f)
                 return;
 
             string command = e.Result.Text.ToLower();
@@ -65,7 +65,7 @@ namespace JobHuntersSystem
 
         private void ShowTime()
         {
-            string hour = DateTime.Now.ToString("hh:mm tt");
+            string hour = DateTime.Now.ToString("HH:mm tt");
             MessageBox.Show($"Current time: {hour}", "System Time");
         }
 

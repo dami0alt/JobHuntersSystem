@@ -137,7 +137,7 @@ namespace JobHuntersSystem
             {
                 lblHonor.Text = "★ ★ ★ ★ ★ ♚";
             }
-            //speech = new SpeechManager(this);
+            speech = new SpeechManager(this);
         }
 
         private void pctExtender_Click(object sender, EventArgs e)
