@@ -260,7 +260,7 @@ namespace Planets
             // 
             // SWcdSpecies
             // 
-            this.SWcdSpecies.ClasseCS = null;
+            this.SWcdSpecies.ClasseCS = "Species.dll";
             this.SWcdSpecies.ControlID = "SWtxtSpecies";
             this.SWcdSpecies.FormCS = null;
             this.SWcdSpecies.Location = new System.Drawing.Point(759, 94);
@@ -296,7 +296,7 @@ namespace Planets
             // 
             // SWcdFiliation
             // 
-            this.SWcdFiliation.ClasseCS = null;
+            this.SWcdFiliation.ClasseCS = "Filiations.dll";
             this.SWcdFiliation.ControlID = "SWtxtFiliation";
             this.SWcdFiliation.FormCS = null;
             this.SWcdFiliation.Location = new System.Drawing.Point(759, 139);
