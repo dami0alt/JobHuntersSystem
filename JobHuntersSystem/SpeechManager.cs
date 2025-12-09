@@ -12,6 +12,8 @@ namespace JobHuntersSystem
         private SpeechRecognitionEngine recognizer;
         private frmMain parentForm;
 
+        public bool IsRunning { get; private set; }
+
         public SpeechManager(frmMain form)
         {
             string[] commands;
@@ -22,15 +24,22 @@ namespace JobHuntersSystem
                 recognizer = new SpeechRecognitionEngine(new CultureInfo("en-US"));
 
                 ConfigureRecognizer(commands);
+                IsRunning = true;
             }
             catch(Exception ex){
+                try
+                {
+                    recognizer = new SpeechRecognitionEngine(new CultureInfo("es-ES"));
+                    commands = new string[] { "apagar", "hora", "información" };
 
-                MessageBox.Show(ex.Message, "Voice Error", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    ConfigureRecognizer(commands);
+                    IsRunning = true;
+                }
+                catch
+                {
+                    IsRunning = false;
+                }
 
-                recognizer = new SpeechRecognitionEngine(new CultureInfo("es-ES"));
-                commands = new string[] { "apagar", "hora", "información" };
-
-                ConfigureRecognizer(commands);
             }
         }
         private void ConfigureRecognizer(string[] commands)

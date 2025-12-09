@@ -48,10 +48,11 @@ namespace JobHuntersSystem
             this.pctSecretItem = new System.Windows.Forms.PictureBox();
             this.pnlRectangleLeft = new System.Windows.Forms.Panel();
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.pctMessage1 = new System.Windows.Forms.PictureBox();
             this.lblVersion = new System.Windows.Forms.Label();
             this.pctSpaceShip = new System.Windows.Forms.PictureBox();
             this.timerTime = new System.Windows.Forms.Timer(this.components);
-            this.pctMessage1 = new System.Windows.Forms.PictureBox();
+            this.pctVoice = new System.Windows.Forms.PictureBox();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SWcbClose)).BeginInit();
             this.panel1.SuspendLayout();
@@ -63,13 +64,15 @@ namespace JobHuntersSystem
             this.pnlUserInformation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctSecretItem)).BeginInit();
             this.pnlMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctSpaceShip)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctMessage1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctSpaceShip)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctVoice)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.pnlHeader.Controls.Add(this.pctVoice);
             this.pnlHeader.Controls.Add(this.SWcbClose);
             this.pnlHeader.Controls.Add(this.panel1);
             this.pnlHeader.Controls.Add(this.lblHonor);
@@ -120,9 +123,9 @@ namespace JobHuntersSystem
             | System.Windows.Forms.AnchorStyles.Left)));
             this.lblHonor.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHonor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(171)))), ((int)(((byte)(82)))));
-            this.lblHonor.Location = new System.Drawing.Point(122, -3);
+            this.lblHonor.Location = new System.Drawing.Point(163, -3);
             this.lblHonor.Name = "lblHonor";
-            this.lblHonor.Size = new System.Drawing.Size(255, 35);
+            this.lblHonor.Size = new System.Drawing.Size(181, 35);
             this.lblHonor.TabIndex = 6;
             // 
             // pnlOptions
@@ -280,6 +283,18 @@ namespace JobHuntersSystem
             this.pnlMain.Size = new System.Drawing.Size(1193, 761);
             this.pnlMain.TabIndex = 7;
             // 
+            // pctMessage1
+            // 
+            this.pctMessage1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pctMessage1.ImageLocation = "Multimedia/png/Message1.png";
+            this.pctMessage1.Location = new System.Drawing.Point(1013, 636);
+            this.pctMessage1.Name = "pctMessage1";
+            this.pctMessage1.Size = new System.Drawing.Size(117, 72);
+            this.pctMessage1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctMessage1.TabIndex = 2;
+            this.pctMessage1.TabStop = false;
+            this.pctMessage1.Visible = false;
+            // 
             // lblVersion
             // 
             this.lblVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -308,17 +323,16 @@ namespace JobHuntersSystem
             this.timerTime.Interval = 1000;
             this.timerTime.Tick += new System.EventHandler(this.timerTime_Tick);
             // 
-            // pctMessage1
+            // pctVoice
             // 
-            this.pctMessage1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pctMessage1.ImageLocation = "Multimedia/png/Message1.png";
-            this.pctMessage1.Location = new System.Drawing.Point(1013, 636);
-            this.pctMessage1.Name = "pctMessage1";
-            this.pctMessage1.Size = new System.Drawing.Size(117, 72);
-            this.pctMessage1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pctMessage1.TabIndex = 2;
-            this.pctMessage1.TabStop = false;
-            this.pctMessage1.Visible = false;
+            this.pctVoice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.pctVoice.Location = new System.Drawing.Point(125, 0);
+            this.pctVoice.Name = "pctVoice";
+            this.pctVoice.Size = new System.Drawing.Size(29, 29);
+            this.pctVoice.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctVoice.TabIndex = 9;
+            this.pctVoice.TabStop = false;
             // 
             // frmMain
             // 
@@ -349,8 +363,9 @@ namespace JobHuntersSystem
             this.pnlUserInformation.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pctSecretItem)).EndInit();
             this.pnlMain.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pctSpaceShip)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctMessage1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctSpaceShip)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctVoice)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -379,5 +394,6 @@ namespace JobHuntersSystem
         private System.Windows.Forms.PictureBox pctSpaceShip;
         private System.Windows.Forms.Label lblVersion;
         private System.Windows.Forms.PictureBox pctMessage1;
+        private System.Windows.Forms.PictureBox pctVoice;
     }
 }
