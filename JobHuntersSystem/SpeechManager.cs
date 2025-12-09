@@ -25,7 +25,7 @@ namespace JobHuntersSystem
             }
             catch(Exception ex){
 
-                MessageBox.Show(ex.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Voice Error", MessageBoxButtons.OK,MessageBoxIcon.Error);
 
                 recognizer = new SpeechRecognitionEngine(new CultureInfo("es-ES"));
                 commands = new string[] { "apagar", "hora", "información" };
