@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title="Actualitzar method" Url="html/45cf1c74-d7c9-c5a9-120d-9e0e5fcf1ab2.htm" />
+  <HelpKINode Title="AfegirDataTable method" Url="html/5c9242cd-f3a7-bb19-c223-7f034fae0b2d.htm" />
+  <HelpKINode Title="BaseDeDades class">
+    <HelpKINode Title="BaseDeDades Class" Url="html/1842c6e6-1184-9614-39aa-8d04c53db894.htm" />
+    <HelpKINode Title="constructor" Url="html/fc05f855-086e-c7d1-1b92-35c937d61fa1.htm" />
+    <HelpKINode Title="methods" Url="html/9644b0e6-370f-7240-55c1-2b47725058c6.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BaseDeDades.Actualitzar method" Url="html/45cf1c74-d7c9-c5a9-120d-9e0e5fcf1ab2.htm" />
+  <HelpKINode Title="BaseDeDades.AfegirDataTable method" Url="html/5c9242cd-f3a7-bb19-c223-7f034fae0b2d.htm" />
+  <HelpKINode Title="BaseDeDades.BaseDeDades constructor" Url="html/fc05f855-086e-c7d1-1b92-35c937d61fa1.htm" />
+  <HelpKINode Title="BaseDeDades.Executa method" Url="html/f49cb136-4874-f0a6-d4af-10b8afeab875.htm" />
+  <HelpKINode Title="BaseDeDades.GeneraConsultaCerca method" Url="html/9d89b8fd-fe47-7de6-0d4d-9522521d0377.htm" />
+  <HelpKINode Title="BaseDeDades.PortarDataTable method" Url="html/56e7b0ce-219d-24d1-2f33-270b9affce1a.htm" />
+  <HelpKINode Title="BaseDeDades.PortarPerConsulta method" Url="html/920f79ed-774d-4bd9-bfbd-ee0679e5e84e.htm" />
+  <HelpKINode Title="BaseDeDades.PortarTaula method" Url="html/99c3f7ed-d58a-58b7-00c4-77789cb6a2f4.htm" />
+  <HelpKINode Title="ComponentesDeAcceso namespace" Url="html/991b36d3-9668-4bfa-7ea9-5d9ae136a129.htm" />
+  <HelpKINode Title="ComponentesDeAcceso.BaseDeDades class" Url="html/1842c6e6-1184-9614-39aa-8d04c53db894.htm" />
+  <HelpKINode Title="Executa method" Url="html/f49cb136-4874-f0a6-d4af-10b8afeab875.htm" />
+  <HelpKINode Title="GeneraConsultaCerca method" Url="html/9d89b8fd-fe47-7de6-0d4d-9522521d0377.htm" />
+  <HelpKINode Title="PortarDataTable method" Url="html/56e7b0ce-219d-24d1-2f33-270b9affce1a.htm" />
+  <HelpKINode Title="PortarPerConsulta method" Url="html/920f79ed-774d-4bd9-bfbd-ee0679e5e84e.htm" />
+  <HelpKINode Title="PortarTaula method" Url="html/99c3f7ed-d58a-58b7-00c4-77789cb6a2f4.htm" />
+  <HelpKINode Title="version">
+    <HelpKINode Title="1.0.0.0" Url="html/67887f50-2e66-4ffc-90c9-c0163cde6c55.htm" />
+    <HelpKINode Title="history" Url="html/1d280640-44a6-4b9b-a6f3-629515140941.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Welcome" Url="html/6dca9754-d40e-40be-8a6d-2752f3d58f99.htm" />
+</HelpKI>
