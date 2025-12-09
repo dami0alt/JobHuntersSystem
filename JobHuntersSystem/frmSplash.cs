@@ -15,6 +15,8 @@ namespace JobHuntersSystem
     {
         public bool SkipClicked { get; set; } = false; //añadido
 
+        int percentage = 1;
+        int steps = 0;
         public frmSplash()
         {
             InitializeComponent();
@@ -23,10 +25,58 @@ namespace JobHuntersSystem
 
         private void TimerSplash_Tick(object sender, EventArgs e)
         {
-            pgbSplash.Increment(1);
-            lblProgress.Text = pgbSplash.Value.ToString() + "%";
 
-            if(pgbSplash.Value == pgbSplash.Maximum)
+            pgbSplash.Increment(1);
+
+            if(pgbSplash.Value % 25 == 0)
+            {
+                steps++;
+                if (steps % 4 != 0)
+                {
+                    int dots = (pgbSplash.Value % 25) + 1;
+
+                    lblDots.Text += new string('.', dots);
+                }
+                else{
+                    lblDots.Text = string.Empty;
+                }
+              
+            }
+           
+            switch (percentage)
+            {
+                case 1:
+                    lblInformation.Text = "Initializing system";
+                    break;
+                case 20:
+                    lblInformation.Text = "Establishing secure connection";
+                    break;
+                case 30:
+                    lblInformation.Text = "Preparing graphical environment";
+                    break;
+                case 40:
+                    lblInformation.Text = "Optimizing available resources";
+                    break;
+                case 55:
+                    lblInformation.Text = "Synchronizing data modules";
+                    break;
+                case 65:
+                    lblInformation.Text = "Finalizing startup processes";
+                    break;
+                case 85:
+                    lblInformation.Text = "Ready to launch application";
+                    break;
+            }
+
+            if (pgbSplash.Value % 5 == 0)
+            {
+                percentage++;
+                lblProgress.Text = percentage + "%";
+            }
+           
+
+
+            if (pgbSplash.Value == pgbSplash.Maximum)
             {
                 TimerSplash.Stop();
                 this.Close();

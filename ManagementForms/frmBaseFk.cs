@@ -108,7 +108,6 @@ namespace ManagementForms
                   
                     if (string.IsNullOrEmpty(value))
                     {
-                        string name = ctrl.Name;
                         if (((SWTextbox)ctrl).NullSpace)
                         {
                             row[((SWTextbox)ctrl).DatabaseName] = DBNull.Value;
@@ -123,12 +122,6 @@ namespace ManagementForms
                     {
                         row[((SWTextbox)ctrl).DatabaseName] = value;
                     }
-                }
-                else if (ctrl is ComboBox)
-                {
-                
-                    row[ctrl.Tag.ToString()] = DBNull.Value;
-                    row[ctrl.Tag.ToString()] = ((ComboBox)ctrl).SelectedValue;
                 }
             }
             ds.Tables[0].Rows.Add(row);     

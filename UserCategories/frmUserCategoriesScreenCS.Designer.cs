@@ -43,9 +43,9 @@ namespace UserCategories
             this.lblCodeUser.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodeUser.Location = new System.Drawing.Point(75, 92);
             this.lblCodeUser.Name = "lblCodeUser";
-            this.lblCodeUser.Size = new System.Drawing.Size(87, 20);
+            this.lblCodeUser.Size = new System.Drawing.Size(91, 20);
             this.lblCodeUser.TabIndex = 23;
-            this.lblCodeUser.Text = "Code User";
+            this.lblCodeUser.Text = "User Code ";
             // 
             // SWtxtCodeUser
             // 
@@ -103,7 +103,7 @@ namespace UserCategories
             this.lblAccessLevel.TabIndex = 27;
             this.lblAccessLevel.Text = "Access Level";
             // 
-            // frmUserCategoriesScreen
+            // frmUserCategoriesScreenCS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(842, 584);
@@ -113,7 +113,7 @@ namespace UserCategories
             this.Controls.Add(this.lblDescUser);
             this.Controls.Add(this.SWtxtCodeUser);
             this.Controls.Add(this.lblCodeUser);
-            this.Name = "frmUserCategoriesScreen";
+            this.Name = "frmUserCategoriesScreenCS";
             this.Controls.SetChildIndex(this.lblCodeUser, 0);
             this.Controls.SetChildIndex(this.SWtxtCodeUser, 0);
             this.Controls.SetChildIndex(this.lblDescUser, 0);

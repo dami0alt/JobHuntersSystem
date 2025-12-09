@@ -24,7 +24,7 @@ namespace ManagementForms
         }
 
         protected DataSet dts;
-  
+        
         private void BindControls()
         {
             foreach (Control ctrl in this.Controls)
@@ -48,6 +48,10 @@ namespace ManagementForms
                 }
             }
         }
+        protected virtual void GetData()
+        {
+            dts = dbManager.PortarTaula(_tableName);
+        }
         private void UpdateRegisters()
         {
             string query = $"SELECT * FROM {_tableName}";
@@ -67,7 +71,13 @@ namespace ManagementForms
 
             dbManager.Actualitzar(query, dts);
 
-            dts = dbManager.PortarTaula(_tableName);
+
+            GetData();
+
+            timerInfo.Start();
+            lblInfo.ForeColor = Color.LightGreen;
+            lblInfo.Visible = true;
+            lblInfo.Text = "Registers Updated !!";
 
             BindControls();
             dgtData.DataSource = dts.Tables[0];
@@ -81,11 +91,23 @@ namespace ManagementForms
             {
                 if(ctrl is SWTextbox)
                 {
-                    row[((SWTextbox)ctrl).DatabaseName] = ctrl.Text;
-                }
-                else if (ctrl is ComboBox)
-                {
-                    row[ctrl.Tag.ToString()] = ((ComboBox)ctrl).SelectedValue;
+                    string value = ctrl.Text;
+                    if (string.IsNullOrEmpty(value))
+                    {
+                        if (((SWTextbox)ctrl).NullSpace)
+                        {
+                            row[((SWTextbox)ctrl).DatabaseName] = DBNull.Value;
+                        }
+                        else
+                        {
+                            lblInfo.Visible = true;
+                            throw new ArgumentException($"The required fields are empty, please verify...");
+                        }
+                    }
+                    else
+                    {
+                        row[((SWTextbox)ctrl).DatabaseName] = value;
+                    }
                 }
             }
             dts.Tables[0].Rows.Add(row);     
@@ -114,7 +136,7 @@ namespace ManagementForms
         {
             if (DesignMode) return;
             dbManager = new BaseDeDades();
-            dts = dbManager.PortarTaula(_tableName);
+            GetData();
 
             BindControls();
             dgtData.DataSource = dts.Tables[0];
@@ -150,7 +172,16 @@ namespace ManagementForms
         }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            UpdateRegisters();
+            try
+            {
+                UpdateRegisters();
+            }
+            catch (Exception ex)
+            {
+                timerInfo.Start();
+                lblInfo.ForeColor = Color.LightSalmon;
+                lblInfo.Text = ex.Message;
+            }
         }
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -160,6 +191,13 @@ namespace ManagementForms
         private void btnClose_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void timerInfo_Tick(object sender, EventArgs e)
+        {
+            timerInfo.Stop();
+            lblInfo.Visible = false;
+            timerInfo.Dispose();
         }
     }
 }

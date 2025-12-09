@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmUserRanksScreenCS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserRanksScreenCS.Designer.cs">
+      <DependentUpon>frmUserRanksScreenCS.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUserRanks.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +63,9 @@
       <DependentUpon>frmUserRanks.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmUserRanksScreenCS.resx">
+      <DependentUpon>frmUserRanksScreenCS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmUserRanks.resx">
       <DependentUpon>frmUserRanks.cs</DependentUpon>
     </EmbeddedResource>

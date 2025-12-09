@@ -44,6 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SWCloseButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="SWColorPicker.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -53,6 +56,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="SWCloseButton.resx">
+      <DependentUpon>SWCloseButton.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SWColorPicker.resx">
       <DependentUpon>SWColorPicker.cs</DependentUpon>
     </EmbeddedResource>
