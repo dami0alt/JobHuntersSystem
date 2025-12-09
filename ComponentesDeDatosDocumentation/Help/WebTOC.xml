@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Title="Welcome to the [TODO: Add project name]" Url="html/6dca9754-d40e-40be-8a6d-2752f3d58f99.htm" />
+  <HelpTOCNode Id="af8d1f70-c304-43b2-b129-0cbda7e71eb0" Title="Version History" Url="html/1d280640-44a6-4b9b-a6f3-629515140941.htm">
+    <HelpTOCNode Title="Version 1.0.0.0" Url="html/67887f50-2e66-4ffc-90c9-c0163cde6c55.htm" />
+  </HelpTOCNode>
+  <HelpTOCNode Id="09c3c0ba-7931-4aea-a6c1-1ccf80670d3d" Title="ComponentesDeAcceso" Url="html/991b36d3-9668-4bfa-7ea9-5d9ae136a129.htm">
+    <HelpTOCNode Id="b2f33da8-22ea-49fd-bf87-b43926559b6c" Title="BaseDeDades Class" Url="html/1842c6e6-1184-9614-39aa-8d04c53db894.htm">
+      <HelpTOCNode Title="BaseDeDades Constructor " Url="html/fc05f855-086e-c7d1-1b92-35c937d61fa1.htm" />
+      <HelpTOCNode Id="76208cb7-267c-476b-bbe1-e3d6c80eb3c5" Title="BaseDeDades Methods" Url="html/9644b0e6-370f-7240-55c1-2b47725058c6.htm">
+        <HelpTOCNode Title="Actualitzar Method " Url="html/45cf1c74-d7c9-c5a9-120d-9e0e5fcf1ab2.htm" />
+        <HelpTOCNode Title="AfegirDataTable Method " Url="html/5c9242cd-f3a7-bb19-c223-7f034fae0b2d.htm" />
+        <HelpTOCNode Title="Executa Method " Url="html/f49cb136-4874-f0a6-d4af-10b8afeab875.htm" />
+        <HelpTOCNode Title="GeneraConsultaCerca Method " Url="html/9d89b8fd-fe47-7de6-0d4d-9522521d0377.htm" />
+        <HelpTOCNode Title="PortarDataTable Method " Url="html/56e7b0ce-219d-24d1-2f33-270b9affce1a.htm" />
+        <HelpTOCNode Id="ad441da6-361a-47c9-a4f5-284b349463e2" Title="PortarPerConsulta Method " Url="html/920f79ed-774d-4bd9-bfbd-ee0679e5e84e.htm">
+          <HelpTOCNode Title="PortarPerConsulta Method (String)" Url="html/6148fc8e-00d9-5ad3-1d69-0796feada070.htm" />
+          <HelpTOCNode Title="PortarPerConsulta Method (String, String)" Url="html/34d40006-2f44-82ef-bb9d-2964d47c182b.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="PortarTaula Method " Url="html/99c3f7ed-d58a-58b7-00c4-77789cb6a2f4.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>
