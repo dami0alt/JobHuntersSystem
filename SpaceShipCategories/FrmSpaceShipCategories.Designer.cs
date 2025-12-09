@@ -37,11 +37,12 @@ namespace SpaceShipCategories
             // 
             // lblTableName
             // 
-            this.lblTableName.Size = new System.Drawing.Size(468, 25);
+            this.lblTableName.Size = new System.Drawing.Size(466, 25);
             // 
             // swTextbox1
             // 
             this.swTextbox1.AllowedData = SecureCoreInheritedControl.DataType.Text;
+            this.swTextbox1.BackColor = System.Drawing.Color.White;
             this.swTextbox1.ControlID = null;
             this.swTextbox1.DatabaseName = "CodeSpaceShipCategory";
             this.swTextbox1.IsForeignKey = false;
@@ -50,11 +51,12 @@ namespace SpaceShipCategories
             this.swTextbox1.NullSpace = true;
             this.swTextbox1.Size = new System.Drawing.Size(222, 24);
             this.swTextbox1.TabIndex = 6;
-            this.swTextbox1.Tag = "CodeSpaceShipCategory";
+            this.swTextbox1.Tag = "";
             // 
             // swTextbox2
             // 
             this.swTextbox2.AllowedData = SecureCoreInheritedControl.DataType.Text;
+            this.swTextbox2.BackColor = System.Drawing.Color.White;
             this.swTextbox2.ControlID = null;
             this.swTextbox2.DatabaseName = "DescSpaceShipCategory";
             this.swTextbox2.IsForeignKey = false;
@@ -63,7 +65,7 @@ namespace SpaceShipCategories
             this.swTextbox2.NullSpace = true;
             this.swTextbox2.Size = new System.Drawing.Size(222, 24);
             this.swTextbox2.TabIndex = 7;
-            this.swTextbox2.Tag = "DescSpaceShipCategory";
+            this.swTextbox2.Tag = "";
             // 
             // lblCodeShip
             // 
