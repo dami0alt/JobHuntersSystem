@@ -31,6 +31,7 @@ namespace JobHuntersSystem
         {
             this.components = new System.ComponentModel.Container();
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.pctVoice = new System.Windows.Forms.PictureBox();
             this.SWcbClose = new SecureCoreInheritedControl.SWCloseButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTime = new System.Windows.Forms.Label();
@@ -52,8 +53,8 @@ namespace JobHuntersSystem
             this.lblVersion = new System.Windows.Forms.Label();
             this.pctSpaceShip = new System.Windows.Forms.PictureBox();
             this.timerTime = new System.Windows.Forms.Timer(this.components);
-            this.pctVoice = new System.Windows.Forms.PictureBox();
             this.pnlHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctVoice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SWcbClose)).BeginInit();
             this.panel1.SuspendLayout();
             this.pnlOptions.SuspendLayout();
@@ -66,7 +67,6 @@ namespace JobHuntersSystem
             this.pnlMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctMessage1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctSpaceShip)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctVoice)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -82,6 +82,17 @@ namespace JobHuntersSystem
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(1440, 29);
             this.pnlHeader.TabIndex = 0;
+            // 
+            // pctVoice
+            // 
+            this.pctVoice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.pctVoice.Location = new System.Drawing.Point(125, 0);
+            this.pctVoice.Name = "pctVoice";
+            this.pctVoice.Size = new System.Drawing.Size(29, 29);
+            this.pctVoice.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctVoice.TabIndex = 9;
+            this.pctVoice.TabStop = false;
             // 
             // SWcbClose
             // 
@@ -123,7 +134,7 @@ namespace JobHuntersSystem
             | System.Windows.Forms.AnchorStyles.Left)));
             this.lblHonor.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHonor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(171)))), ((int)(((byte)(82)))));
-            this.lblHonor.Location = new System.Drawing.Point(163, -3);
+            this.lblHonor.Location = new System.Drawing.Point(192, -3);
             this.lblHonor.Name = "lblHonor";
             this.lblHonor.Size = new System.Drawing.Size(181, 35);
             this.lblHonor.TabIndex = 6;
@@ -323,17 +334,6 @@ namespace JobHuntersSystem
             this.timerTime.Interval = 1000;
             this.timerTime.Tick += new System.EventHandler(this.timerTime_Tick);
             // 
-            // pctVoice
-            // 
-            this.pctVoice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.pctVoice.Location = new System.Drawing.Point(125, 0);
-            this.pctVoice.Name = "pctVoice";
-            this.pctVoice.Size = new System.Drawing.Size(29, 29);
-            this.pctVoice.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pctVoice.TabIndex = 9;
-            this.pctVoice.TabStop = false;
-            // 
             // frmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -353,6 +353,7 @@ namespace JobHuntersSystem
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.pnlHeader.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pctVoice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SWcbClose)).EndInit();
             this.panel1.ResumeLayout(false);
             this.pnlOptions.ResumeLayout(false);
@@ -365,7 +366,6 @@ namespace JobHuntersSystem
             this.pnlMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pctMessage1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctSpaceShip)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctVoice)).EndInit();
             this.ResumeLayout(false);
 
         }

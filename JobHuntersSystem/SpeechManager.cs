@@ -39,7 +39,6 @@ namespace JobHuntersSystem
                 {
                     IsRunning = false;
                 }
-
             }
         }
         private void ConfigureRecognizer(string[] commands)
