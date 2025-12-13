@@ -50,11 +50,12 @@ namespace SpaceShipsTypes
             // SWtxtDescType
             // 
             this.SWtxtDescType.AllowedData = SecureCoreInheritedControl.DataType.Text;
-            this.SWtxtDescType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(194)))), ((int)(((byte)(204)))));
+            this.SWtxtDescType.BackColor = System.Drawing.Color.White;
             this.SWtxtDescType.ControlID = null;
             this.SWtxtDescType.DatabaseName = "DescSpaceShipType";
             this.SWtxtDescType.IsForeignKey = false;
             this.SWtxtDescType.Location = new System.Drawing.Point(221, 122);
+            this.SWtxtDescType.MaxLength = 200;
             this.SWtxtDescType.Name = "SWtxtDescType";
             this.SWtxtDescType.NullSpace = true;
             this.SWtxtDescType.Size = new System.Drawing.Size(171, 21);
@@ -73,10 +74,12 @@ namespace SpaceShipsTypes
             // SWtxtTypeCode
             // 
             this.SWtxtTypeCode.AllowedData = SecureCoreInheritedControl.DataType.Text;
+            this.SWtxtTypeCode.BackColor = System.Drawing.Color.White;
             this.SWtxtTypeCode.ControlID = null;
             this.SWtxtTypeCode.DatabaseName = "CodeSpaceShipType";
             this.SWtxtTypeCode.IsForeignKey = false;
             this.SWtxtTypeCode.Location = new System.Drawing.Point(221, 78);
+            this.SWtxtTypeCode.MaxLength = 12;
             this.SWtxtTypeCode.Name = "SWtxtTypeCode";
             this.SWtxtTypeCode.NullSpace = true;
             this.SWtxtTypeCode.Size = new System.Drawing.Size(171, 21);
