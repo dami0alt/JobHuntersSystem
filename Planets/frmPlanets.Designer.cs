@@ -72,6 +72,7 @@ namespace Planets
             this.SWtxtCodePlanet.DatabaseName = "CodePlanet";
             this.SWtxtCodePlanet.IsForeignKey = false;
             this.SWtxtCodePlanet.Location = new System.Drawing.Point(160, 73);
+            this.SWtxtCodePlanet.MaxLength = 12;
             this.SWtxtCodePlanet.Name = "SWtxtCodePlanet";
             this.SWtxtCodePlanet.NullSpace = true;
             this.SWtxtCodePlanet.Size = new System.Drawing.Size(157, 21);
@@ -95,6 +96,7 @@ namespace Planets
             this.SWtxtDescPlanet.DatabaseName = "DescPlanet";
             this.SWtxtDescPlanet.IsForeignKey = false;
             this.SWtxtDescPlanet.Location = new System.Drawing.Point(160, 119);
+            this.SWtxtDescPlanet.MaxLength = 100;
             this.SWtxtDescPlanet.Name = "SWtxtDescPlanet";
             this.SWtxtDescPlanet.NullSpace = true;
             this.SWtxtDescPlanet.Size = new System.Drawing.Size(157, 21);
@@ -138,6 +140,7 @@ namespace Planets
             this.SWtxtPlanetPicture.DatabaseName = "PlanetPicture";
             this.SWtxtPlanetPicture.IsForeignKey = false;
             this.SWtxtPlanetPicture.Location = new System.Drawing.Point(766, 211);
+            this.SWtxtPlanetPicture.MaxLength = 100;
             this.SWtxtPlanetPicture.Name = "SWtxtPlanetPicture";
             this.SWtxtPlanetPicture.NullSpace = true;
             this.SWtxtPlanetPicture.Size = new System.Drawing.Size(251, 21);
@@ -161,6 +164,7 @@ namespace Planets
             this.SWtxtparsecs.DatabaseName = "parsecs";
             this.SWtxtparsecs.IsForeignKey = false;
             this.SWtxtparsecs.Location = new System.Drawing.Point(474, 73);
+            this.SWtxtparsecs.MaxLength = 12;
             this.SWtxtparsecs.Name = "SWtxtparsecs";
             this.SWtxtparsecs.NullSpace = true;
             this.SWtxtparsecs.Size = new System.Drawing.Size(132, 21);
@@ -194,6 +198,7 @@ namespace Planets
             this.SWtxtPortPlanet.DatabaseName = "PortPlanet";
             this.SWtxtPortPlanet.IsForeignKey = false;
             this.SWtxtPortPlanet.Location = new System.Drawing.Point(474, 166);
+            this.SWtxtPortPlanet.MaxLength = 4;
             this.SWtxtPortPlanet.Name = "SWtxtPortPlanet";
             this.SWtxtPortPlanet.NullSpace = true;
             this.SWtxtPortPlanet.Size = new System.Drawing.Size(132, 21);
@@ -217,6 +222,7 @@ namespace Planets
             this.SWtxtIPPlanet.DatabaseName = "IPPlanet";
             this.SWtxtIPPlanet.IsForeignKey = false;
             this.SWtxtIPPlanet.Location = new System.Drawing.Point(474, 119);
+            this.SWtxtIPPlanet.MaxLength = 15;
             this.SWtxtIPPlanet.Name = "SWtxtIPPlanet";
             this.SWtxtIPPlanet.NullSpace = true;
             this.SWtxtIPPlanet.Size = new System.Drawing.Size(132, 21);
@@ -240,6 +246,7 @@ namespace Planets
             this.SWtxtlong.DatabaseName = "long";
             this.SWtxtlong.IsForeignKey = false;
             this.SWtxtlong.Location = new System.Drawing.Point(160, 166);
+            this.SWtxtlong.MaxLength = 12;
             this.SWtxtlong.Name = "SWtxtlong";
             this.SWtxtlong.NullSpace = true;
             this.SWtxtlong.Size = new System.Drawing.Size(157, 21);
@@ -253,6 +260,7 @@ namespace Planets
             this.SWtxtlat.DatabaseName = "lat";
             this.SWtxtlat.IsForeignKey = false;
             this.SWtxtlat.Location = new System.Drawing.Point(160, 212);
+            this.SWtxtlat.MaxLength = 12;
             this.SWtxtlat.Name = "SWtxtlat";
             this.SWtxtlat.NullSpace = true;
             this.SWtxtlat.Size = new System.Drawing.Size(157, 21);
@@ -376,6 +384,7 @@ namespace Planets
             this.SWtxtPortPlanet1.DatabaseName = "PortPlanet";
             this.SWtxtPortPlanet1.IsForeignKey = false;
             this.SWtxtPortPlanet1.Location = new System.Drawing.Point(474, 212);
+            this.SWtxtPortPlanet1.MaxLength = 4;
             this.SWtxtPortPlanet1.Name = "SWtxtPortPlanet1";
             this.SWtxtPortPlanet1.NullSpace = true;
             this.SWtxtPortPlanet1.Size = new System.Drawing.Size(132, 21);
