@@ -112,11 +112,25 @@ namespace JobHuntersSystem
                 form.ShowDialog();
             }
         }
-
-        /*public void Stop()
+        public void Resume()
         {
+            try
+            {
+                recognizer.RecognizeAsync(RecognizeMode.Multiple);
+                IsRunning = true;
+            }
+            catch (InvalidOperationException)
+            {
+                recognizer.RecognizeAsyncCancel();
+                recognizer.RecognizeAsync(RecognizeMode.Multiple);
+                IsRunning = true;
+            }
+        }
+
+        public void Stop()
+        {
+            IsRunning = false;
             recognizer.RecognizeAsyncStop();
-            recognizer.Dispose();
-        }*/
+        }
     }
 }

@@ -44,6 +44,7 @@ namespace UserRanks
             // SWtxtDescRank
             // 
             this.SWtxtDescRank.AllowedData = SecureCoreInheritedControl.DataType.Text;
+            this.SWtxtDescRank.BackColor = System.Drawing.Color.White;
             this.SWtxtDescRank.ControlID = null;
             this.SWtxtDescRank.DatabaseName = "DescRank";
             this.SWtxtDescRank.IsForeignKey = false;
@@ -55,7 +56,8 @@ namespace UserRanks
             // 
             // SWtxtCodeRank
             // 
-            this.SWtxtCodeRank.AllowedData = SecureCoreInheritedControl.DataType.Code;
+            this.SWtxtCodeRank.AllowedData = SecureCoreInheritedControl.DataType.Text;
+            this.SWtxtCodeRank.BackColor = System.Drawing.Color.White;
             this.SWtxtCodeRank.ControlID = "";
             this.SWtxtCodeRank.DatabaseName = "CodeRank";
             this.SWtxtCodeRank.IsForeignKey = false;

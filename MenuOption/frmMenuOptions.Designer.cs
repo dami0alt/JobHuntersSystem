@@ -71,10 +71,12 @@ namespace MenuOption
             // SWtxtPicturePathMain
             // 
             this.SWtxtPicturePathMain.AllowedData = SecureCoreInheritedControl.DataType.Path;
+            this.SWtxtPicturePathMain.BackColor = System.Drawing.Color.White;
             this.SWtxtPicturePathMain.ControlID = "isIcon";
             this.SWtxtPicturePathMain.DatabaseName = "PicturePathMain";
             this.SWtxtPicturePathMain.IsForeignKey = false;
             this.SWtxtPicturePathMain.Location = new System.Drawing.Point(186, 160);
+            this.SWtxtPicturePathMain.MaxLength = 50;
             this.SWtxtPicturePathMain.Name = "SWtxtPicturePathMain";
             this.SWtxtPicturePathMain.NullSpace = true;
             this.SWtxtPicturePathMain.Size = new System.Drawing.Size(201, 21);
@@ -88,6 +90,7 @@ namespace MenuOption
             this.SWtxtFormName.DatabaseName = "FormName";
             this.SWtxtFormName.IsForeignKey = false;
             this.SWtxtFormName.Location = new System.Drawing.Point(186, 118);
+            this.SWtxtFormName.MaxLength = 100;
             this.SWtxtFormName.Name = "SWtxtFormName";
             this.SWtxtFormName.NullSpace = false;
             this.SWtxtFormName.Size = new System.Drawing.Size(315, 21);
@@ -101,6 +104,7 @@ namespace MenuOption
             this.SWtxtdllName.DatabaseName = "dllName";
             this.SWtxtdllName.IsForeignKey = false;
             this.SWtxtdllName.Location = new System.Drawing.Point(186, 67);
+            this.SWtxtdllName.MaxLength = 100;
             this.SWtxtdllName.Name = "SWtxtdllName";
             this.SWtxtdllName.NullSpace = false;
             this.SWtxtdllName.Size = new System.Drawing.Size(315, 21);
@@ -140,10 +144,12 @@ namespace MenuOption
             // SWtxtPicturePathHover
             // 
             this.SWtxtPicturePathHover.AllowedData = SecureCoreInheritedControl.DataType.Path;
+            this.SWtxtPicturePathHover.BackColor = System.Drawing.Color.White;
             this.SWtxtPicturePathHover.ControlID = "isIconHover";
             this.SWtxtPicturePathHover.DatabaseName = "PicturePathHover";
             this.SWtxtPicturePathHover.IsForeignKey = false;
             this.SWtxtPicturePathHover.Location = new System.Drawing.Point(661, 163);
+            this.SWtxtPicturePathHover.MaxLength = 50;
             this.SWtxtPicturePathHover.Name = "SWtxtPicturePathHover";
             this.SWtxtPicturePathHover.NullSpace = true;
             this.SWtxtPicturePathHover.Size = new System.Drawing.Size(203, 21);
@@ -162,10 +168,12 @@ namespace MenuOption
             // SWtxtFontColorHover
             // 
             this.SWtxtFontColorHover.AllowedData = SecureCoreInheritedControl.DataType.Rgb;
+            this.SWtxtFontColorHover.BackColor = System.Drawing.Color.White;
             this.SWtxtFontColorHover.ControlID = "SWcpFontHoverColor";
             this.SWtxtFontColorHover.DatabaseName = "FontColorHover";
             this.SWtxtFontColorHover.IsForeignKey = false;
             this.SWtxtFontColorHover.Location = new System.Drawing.Point(982, 116);
+            this.SWtxtFontColorHover.MaxLength = 11;
             this.SWtxtFontColorHover.Name = "SWtxtFontColorHover";
             this.SWtxtFontColorHover.NullSpace = true;
             this.SWtxtFontColorHover.Size = new System.Drawing.Size(117, 21);
@@ -184,10 +192,12 @@ namespace MenuOption
             // SWtxtFontColorMain
             // 
             this.SWtxtFontColorMain.AllowedData = SecureCoreInheritedControl.DataType.Rgb;
+            this.SWtxtFontColorMain.BackColor = System.Drawing.Color.White;
             this.SWtxtFontColorMain.ControlID = "SWcpFontColor";
             this.SWtxtFontColorMain.DatabaseName = "FontColorMain";
             this.SWtxtFontColorMain.IsForeignKey = false;
             this.SWtxtFontColorMain.Location = new System.Drawing.Point(982, 67);
+            this.SWtxtFontColorMain.MaxLength = 11;
             this.SWtxtFontColorMain.Name = "SWtxtFontColorMain";
             this.SWtxtFontColorMain.NullSpace = true;
             this.SWtxtFontColorMain.Size = new System.Drawing.Size(117, 21);
@@ -196,10 +206,12 @@ namespace MenuOption
             // SWtxtBackColorHover
             // 
             this.SWtxtBackColorHover.AllowedData = SecureCoreInheritedControl.DataType.Rgb;
+            this.SWtxtBackColorHover.BackColor = System.Drawing.Color.White;
             this.SWtxtBackColorHover.ControlID = "SWcpHoveColor";
             this.SWtxtBackColorHover.DatabaseName = "BackColorHover";
             this.SWtxtBackColorHover.IsForeignKey = false;
             this.SWtxtBackColorHover.Location = new System.Drawing.Point(661, 117);
+            this.SWtxtBackColorHover.MaxLength = 11;
             this.SWtxtBackColorHover.Name = "SWtxtBackColorHover";
             this.SWtxtBackColorHover.NullSpace = true;
             this.SWtxtBackColorHover.Size = new System.Drawing.Size(117, 21);
@@ -208,10 +220,12 @@ namespace MenuOption
             // SWtxtBackColorMain
             // 
             this.SWtxtBackColorMain.AllowedData = SecureCoreInheritedControl.DataType.Rgb;
+            this.SWtxtBackColorMain.BackColor = System.Drawing.Color.White;
             this.SWtxtBackColorMain.ControlID = "SWcpBackColor";
             this.SWtxtBackColorMain.DatabaseName = "BackColorMain";
             this.SWtxtBackColorMain.IsForeignKey = false;
             this.SWtxtBackColorMain.Location = new System.Drawing.Point(661, 67);
+            this.SWtxtBackColorMain.MaxLength = 11;
             this.SWtxtBackColorMain.Name = "SWtxtBackColorMain";
             this.SWtxtBackColorMain.NullSpace = true;
             this.SWtxtBackColorMain.Size = new System.Drawing.Size(117, 21);
@@ -255,6 +269,7 @@ namespace MenuOption
             this.SWtxtDescription.DatabaseName = "Description";
             this.SWtxtDescription.IsForeignKey = false;
             this.SWtxtDescription.Location = new System.Drawing.Point(184, 289);
+            this.SWtxtDescription.MaxLength = 20;
             this.SWtxtDescription.Name = "SWtxtDescription";
             this.SWtxtDescription.NullSpace = false;
             this.SWtxtDescription.Size = new System.Drawing.Size(315, 21);
@@ -278,6 +293,7 @@ namespace MenuOption
             this.SWtxtAccesLevel.DatabaseName = "AccesLevel";
             this.SWtxtAccesLevel.IsForeignKey = false;
             this.SWtxtAccesLevel.Location = new System.Drawing.Point(184, 338);
+            this.SWtxtAccesLevel.MaxLength = 3;
             this.SWtxtAccesLevel.Name = "SWtxtAccesLevel";
             this.SWtxtAccesLevel.NullSpace = false;
             this.SWtxtAccesLevel.Size = new System.Drawing.Size(104, 21);
@@ -358,11 +374,12 @@ namespace MenuOption
             // SWtxtRenderingOrder
             // 
             this.SWtxtRenderingOrder.AllowedData = SecureCoreInheritedControl.DataType.Number;
-            this.SWtxtRenderingOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(194)))), ((int)(((byte)(204)))));
+            this.SWtxtRenderingOrder.BackColor = System.Drawing.Color.White;
             this.SWtxtRenderingOrder.ControlID = "";
             this.SWtxtRenderingOrder.DatabaseName = "RenderingOrder";
             this.SWtxtRenderingOrder.IsForeignKey = false;
             this.SWtxtRenderingOrder.Location = new System.Drawing.Point(661, 290);
+            this.SWtxtRenderingOrder.MaxLength = 3;
             this.SWtxtRenderingOrder.Name = "SWtxtRenderingOrder";
             this.SWtxtRenderingOrder.NullSpace = true;
             this.SWtxtRenderingOrder.Size = new System.Drawing.Size(71, 21);

@@ -206,5 +206,20 @@ namespace JobHuntersSystem
                 pctMessage1.Visible = false;
             }
         }
+
+        private void pctVoice_Click(object sender, EventArgs e)
+        {
+            string path = AppDomain.CurrentDomain.BaseDirectory;
+            if (speech.IsRunning)
+            {
+                speech.Stop();
+                pctVoice.ImageLocation = path + "Multimedia/png/NotVoice.png";
+            }
+            else
+            {
+                speech.Resume();
+                pctVoice.ImageLocation = path + "Multimedia/png/Voice.png";
+            }
+        }
     }
 }

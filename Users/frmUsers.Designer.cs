@@ -262,6 +262,7 @@ namespace Users
             this.SWtxtUserName.DatabaseName = "UserName";
             this.SWtxtUserName.IsForeignKey = false;
             this.SWtxtUserName.Location = new System.Drawing.Point(174, 70);
+            this.SWtxtUserName.MaxLength = 100;
             this.SWtxtUserName.Name = "SWtxtUserName";
             this.SWtxtUserName.NullSpace = true;
             this.SWtxtUserName.Size = new System.Drawing.Size(171, 21);
@@ -275,6 +276,7 @@ namespace Users
             this.SWtxtUserCode.DatabaseName = "CodeUser";
             this.SWtxtUserCode.IsForeignKey = false;
             this.SWtxtUserCode.Location = new System.Drawing.Point(174, 118);
+            this.SWtxtUserCode.MaxLength = 12;
             this.SWtxtUserCode.Name = "SWtxtUserCode";
             this.SWtxtUserCode.NullSpace = true;
             this.SWtxtUserCode.Size = new System.Drawing.Size(171, 21);
@@ -298,6 +300,7 @@ namespace Users
             this.SWtxtLogin.DatabaseName = "Login";
             this.SWtxtLogin.IsForeignKey = false;
             this.SWtxtLogin.Location = new System.Drawing.Point(174, 166);
+            this.SWtxtLogin.MaxLength = 12;
             this.SWtxtLogin.Name = "SWtxtLogin";
             this.SWtxtLogin.NullSpace = false;
             this.SWtxtLogin.Size = new System.Drawing.Size(171, 21);
@@ -333,6 +336,7 @@ namespace Users
             this.SWtxtPhoto.DatabaseName = "Photo";
             this.SWtxtPhoto.IsForeignKey = false;
             this.SWtxtPhoto.Location = new System.Drawing.Point(664, 122);
+            this.SWtxtPhoto.MaxLength = 50;
             this.SWtxtPhoto.Name = "SWtxtPhoto";
             this.SWtxtPhoto.NullSpace = true;
             this.SWtxtPhoto.Size = new System.Drawing.Size(292, 21);

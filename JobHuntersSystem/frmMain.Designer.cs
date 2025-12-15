@@ -93,6 +93,7 @@ namespace JobHuntersSystem
             this.pctVoice.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctVoice.TabIndex = 9;
             this.pctVoice.TabStop = false;
+            this.pctVoice.Click += new System.EventHandler(this.pctVoice_Click);
             // 
             // SWcbClose
             // 
