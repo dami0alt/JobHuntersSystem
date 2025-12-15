@@ -49,6 +49,7 @@ namespace UserRanks
             this.SWtxtDescRank.DatabaseName = "DescRank";
             this.SWtxtDescRank.IsForeignKey = false;
             this.SWtxtDescRank.Location = new System.Drawing.Point(155, 167);
+            this.SWtxtDescRank.MaxLength = 50;
             this.SWtxtDescRank.Name = "SWtxtDescRank";
             this.SWtxtDescRank.NullSpace = true;
             this.SWtxtDescRank.Size = new System.Drawing.Size(193, 21);
@@ -62,6 +63,7 @@ namespace UserRanks
             this.SWtxtCodeRank.DatabaseName = "CodeRank";
             this.SWtxtCodeRank.IsForeignKey = false;
             this.SWtxtCodeRank.Location = new System.Drawing.Point(155, 116);
+            this.SWtxtCodeRank.MaxLength = 12;
             this.SWtxtCodeRank.Name = "SWtxtCodeRank";
             this.SWtxtCodeRank.NullSpace = true;
             this.SWtxtCodeRank.Size = new System.Drawing.Size(193, 21);

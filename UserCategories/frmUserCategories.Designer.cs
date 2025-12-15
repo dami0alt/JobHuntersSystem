@@ -29,12 +29,12 @@ namespace UserCategories
         /// </summary>
         private void InitializeComponent()
         {
-            this.swTextbox2 = new SecureCoreInheritedControl.SWTextbox();
             this.swTextbox3 = new SecureCoreInheritedControl.SWTextbox();
             this.swTextbox4 = new SecureCoreInheritedControl.SWTextbox();
             this.lblLevel = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblCode = new System.Windows.Forms.Label();
+            this.swTextbox2 = new SecureCoreInheritedControl.SWTextbox();
             this.SuspendLayout();
             // 
             // lblTableName
@@ -42,26 +42,15 @@ namespace UserCategories
             this.lblTableName.Location = new System.Drawing.Point(342, 5);
             this.lblTableName.Size = new System.Drawing.Size(517, 32);
             // 
-            // swTextbox2
-            // 
-            this.swTextbox2.AllowedData = SecureCoreInheritedControl.DataType.Text;
-            this.swTextbox2.ControlID = null;
-            this.swTextbox2.DatabaseName = "CodeCategory";
-            this.swTextbox2.IsForeignKey = false;
-            this.swTextbox2.Location = new System.Drawing.Point(181, 122);
-            this.swTextbox2.Name = "swTextbox2";
-            this.swTextbox2.NullSpace = true;
-            this.swTextbox2.Size = new System.Drawing.Size(223, 21);
-            this.swTextbox2.TabIndex = 5;
-            this.swTextbox2.Tag = "CodeCategory";
-            // 
             // swTextbox3
             // 
             this.swTextbox3.AllowedData = SecureCoreInheritedControl.DataType.Text;
+            this.swTextbox3.BackColor = System.Drawing.Color.White;
             this.swTextbox3.ControlID = null;
             this.swTextbox3.DatabaseName = "DescCategory";
             this.swTextbox3.IsForeignKey = false;
             this.swTextbox3.Location = new System.Drawing.Point(181, 163);
+            this.swTextbox3.MaxLength = 100;
             this.swTextbox3.Name = "swTextbox3";
             this.swTextbox3.NullSpace = true;
             this.swTextbox3.Size = new System.Drawing.Size(223, 21);
@@ -71,6 +60,7 @@ namespace UserCategories
             // swTextbox4
             // 
             this.swTextbox4.AllowedData = SecureCoreInheritedControl.DataType.Number;
+            this.swTextbox4.BackColor = System.Drawing.Color.White;
             this.swTextbox4.ControlID = null;
             this.swTextbox4.DatabaseName = "AccessLevel";
             this.swTextbox4.IsForeignKey = false;
@@ -97,9 +87,9 @@ namespace UserCategories
             this.lblName.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.Location = new System.Drawing.Point(73, 164);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(95, 18);
+            this.lblName.Size = new System.Drawing.Size(91, 18);
             this.lblName.TabIndex = 9;
-            this.lblName.Text = "Description:";
+            this.lblName.Text = "Description";
             // 
             // lblCode
             // 
@@ -110,6 +100,21 @@ namespace UserCategories
             this.lblCode.Size = new System.Drawing.Size(124, 18);
             this.lblCode.TabIndex = 8;
             this.lblCode.Text = "Code Category";
+            // 
+            // swTextbox2
+            // 
+            this.swTextbox2.AllowedData = SecureCoreInheritedControl.DataType.Text;
+            this.swTextbox2.BackColor = System.Drawing.Color.White;
+            this.swTextbox2.ControlID = null;
+            this.swTextbox2.DatabaseName = "CodeCategory";
+            this.swTextbox2.IsForeignKey = false;
+            this.swTextbox2.Location = new System.Drawing.Point(181, 122);
+            this.swTextbox2.MaxLength = 12;
+            this.swTextbox2.Name = "swTextbox2";
+            this.swTextbox2.NullSpace = true;
+            this.swTextbox2.Size = new System.Drawing.Size(223, 21);
+            this.swTextbox2.TabIndex = 5;
+            this.swTextbox2.Tag = "CodeCategory";
             // 
             // frmUserCategories
             // 
@@ -135,11 +140,11 @@ namespace UserCategories
         }
 
         #endregion
-        private SecureCoreInheritedControl.SWTextbox swTextbox2;
         private SecureCoreInheritedControl.SWTextbox swTextbox3;
         private SecureCoreInheritedControl.SWTextbox swTextbox4;
         private System.Windows.Forms.Label lblLevel;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblCode;
+        private SecureCoreInheritedControl.SWTextbox swTextbox2;
     }
 }
