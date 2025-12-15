@@ -12,17 +12,38 @@ namespace JobHuntersSystem
         private SpeechRecognitionEngine recognizer;
         private frmMain parentForm;
 
+        public bool IsRunning { get; private set; }
+
         public SpeechManager(frmMain form)
         {
+            string[] commands;
             parentForm = form;
-            recognizer = new SpeechRecognitionEngine(new CultureInfo("en-US"));
+            try
+            {
+                commands = new string[]{ "turn off", "get time", "get info" };
+                recognizer = new SpeechRecognitionEngine(new CultureInfo("en-US"));
 
-            ConfigureRecognizer();
+                ConfigureRecognizer(commands);
+                IsRunning = true;
+            }
+            catch(Exception ex){
+                try
+                {
+                    recognizer = new SpeechRecognitionEngine(new CultureInfo("es-ES"));
+                    commands = new string[] { "apagar", "hora", "información" };
+
+                    ConfigureRecognizer(commands);
+                    IsRunning = true;
+                }
+                catch
+                {
+                    IsRunning = false;
+                }
+            }
         }
-
-        private void ConfigureRecognizer()
+        private void ConfigureRecognizer(string[] commands)
         {
-            string[] commands = { "turn off", "get time", "get info" };
+
             Choices words = new Choices(commands);
             GrammarBuilder gb = new GrammarBuilder(words);
             gb.Culture = recognizer.RecognizerInfo.Culture;
@@ -91,11 +112,25 @@ namespace JobHuntersSystem
                 form.ShowDialog();
             }
         }
-
-        /*public void Stop()
+        public void Resume()
         {
+            try
+            {
+                recognizer.RecognizeAsync(RecognizeMode.Multiple);
+                IsRunning = true;
+            }
+            catch (InvalidOperationException)
+            {
+                recognizer.RecognizeAsyncCancel();
+                recognizer.RecognizeAsync(RecognizeMode.Multiple);
+                IsRunning = true;
+            }
+        }
+
+        public void Stop()
+        {
+            IsRunning = false;
             recognizer.RecognizeAsyncStop();
-            recognizer.Dispose();
-        }*/
+        }
     }
 }

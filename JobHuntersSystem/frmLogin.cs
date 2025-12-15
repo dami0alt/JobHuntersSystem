@@ -66,6 +66,7 @@ namespace JobHuntersSystem
                     lblBody.Text = ("Insert a correct credential or contact the administrator");
                     lblMessage.ForeColor = Color.Salmon;
                     lblBody.ForeColor = Color.Salmon;
+                    txtPass.Clear();
                 }
                 else
                 {

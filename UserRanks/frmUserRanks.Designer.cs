@@ -57,7 +57,7 @@ namespace UserRanks
             // 
             // SWtxtCodeRank
             // 
-            this.SWtxtCodeRank.AllowedData = SecureCoreInheritedControl.DataType.Code;
+            this.SWtxtCodeRank.AllowedData = SecureCoreInheritedControl.DataType.Text;
             this.SWtxtCodeRank.BackColor = System.Drawing.Color.White;
             this.SWtxtCodeRank.ControlID = "";
             this.SWtxtCodeRank.DatabaseName = "CodeRank";

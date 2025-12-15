@@ -31,16 +31,16 @@ namespace ManagementForms
         {
             this.components = new System.ComponentModel.Container();
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.SWcbClose = new SecureCoreInheritedControl.SWCloseButton();
             this.lblTableName = new System.Windows.Forms.Label();
             this.dgtData = new System.Windows.Forms.DataGridView();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
             this.lblInfo = new System.Windows.Forms.Label();
             this.timerInfo = new System.Windows.Forms.Timer(this.components);
-            this.SWcbClose = new SecureCoreInheritedControl.SWCloseButton();
             this.pnlHeader.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgtData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SWcbClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgtData)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -54,6 +54,21 @@ namespace ManagementForms
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(1201, 43);
             this.pnlHeader.TabIndex = 0;
+            // 
+            // SWcbClose
+            // 
+            this.SWcbClose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.SWcbClose.HoverIconPath = "Multimedia/png/CloseButtonShinyYellow.png";
+            this.SWcbClose.ImageLocation = "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE\\Multime" +
+    "dia/png/CloseButtonYellow.png";
+            this.SWcbClose.Location = new System.Drawing.Point(9, 3);
+            this.SWcbClose.MainIconPath = "Multimedia/png/CloseButtonYellow.png";
+            this.SWcbClose.Name = "SWcbClose";
+            this.SWcbClose.Size = new System.Drawing.Size(36, 36);
+            this.SWcbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.SWcbClose.TabIndex = 9;
+            this.SWcbClose.TabStop = false;
             // 
             // lblTableName
             // 
@@ -121,21 +136,6 @@ namespace ManagementForms
             this.timerInfo.Interval = 3000;
             this.timerInfo.Tick += new System.EventHandler(this.timerInfo_Tick);
             // 
-            // SWcbClose
-            // 
-            this.SWcbClose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.SWcbClose.HoverIconPath = "Multimedia/png/CloseButtonShinyYellow.png";
-            this.SWcbClose.ImageLocation = "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE\\Multime" +
-    "dia/png/CloseButtonYellow.png";
-            this.SWcbClose.Location = new System.Drawing.Point(9, 3);
-            this.SWcbClose.MainIconPath = "Multimedia/png/CloseButtonYellow.png";
-            this.SWcbClose.Name = "SWcbClose";
-            this.SWcbClose.Size = new System.Drawing.Size(36, 36);
-            this.SWcbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.SWcbClose.TabIndex = 9;
-            this.SWcbClose.TabStop = false;
-            // 
             // frmBasefk
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -153,11 +153,11 @@ namespace ManagementForms
             this.MinimumSize = new System.Drawing.Size(1217, 768);
             this.Name = "frmBasefk";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Base";
+            this.Text = "7";
             this.Load += new System.EventHandler(this.frmBase_Load);
             this.pnlHeader.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgtData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SWcbClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgtData)).EndInit();
             this.ResumeLayout(false);
 
         }

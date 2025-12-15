@@ -89,35 +89,13 @@ namespace JobHuntersSystem
         {
             this.Close();
         }
-
-        private void frmMain_Load(object sender, EventArgs e)
+        private void SetHonor()
         {
-            LoadAniCursor();
-            LoadUserOptions();
-
-            lblUserName.Text = _UserName;
-            lblRoleUser.Text = _RoleUser;
-
-            pctLogo.ImageLocation = logoPath;
-            if (File.Exists(_ProfileImagePath))
-            {
-                pctProfileImage.ImageLocation = _ProfileImagePath;
-
-            }
-            else
-            {
-                pctProfileImage.ImageLocation = AppDomain.CurrentDomain.BaseDirectory + "Multimedia/Users/Anonym.png";
-            }
-            if(CurrentUser.MainUser.AccesLevel == 100)
-            {
-                pctSecretItem.ImageLocation = AppDomain.CurrentDomain.BaseDirectory + "Multimedia/png/crown.png";
-            }
-
             if (_AccessLevelUser <= 10)
             {
                 lblHonor.Text = "★";
             }
-            else if(_AccessLevelUser <= 20)
+            else if (_AccessLevelUser <= 20)
             {
                 lblHonor.Text = "★ ★";
             }
@@ -137,7 +115,46 @@ namespace JobHuntersSystem
             {
                 lblHonor.Text = "★ ★ ★ ★ ★ ♚";
             }
+        }
+        private void SetImageProfile()
+        {
+            if (File.Exists(_ProfileImagePath))
+            {
+                pctProfileImage.ImageLocation = _ProfileImagePath;
+
+            }
+            else
+            {
+                pctProfileImage.ImageLocation = AppDomain.CurrentDomain.BaseDirectory + "Multimedia/Users/Anonym.png";
+            }
+            if (CurrentUser.MainUser.AccesLevel == 100)
+            {
+                pctSecretItem.ImageLocation = AppDomain.CurrentDomain.BaseDirectory + "Multimedia/png/crown.png";
+            }
+        }
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            LoadAniCursor();
+            LoadUserOptions();
+
+            lblUserName.Text = _UserName;
+            lblRoleUser.Text = _RoleUser;
+
+            pctLogo.ImageLocation = logoPath;
+            SetImageProfile();
+            SetHonor();
+
+           
             speech = new SpeechManager(this);
+            string path = AppDomain.CurrentDomain.BaseDirectory;
+            if (speech.IsRunning)
+            {
+                pctVoice.ImageLocation = path+ "Multimedia/png/Voice.png";
+            }
+            else
+            {
+                pctVoice.ImageLocation = path+"Multimedia/png/NotVoice.png";
+            }
         }
 
         private void pctExtender_Click(object sender, EventArgs e)
@@ -187,6 +204,21 @@ namespace JobHuntersSystem
             if (pctMessage1.Visible)
             {
                 pctMessage1.Visible = false;
+            }
+        }
+
+        private void pctVoice_Click(object sender, EventArgs e)
+        {
+            string path = AppDomain.CurrentDomain.BaseDirectory;
+            if (speech.IsRunning)
+            {
+                speech.Stop();
+                pctVoice.ImageLocation = path + "Multimedia/png/NotVoice.png";
+            }
+            else
+            {
+                speech.Resume();
+                pctVoice.ImageLocation = path + "Multimedia/png/Voice.png";
             }
         }
     }

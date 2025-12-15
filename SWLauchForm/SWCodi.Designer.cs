@@ -46,6 +46,7 @@ namespace SWUserControls
             // txtCode
             // 
             this.txtCode.Location = new System.Drawing.Point(6, 21);
+            this.txtCode.MaxLength = 12;
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(78, 20);
             this.txtCode.TabIndex = 1;
