@@ -37,7 +37,7 @@ namespace SpaceShipCategories
             // 
             // lblTableName
             // 
-            this.lblTableName.Size = new System.Drawing.Size(466, 25);
+            this.lblTableName.Size = new System.Drawing.Size(464, 25);
             // 
             // swTextbox1
             // 
@@ -61,6 +61,7 @@ namespace SpaceShipCategories
             this.swTextbox2.DatabaseName = "DescSpaceShipCategory";
             this.swTextbox2.IsForeignKey = false;
             this.swTextbox2.Location = new System.Drawing.Point(194, 253);
+            this.swTextbox2.MaxLength = 100;
             this.swTextbox2.Name = "swTextbox2";
             this.swTextbox2.NullSpace = true;
             this.swTextbox2.Size = new System.Drawing.Size(222, 24);
