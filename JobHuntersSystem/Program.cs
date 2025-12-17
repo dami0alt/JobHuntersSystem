@@ -13,34 +13,19 @@ namespace JobHuntersSystem
         /// </summary>
         [STAThread]
         static void Main()
-        {
-
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-
-            frmSplash splash = new frmSplash(); //añadido
-            Application.Run(splash); //añadido
-
-            if (splash.SkipClicked) //añadido
+        {           
+            using (frmLogin frmLogin = new frmLogin())
             {
-                Application.Run(new frmMain());
-            }
-            else
-            {
-                    using (frmLogin frmLogin = new frmLogin())
-                    {
-                        DialogResult result = frmLogin.ShowDialog();
-                        if (result == DialogResult.OK)
-                        {
-                            Application.Run(new frmMain());
-                        }
-                        else
-                        {
-                            Application.Exit();
-                        }
+                DialogResult result = frmLogin.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    Application.Run(new frmMain());
                 }
+                else
+                {
+                    Application.Exit();
+                }                
             }
-
         }
     }
 }
