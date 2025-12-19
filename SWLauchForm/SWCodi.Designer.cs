@@ -50,7 +50,7 @@ namespace SWUserControls
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(78, 20);
             this.txtCode.TabIndex = 1;
-            this.txtCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCode_KeyDown);
+            this.txtCode.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtCode_KeyUp);
             // 
             // pnlMain
             // 

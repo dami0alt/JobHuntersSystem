@@ -61,7 +61,7 @@ namespace SWUserControls
                 string FileName = Path.GetFileName(ogFilePath);
                 appPath += FileName;
 
-                if(appPath.Length > 50)
+                if (appPath.Length > 50)
                 {
                     MessageBox.Show("The file lenght over the 50 character. Please, rename it", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -78,8 +78,17 @@ namespace SWUserControls
                         }
                     }
                 }
-
-
+                else
+                {
+                    foreach (Control ctrl in this.Parent.Controls)
+                    {
+                        if (ctrl.Name.Equals(ctrlName))
+                        {
+                            ctrl.Focus();
+                            ctrl.Text = appPath;
+                        }
+                    }
+                }
             }
         }
         public void SetPhoto(string path)

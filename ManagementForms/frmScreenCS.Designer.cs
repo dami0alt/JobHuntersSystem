@@ -240,8 +240,9 @@ namespace ManagementForms
             this.Name = "frmScreenCS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "      ";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmScreenCS_FormClosed);
             this.Load += new System.EventHandler(this.frmScreenCS_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmScreenCS_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.frmScreenCS_KeyUp);
             this.pnlHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pctGif2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctGif1)).EndInit();

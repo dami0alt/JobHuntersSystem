@@ -251,7 +251,7 @@ namespace SWUserControls
             dbManagement = new BaseDeDades();
         }
 
-        private void txtCode_KeyDown(object sender, KeyEventArgs e)
+        private void txtCode_KeyUp(object sender, KeyEventArgs e)
         {
             try
             {

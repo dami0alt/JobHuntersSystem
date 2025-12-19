@@ -191,7 +191,13 @@ namespace ManagementForms
             try
             {
                 UpdateRegisters();
-            }catch(Exception ex)
+            }
+            catch (System.Data.Common.DbException ex)
+            {
+                MessageBox.Show("ERROR: Could not connect to the database.Please check the connection.\n" +
+                                    $"Details: {ex.Message}", "Error Connection", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
             {
                 timerInfo.Start();
                 lblInfo.ForeColor = Color.LightSalmon;

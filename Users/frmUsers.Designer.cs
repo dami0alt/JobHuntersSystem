@@ -59,8 +59,9 @@ namespace Users
             // 
             // lblTableName
             // 
+            this.lblTableName.Location = new System.Drawing.Point(384, 2);
             this.lblTableName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTableName.Size = new System.Drawing.Size(432, 25);
+            this.lblTableName.Size = new System.Drawing.Size(432, 39);
             // 
             // SWcdUserCategory
             // 

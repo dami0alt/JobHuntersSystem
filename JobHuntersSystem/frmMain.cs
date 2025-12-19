@@ -134,27 +134,40 @@ namespace JobHuntersSystem
         }
         private void frmMain_Load(object sender, EventArgs e)
         {
-            LoadAniCursor();
-            LoadUserOptions();
-
-            lblUserName.Text = _UserName;
-            lblRoleUser.Text = _RoleUser;
-
-            pctLogo.ImageLocation = logoPath;
-            SetImageProfile();
-            SetHonor();
-
-           
-            speech = new SpeechManager(this);
-            string path = AppDomain.CurrentDomain.BaseDirectory;
-            if (speech.IsRunning)
+            try
             {
-                pctVoice.ImageLocation = path+ "Multimedia/png/Voice.png";
+                LoadAniCursor();
+                LoadUserOptions();
+
+                lblUserName.Text = _UserName;
+                lblRoleUser.Text = _RoleUser;
+
+                pctLogo.ImageLocation = logoPath;
+                SetImageProfile();
+                SetHonor();
+
+
+                speech = new SpeechManager(this);
+                string path = AppDomain.CurrentDomain.BaseDirectory;
+                if (speech.IsRunning)
+                {
+                    pctVoice.ImageLocation = path + "Multimedia/png/Voice.png";
+                }
+                else
+                {
+                    pctVoice.ImageLocation = path + "Multimedia/png/NotVoice.png";
+                }
             }
-            else
+            catch (System.Data.Common.DbException ex)
             {
-                pctVoice.ImageLocation = path+"Multimedia/png/NotVoice.png";
+                MessageBox.Show("ERROR: Could not connect to the database.Please check the connection.\n" +
+                                    $"Details: {ex.Message}","Error Connection",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void pctExtender_Click(object sender, EventArgs e)

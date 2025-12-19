@@ -61,8 +61,8 @@ namespace Planets
             // 
             // lblTableName
             // 
-            this.lblTableName.Location = new System.Drawing.Point(358, 0);
-            this.lblTableName.Size = new System.Drawing.Size(484, 42);
+            this.lblTableName.Location = new System.Drawing.Point(360, 0);
+            this.lblTableName.Size = new System.Drawing.Size(481, 42);
             // 
             // SWtxtCodePlanet
             // 
@@ -270,7 +270,7 @@ namespace Planets
             // 
             this.SWcdSpecies.ClasseCS = "Species.dll";
             this.SWcdSpecies.ControlID = "SWtxtSpecies";
-            this.SWcdSpecies.FormCS = null;
+            this.SWcdSpecies.FormCS = "Species.frmSpeciesScreenCS";
             this.SWcdSpecies.Location = new System.Drawing.Point(759, 94);
             this.SWcdSpecies.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SWcdSpecies.Name = "SWcdSpecies";
@@ -306,7 +306,7 @@ namespace Planets
             // 
             this.SWcdFiliation.ClasseCS = "Filiations.dll";
             this.SWcdFiliation.ControlID = "SWtxtFiliation";
-            this.SWcdFiliation.FormCS = null;
+            this.SWcdFiliation.FormCS = "Filiations.frmFiliationsScreenCS";
             this.SWcdFiliation.Location = new System.Drawing.Point(759, 139);
             this.SWcdFiliation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SWcdFiliation.Name = "SWcdFiliation";
@@ -320,9 +320,9 @@ namespace Planets
             // 
             // SWcdSector
             // 
-            this.SWcdSector.ClasseCS = null;
+            this.SWcdSector.ClasseCS = "Sectors.dll";
             this.SWcdSector.ControlID = "SWtxtPlanet";
-            this.SWcdSector.FormCS = null;
+            this.SWcdSector.FormCS = "Sectors.frmSectorsScreenCS";
             this.SWcdSector.Location = new System.Drawing.Point(759, 49);
             this.SWcdSector.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SWcdSector.Name = "SWcdSector";
@@ -444,6 +444,7 @@ namespace Planets
             this.Controls.Add(this.label1);
             this.Controls.Add(this.SWtxtCodePlanet);
             this.Controls.Add(this.lblUserName);
+            this.MinimumSize = new System.Drawing.Size(782, 558);
             this.Name = "frmPlanets";
             this.Load += new System.EventHandler(this.frmPlanets_Load);
             this.Controls.SetChildIndex(this.lblUserName, 0);

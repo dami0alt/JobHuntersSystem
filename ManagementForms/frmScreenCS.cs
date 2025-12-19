@@ -19,7 +19,7 @@ namespace ManagementForms
         protected string _tableName, _controlId, _formName;
         protected DataSet dts;
 
-        //protected SWTextbox txt = new SWTextbox();
+        private Cursor customCursor;
         #region cursor(Opcional)
         [DllImport("user32.dll")]
         public static extern IntPtr LoadCursorFromFile(string lpFileName);
@@ -30,10 +30,9 @@ namespace ManagementForms
 
         Dictionary<string, string> searchParameters;
 
-        public frmScreenCS() //Solución provisional debido a un bug con el diseñador.
+        public frmScreenCS()
         {
             InitializeComponent();
-            //if (DesignMode) return;
         }
         public frmScreenCS(string tableName, string formName, string controlId)
         {
@@ -46,16 +45,15 @@ namespace ManagementForms
         }
         private void LoadAniCursor()
         {
-            // Reemplaza "ruta\\al\\tu_cursor.ani" con la ruta real de tu archivo .ani
             cursorPath = AppDomain.CurrentDomain.BaseDirectory + cursorPath;
             IntPtr hCursor = LoadCursorFromFile(cursorPath);
             if (hCursor != IntPtr.Zero)
             {
-                this.Cursor = new Cursor(hCursor);
+                customCursor = new Cursor(hCursor);
+                this.Cursor = customCursor;
             }
             else
             {
-                // Manejar error si no se puede cargar el cursor
                 MessageBox.Show("The cursor couldn't be loaded","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
@@ -95,14 +93,25 @@ namespace ManagementForms
         private void frmScreenCS_Load(object sender, EventArgs e)
         {
             if (DesignMode) return;
+            try
+            {
+                LoadAniCursor();
+                db = new BaseDeDades();
+                dts = new DataSet();
 
-            LoadAniCursor();
-            db = new BaseDeDades();
-            dts = new DataSet();
-
-            dgvData.DataSource = null;
-            ConfigurateDataGridView();
-            lblTableName.Text = _tableName+" Search";
+                dgvData.DataSource = null;
+                ConfigurateDataGridView();
+                lblTableName.Text = _tableName + " Search";
+            }
+            catch (System.Data.Common.DbException ex)
+            {
+                MessageBox.Show("ERROR: Could not connect to the database.Please check the connection.\n" +
+                                    $"Details: {ex.Message}", "Error Connection", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -110,7 +119,7 @@ namespace ManagementForms
             this.Close();
         }
 
-        private void frmScreenCS_KeyDown(object sender, KeyEventArgs e)
+        private void frmScreenCS_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.F2)
             {
@@ -138,7 +147,6 @@ namespace ManagementForms
             // Actualiza el texto con puntos
             lblInfo.Text = "Loading" + new string('.', loadingStep % 5);
 
-            // Después de 3 ticks (~1 segundo), detiene el timer y carga los datos
             if (loadingStep >= 4)
             {
                 timerInfo.Stop();
@@ -166,14 +174,44 @@ namespace ManagementForms
             }
         }
 
+        private void frmScreenCS_FormClosed(object sender, FormClosedEventArgs e)
+        {
+           foreach(Control ctrl in this.Controls)
+            {
+                if(ctrl is PictureBox)
+                {
+                    if (((PictureBox)ctrl).Image != null)
+                    {
+
+                        ((PictureBox)ctrl).Image.Dispose();
+                        ((PictureBox)ctrl).Image = null;
+                    }
+                }
+            }
+            customCursor.Dispose();
+            customCursor = null;
+        }
+
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            searchParameters = GetValues();
-            loadingStep = 0;
-            lblInfo.Text = "Loading";
-            lblInfo.Visible = true;
-            pctGif3.Visible = true;
-            timerInfo.Start();
+            try
+            {
+                searchParameters = GetValues();
+                loadingStep = 0;
+                lblInfo.Text = "Loading";
+                lblInfo.Visible = true;
+                pctGif3.Visible = true;
+                timerInfo.Start();
+            }
+            catch (System.Data.Common.DbException ex)
+            {
+                MessageBox.Show("ERROR: Could not connect to the database.Please check the connection.\n" +
+                                    $"Details: {ex.Message}", "Error Connection", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }    
         }
 
         private void dgvData_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -195,7 +233,7 @@ namespace ManagementForms
                         }
                         break;
                     }                   
-                }               
+                }
                 this.Close();
             }
         }

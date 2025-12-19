@@ -43,9 +43,9 @@ namespace SpaceShipsTypes
             // 
             // lblTableName
             // 
-            this.lblTableName.Location = new System.Drawing.Point(2, 7);
+            this.lblTableName.Location = new System.Drawing.Point(380, 3);
             this.lblTableName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTableName.Size = new System.Drawing.Size(1194, 26);
+            this.lblTableName.Size = new System.Drawing.Size(441, 36);
             // 
             // SWtxtDescType
             // 
@@ -113,7 +113,7 @@ namespace SpaceShipsTypes
             this.SWtxtSpaceShipCategories.DatabaseName = "idSpaceShipCategory";
             this.SWtxtSpaceShipCategories.Enabled = false;
             this.SWtxtSpaceShipCategories.IsForeignKey = true;
-            this.SWtxtSpaceShipCategories.Location = new System.Drawing.Point(559, 213);
+            this.SWtxtSpaceShipCategories.Location = new System.Drawing.Point(489, 213);
             this.SWtxtSpaceShipCategories.Name = "SWtxtSpaceShipCategories";
             this.SWtxtSpaceShipCategories.NullSpace = false;
             this.SWtxtSpaceShipCategories.Size = new System.Drawing.Size(60, 21);
@@ -133,7 +133,7 @@ namespace SpaceShipsTypes
             this.SWcdCodeCategory.NomId = "idSpaceShipCategory";
             this.SWcdCodeCategory.NomTaula = "SpaceShipCategories";
             this.SWcdCodeCategory.NullSpace = false;
-            this.SWcdCodeCategory.Size = new System.Drawing.Size(340, 74);
+            this.SWcdCodeCategory.Size = new System.Drawing.Size(339, 74);
             this.SWcdCodeCategory.TabIndex = 33;
             // 
             // lblCodeFiliation
@@ -153,7 +153,7 @@ namespace SpaceShipsTypes
             this.SWtxtidFiliation.ControlID = "SWcdFiliationCode";
             this.SWtxtidFiliation.DatabaseName = "idFiliation";
             this.SWtxtidFiliation.IsForeignKey = true;
-            this.SWtxtidFiliation.Location = new System.Drawing.Point(559, 166);
+            this.SWtxtidFiliation.Location = new System.Drawing.Point(489, 166);
             this.SWtxtidFiliation.Name = "SWtxtidFiliation";
             this.SWtxtidFiliation.NullSpace = false;
             this.SWtxtidFiliation.ShortcutsEnabled = false;
@@ -166,7 +166,7 @@ namespace SpaceShipsTypes
             this.SWcdFiliationCode.ClasseCS = "Filiations.dll";
             this.SWcdFiliationCode.ControlID = "SWtxtidFiliation";
             this.SWcdFiliationCode.FormCS = "Filiations.frmFiliationsScreenCS";
-            this.SWcdFiliationCode.Location = new System.Drawing.Point(214, 140);
+            this.SWcdFiliationCode.Location = new System.Drawing.Point(213, 140);
             this.SWcdFiliationCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SWcdFiliationCode.Name = "SWcdFiliationCode";
             this.SWcdFiliationCode.NomCodi = "CodeFiliation";
@@ -182,26 +182,26 @@ namespace SpaceShipsTypes
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.ClientSize = new System.Drawing.Size(1201, 729);
             this.Controls.Add(this.SWtxtDescType);
+            this.Controls.Add(this.SWcdCodeCategory);
+            this.Controls.Add(this.SWcdFiliationCode);
             this.Controls.Add(this.lblDescType);
             this.Controls.Add(this.SWtxtTypeCode);
             this.Controls.Add(this.lblSpaceShipTypeCode);
             this.Controls.Add(this.lblCodeCategory);
             this.Controls.Add(this.SWtxtSpaceShipCategories);
-            this.Controls.Add(this.SWcdCodeCategory);
             this.Controls.Add(this.lblCodeFiliation);
             this.Controls.Add(this.SWtxtidFiliation);
-            this.Controls.Add(this.SWcdFiliationCode);
             this.MinimumSize = new System.Drawing.Size(1198, 739);
             this.Name = "frmSpaceShipsTypes";
-            this.Controls.SetChildIndex(this.SWcdFiliationCode, 0);
             this.Controls.SetChildIndex(this.SWtxtidFiliation, 0);
             this.Controls.SetChildIndex(this.lblCodeFiliation, 0);
-            this.Controls.SetChildIndex(this.SWcdCodeCategory, 0);
             this.Controls.SetChildIndex(this.SWtxtSpaceShipCategories, 0);
             this.Controls.SetChildIndex(this.lblCodeCategory, 0);
             this.Controls.SetChildIndex(this.lblSpaceShipTypeCode, 0);
             this.Controls.SetChildIndex(this.SWtxtTypeCode, 0);
             this.Controls.SetChildIndex(this.lblDescType, 0);
+            this.Controls.SetChildIndex(this.SWcdFiliationCode, 0);
+            this.Controls.SetChildIndex(this.SWcdCodeCategory, 0);
             this.Controls.SetChildIndex(this.SWtxtDescType, 0);
             this.ResumeLayout(false);
             this.PerformLayout();

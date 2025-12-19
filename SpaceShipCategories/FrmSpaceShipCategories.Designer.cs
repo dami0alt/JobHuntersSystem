@@ -37,7 +37,8 @@ namespace SpaceShipCategories
             // 
             // lblTableName
             // 
-            this.lblTableName.Size = new System.Drawing.Size(464, 25);
+            this.lblTableName.Location = new System.Drawing.Point(330, 4);
+            this.lblTableName.Size = new System.Drawing.Size(515, 34);
             // 
             // swTextbox1
             // 
@@ -46,10 +47,10 @@ namespace SpaceShipCategories
             this.swTextbox1.ControlID = null;
             this.swTextbox1.DatabaseName = "CodeSpaceShipCategory";
             this.swTextbox1.IsForeignKey = false;
-            this.swTextbox1.Location = new System.Drawing.Point(194, 195);
+            this.swTextbox1.Location = new System.Drawing.Point(170, 164);
             this.swTextbox1.Name = "swTextbox1";
             this.swTextbox1.NullSpace = true;
-            this.swTextbox1.Size = new System.Drawing.Size(222, 24);
+            this.swTextbox1.Size = new System.Drawing.Size(195, 21);
             this.swTextbox1.TabIndex = 6;
             this.swTextbox1.Tag = "";
             // 
@@ -60,11 +61,11 @@ namespace SpaceShipCategories
             this.swTextbox2.ControlID = null;
             this.swTextbox2.DatabaseName = "DescSpaceShipCategory";
             this.swTextbox2.IsForeignKey = false;
-            this.swTextbox2.Location = new System.Drawing.Point(194, 253);
+            this.swTextbox2.Location = new System.Drawing.Point(170, 213);
             this.swTextbox2.MaxLength = 100;
             this.swTextbox2.Name = "swTextbox2";
             this.swTextbox2.NullSpace = true;
-            this.swTextbox2.Size = new System.Drawing.Size(222, 24);
+            this.swTextbox2.Size = new System.Drawing.Size(195, 21);
             this.swTextbox2.TabIndex = 7;
             this.swTextbox2.Tag = "";
             // 
@@ -72,9 +73,9 @@ namespace SpaceShipCategories
             // 
             this.lblCodeShip.AutoSize = true;
             this.lblCodeShip.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.lblCodeShip.Location = new System.Drawing.Point(27, 196);
+            this.lblCodeShip.Location = new System.Drawing.Point(24, 165);
             this.lblCodeShip.Name = "lblCodeShip";
-            this.lblCodeShip.Size = new System.Drawing.Size(161, 23);
+            this.lblCodeShip.Size = new System.Drawing.Size(129, 18);
             this.lblCodeShip.TabIndex = 8;
             this.lblCodeShip.Text = "SpaceShipCode";
             // 
@@ -82,21 +83,22 @@ namespace SpaceShipCategories
             // 
             this.lblDescShip.AutoSize = true;
             this.lblDescShip.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.lblDescShip.Location = new System.Drawing.Point(34, 253);
+            this.lblDescShip.Location = new System.Drawing.Point(30, 213);
             this.lblDescShip.Name = "lblDescShip";
-            this.lblDescShip.Size = new System.Drawing.Size(154, 23);
+            this.lblDescShip.Size = new System.Drawing.Size(124, 18);
             this.lblDescShip.TabIndex = 9;
             this.lblDescShip.Text = "SpaceShipDesc";
             // 
             // FrmSpaceShipCategories
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1199, 721);
+            this.ClientSize = new System.Drawing.Size(1175, 740);
             this.Controls.Add(this.lblDescShip);
             this.Controls.Add(this.lblCodeShip);
             this.Controls.Add(this.swTextbox2);
             this.Controls.Add(this.swTextbox1);
+            this.MinimumSize = new System.Drawing.Size(1067, 653);
             this.Name = "FrmSpaceShipCategories";
             this.Text = "FrmSpaceShipCategories";
             this.Controls.SetChildIndex(this.swTextbox1, 0);
