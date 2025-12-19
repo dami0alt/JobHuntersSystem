@@ -51,7 +51,7 @@ namespace Planets
             this.lblFilliation = new System.Windows.Forms.Label();
             this.SWcdFiliation = new SWUserControls.SWCodi();
             this.SWcdSector = new SWUserControls.SWCodi();
-            this.SWtxtSpecie = new SecureCoreInheritedControl.SWTextbox();
+            this.SWtxtSector = new SecureCoreInheritedControl.SWTextbox();
             this.SWtxtSpecies = new SecureCoreInheritedControl.SWTextbox();
             this.SWtxtFiliation = new SecureCoreInheritedControl.SWTextbox();
             this.SWtxtPortPlanet1 = new SecureCoreInheritedControl.SWTextbox();
@@ -321,7 +321,7 @@ namespace Planets
             // SWcdSector
             // 
             this.SWcdSector.ClasseCS = "Sectors.dll";
-            this.SWcdSector.ControlID = "SWtxtPlanet";
+            this.SWcdSector.ControlID = "SWtxtSector";
             this.SWcdSector.FormCS = "Sectors.frmSectorsScreenCS";
             this.SWcdSector.Location = new System.Drawing.Point(759, 49);
             this.SWcdSector.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -334,19 +334,19 @@ namespace Planets
             this.SWcdSector.Size = new System.Drawing.Size(376, 48);
             this.SWcdSector.TabIndex = 9;
             // 
-            // SWtxtSpecie
+            // SWtxtSector
             // 
-            this.SWtxtSpecie.AllowedData = SecureCoreInheritedControl.DataType.Number;
-            this.SWtxtSpecie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(194)))), ((int)(((byte)(204)))));
-            this.SWtxtSpecie.ControlID = "SWcdSector";
-            this.SWtxtSpecie.DatabaseName = "idSector";
-            this.SWtxtSpecie.IsForeignKey = true;
-            this.SWtxtSpecie.Location = new System.Drawing.Point(1066, 75);
-            this.SWtxtSpecie.Name = "SWtxtSpecie";
-            this.SWtxtSpecie.NullSpace = false;
-            this.SWtxtSpecie.Size = new System.Drawing.Size(60, 21);
-            this.SWtxtSpecie.TabIndex = 50;
-            this.SWtxtSpecie.TabStop = false;
+            this.SWtxtSector.AllowedData = SecureCoreInheritedControl.DataType.Number;
+            this.SWtxtSector.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(194)))), ((int)(((byte)(204)))));
+            this.SWtxtSector.ControlID = "SWcdSector";
+            this.SWtxtSector.DatabaseName = "idSector";
+            this.SWtxtSector.IsForeignKey = true;
+            this.SWtxtSector.Location = new System.Drawing.Point(1066, 75);
+            this.SWtxtSector.Name = "SWtxtSector";
+            this.SWtxtSector.NullSpace = false;
+            this.SWtxtSector.Size = new System.Drawing.Size(60, 21);
+            this.SWtxtSector.TabIndex = 50;
+            this.SWtxtSector.TabStop = false;
             // 
             // SWtxtSpecies
             // 
@@ -425,7 +425,7 @@ namespace Planets
             this.Controls.Add(this.label11);
             this.Controls.Add(this.SWtxtFiliation);
             this.Controls.Add(this.SWtxtSpecies);
-            this.Controls.Add(this.SWtxtSpecie);
+            this.Controls.Add(this.SWtxtSector);
             this.Controls.Add(this.lblFilliation);
             this.Controls.Add(this.lblSpecie);
             this.Controls.Add(this.SWtxtPortPlanet);
@@ -465,7 +465,7 @@ namespace Planets
             this.Controls.SetChildIndex(this.SWtxtPortPlanet, 0);
             this.Controls.SetChildIndex(this.lblSpecie, 0);
             this.Controls.SetChildIndex(this.lblFilliation, 0);
-            this.Controls.SetChildIndex(this.SWtxtSpecie, 0);
+            this.Controls.SetChildIndex(this.SWtxtSector, 0);
             this.Controls.SetChildIndex(this.SWtxtSpecies, 0);
             this.Controls.SetChildIndex(this.SWtxtFiliation, 0);
             this.Controls.SetChildIndex(this.label11, 0);
@@ -504,7 +504,7 @@ namespace Planets
         private System.Windows.Forms.Label lblFilliation;
         private SWUserControls.SWCodi SWcdFiliation;
         private SWUserControls.SWCodi SWcdSector;
-        private SecureCoreInheritedControl.SWTextbox SWtxtSpecie;
+        private SecureCoreInheritedControl.SWTextbox SWtxtSector;
         private SecureCoreInheritedControl.SWTextbox SWtxtSpecies;
         private SecureCoreInheritedControl.SWTextbox SWtxtFiliation;
         private SecureCoreInheritedControl.SWTextbox SWtxtPortPlanet1;

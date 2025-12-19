@@ -123,7 +123,7 @@ namespace SpaceShipsTypes
             // SWcdCodeCategory
             // 
             this.SWcdCodeCategory.ClasseCS = "SpaceShipCategories.dll";
-            this.SWcdCodeCategory.ControlID = "SWcdCodeCategoryId";
+            this.SWcdCodeCategory.ControlID = "SWtxtSpaceShipCategories";
             this.SWcdCodeCategory.FormCS = "SpaceShipCategories.frmSpaceShipCategoriesScreenCS";
             this.SWcdCodeCategory.Location = new System.Drawing.Point(213, 187);
             this.SWcdCodeCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

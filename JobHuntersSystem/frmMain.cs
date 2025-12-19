@@ -127,7 +127,7 @@ namespace JobHuntersSystem
             {
                 pctProfileImage.ImageLocation = AppDomain.CurrentDomain.BaseDirectory + "Multimedia/Users/Anonym.png";
             }
-            if (CurrentUser.MainUser.AccesLevel == 100)
+            if (CurrentUser.MainUser.AccesLevel >= 100)
             {
                 pctSecretItem.ImageLocation = AppDomain.CurrentDomain.BaseDirectory + "Multimedia/png/crown.png";
             }
